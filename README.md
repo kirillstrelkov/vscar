@@ -8,7 +8,7 @@ This repository contains code for car comparision app.
 
 ## Initial database
 
-[./db/adac.csv](./db/adac.csv)
+[./db/db.zip](./db/db.zip)
 
 ## Prototype
 
