@@ -1,0 +1,46 @@
+<div class="wrap mat-elevation-z8">
+  <!-- TODO: add number/index/# -->
+  <!-- TODO: find better "on row click" implementation -->
+  <table mat-table [dataSource]="data" class="mat-elevation-z8">
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef> Name </th>
+      <td mat-cell *matCellDef="let car" [routerLink]="['/cars', car.adac_id]"> {{car.name}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="fuel">
+      <th mat-header-cell *matHeaderCellDef> Fuel </th>
+      <td mat-cell *matCellDef="let car" [routerLink]="['/cars', car.adac_id]"> {{car.fuel}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="power">
+      <th mat-header-cell *matHeaderCellDef> Power, kw </th>
+      <td mat-cell *matCellDef="let car" [routerLink]="['/cars', car.adac_id]"> {{car.power}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="price">
+      <th mat-header-cell *matHeaderCellDef> Price, Euro </th>
+      <td mat-cell *matCellDef="let car" [routerLink]="['/cars', car.adac_id]"> {{car.price}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="actions">
+      <th mat-header-cell *matHeaderCellDef> Action </th>
+      <td mat-cell *matCellDef="let car">
+        <button mat-raised-button class="compare" [color]="isComparing(car) ? 'accent' : ''" (click)="onCompare(car)">
+          <div *ngIf="isComparing(car); else elseBlock">Remove from comparison list</div>
+          <ng-template #elseBlock>Add to comparison list</ng-template>
+        </button>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row [class]="isComparing(row) ? 'comparing' : ''" *matRowDef="let row; columns: displayedColumns;"></tr>
+
+    <tr class=" mat-row" *matNoDataRow>
+      <mat-spinner></mat-spinner>
+      <!-- TODO: spinner should be in center -->
+    </tr>
+  </table>
+
+  <mat-paginator [pageSizeOptions]="[5, 10, 50]" [length]="resultsLength" [pageSize]="pageSize" showFirstLastButtons>
+  </mat-paginator>
+</div>

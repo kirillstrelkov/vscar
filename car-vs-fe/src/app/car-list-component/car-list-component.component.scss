@@ -1,0 +1,15 @@
+td.mat-column-name,
+td.mat-column-fuel,
+td.mat-column-power,
+td.mat-column-price {
+  cursor: pointer;
+}
+
+.mat-row.comparing,
+.mat-row:hover {
+  background-color: rgba(0, 0, 0, .075);
+}
+
+button.compare {
+  min-width: 220px;
+}
