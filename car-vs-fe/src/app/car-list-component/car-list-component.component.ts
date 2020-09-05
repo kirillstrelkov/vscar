@@ -16,7 +16,7 @@ export class CarListComponentComponent implements AfterViewInit {
   resultsLength = 100;
   comparingCars = []
 
-  displayedColumns: string[] = ['name', 'fuel', 'power', 'price', 'actions'];
+  displayedColumns: string[] = ['name', 'transmission', 'fuel', 'power', 'price', 'actions'];
   data: Car[] = [];
 
   constructor(private carService: CarService) { }
