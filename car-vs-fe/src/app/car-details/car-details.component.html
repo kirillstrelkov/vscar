@@ -3,7 +3,9 @@
     <mat-card-header>
       <div mat-card-avatar class="car-header-image"></div>
       <mat-card-title>{{ car.name }}</mat-card-title>
-      <mat-card-subtitle>{{car.adac_id}}, {{ car.fuel }}, {{ car.power }} kW, {{ car.price }} Euro
+      <!-- TODO: improve view -->
+      <mat-card-subtitle>{{car.adac_id}}, {{ car.transmission }}, {{ car.fuel }}, {{ car.power }} kW, {{ car.price }}
+        Euro
       </mat-card-subtitle>
     </mat-card-header>
     <img mat-card-image src="{{car.image}}" alt="Photo of a {{ car.name }}">

@@ -6,9 +6,9 @@ export interface Car {
     processed_date: string;
     url: string;
     power: number;
+    transmission: string;
     fuel: string;
     price: number;
     checksum: string;
     attributes: { name: string, value: string }[];
-    // TODO: add transmission
 }
