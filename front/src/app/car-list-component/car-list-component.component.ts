@@ -1,6 +1,5 @@
 import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
-import { MatTableDataSource } from '@angular/material/table';
 import { of } from 'rxjs';
 import { catchError, map, startWith, switchMap } from 'rxjs/operators';
 import { Car } from '../car';
@@ -13,7 +12,7 @@ import { CarService } from '../car.service';
 })
 export class CarListComponentComponent implements AfterViewInit {
   pageSize = 5;
-  resultsLength = 100;
+  resultsLength = 0;
   comparingCars = []
 
   displayedColumns: string[] = ['name', 'transmission', 'fuel', 'power', 'price', 'actions'];
@@ -23,21 +22,16 @@ export class CarListComponentComponent implements AfterViewInit {
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
-  // TODO: fix page and size should be sent
-
   ngAfterViewInit() {
     this.paginator.page
       .pipe(
         startWith({}),
         switchMap(() => {
-          return this.carService.getCars(this.paginator.pageIndex);
+          return this.carService.getCars(this.paginator.pageIndex, this.paginator.pageSize);
         }),
         map(data => {
-          // TODO: getCars should return {total_count: 1, items:[...]}
-          // Otherwise not possible to use pageIndex and limit for request
-          // this.resultsLength = data['total_count'];
-          // return data['items']
-          return data;
+          this.resultsLength = data['total'];
+          return data['docs']
         }),
         catchError(() => {
           console.log("Error to fetch data");
