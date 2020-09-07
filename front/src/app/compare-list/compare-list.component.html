@@ -1,0 +1,31 @@
+<div class="compare-list">
+  <div class="wrap mat-elevation-z8">
+    <!-- TODO: add number/index/# -->
+    <!-- TODO: find better "on row click" implementation -->
+    <!-- TODO: improve -->
+    <table mat-table [dataSource]="data" class="mat-elevation-z8">
+      <ng-container *ngFor="let col of displayedColumns" [matColumnDef]="col">
+        <td mat-cell *matCellDef="let cellData">
+
+          <a *ngIf="cellData[col].url != undefined; else elseBlock;" [href]="cellData[col].url">
+            {{ cellData[col].value }}
+          </a>
+          <ng-template #elseBlock>
+            <img *ngIf="cellData[col].name == 'image'; else elseBlock2;" [src]="cellData[col].value">
+            <ng-template #elseBlock2>
+              {{ cellData[col].value }}
+            </ng-template>
+          </ng-template>
+
+        </td>
+      </ng-container>
+
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+      <tr class=" mat-row" *matNoDataRow>
+        <mat-spinner></mat-spinner>
+        <!-- TODO: spinner should be in center -->
+      </tr>
+    </table>
+  </div>
+</div>

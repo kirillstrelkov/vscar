@@ -3,22 +3,25 @@ import { MatPaginator } from '@angular/material/paginator';
 import { of } from 'rxjs';
 import { catchError, map, startWith, switchMap } from 'rxjs/operators';
 import { Car } from '../car';
+import { CarCompareService } from '../car-compare.service';
 import { CarService } from '../car.service';
 
 @Component({
-  selector: 'app-car-list-component',
-  templateUrl: './car-list-component.component.html',
-  styleUrls: ['./car-list-component.component.scss']
+  selector: 'app-car-list',
+  templateUrl: './car-list.component.html',
+  styleUrls: ['./car-list.component.scss']
 })
-export class CarListComponentComponent implements AfterViewInit {
+export class CarListComponent implements AfterViewInit {
   pageSize = 5;
   resultsLength = 0;
-  comparingCars = []
 
   displayedColumns: string[] = ['name', 'transmission', 'fuel', 'power', 'price', 'actions'];
   data: Car[] = [];
 
-  constructor(private carService: CarService) { }
+  constructor(
+    private carService: CarService,
+    private carCompareService: CarCompareService
+  ) { }
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
@@ -40,19 +43,15 @@ export class CarListComponentComponent implements AfterViewInit {
       ).subscribe(data => this.data = data);
   }
 
-
-  // TODO: should be moved to service
-  // TODO: change car to id, compare based on id
   onCompare(car: Car) {
-    console.log(car.name);
     if (this.isComparing(car)) {
-      this.comparingCars.splice(this.comparingCars.indexOf(car, 0), 1);
+      this.carCompareService.remove(car);
     } else {
-      this.comparingCars.push(car);
+      this.carCompareService.add(car);
     }
   }
 
   isComparing(car: Car) {
-    return this.comparingCars.indexOf(car, 0) != -1;
+    return this.carCompareService.contains(car);
   }
 }
