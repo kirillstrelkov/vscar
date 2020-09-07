@@ -10,6 +10,7 @@ import { CarComponent } from './car/car.component';
 
 
 
+import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatCardModule } from '@angular/material/card';
@@ -18,9 +19,11 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { CarDetailsComponent } from './car-details/car-details.component';
 import { SearchComponent } from './search/search.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
-import { CarListComponentComponent } from './car-list-component/car-list-component.component';
+import { CarListComponent } from './car-list/car-list.component';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { CompareBarComponent } from './compare-bar/compare-bar.component';
+import { CompareListComponent } from './compare-list/compare-list.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +32,9 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     CarDetailsComponent,
     SearchComponent,
     NavBarComponent,
-    CarListComponentComponent,
+    CarListComponent,
+    CompareBarComponent,
+    CompareListComponent,
   ],
   imports: [
     BrowserModule,
@@ -37,6 +42,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     HttpClientModule,
     BrowserAnimationsModule,
     // Angular modules:
+    MatIconModule,
     MatCardModule,
     MatToolbarModule,
     MatTableModule,
