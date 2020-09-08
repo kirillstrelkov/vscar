@@ -10,19 +10,19 @@ export class CarCompareService {
 
   constructor() { }
 
-  add(car: Car) {
+  add(car: Car): void {
     if (!this.contains(car)) {
       this.comparingCarsIds.push(car.adac_id);
     }
   }
-  remove(car: Car) {
+  remove(car: Car): void {
     if (this.contains(car)) {
       this.comparingCarsIds.splice(this.comparingCarsIds.indexOf(car.adac_id, 0), 1);
     }
   }
 
-  contains(car: Car) {
-    return this.comparingCarsIds.indexOf(car.adac_id, 0) != -1;
+  contains(car: Car): boolean {
+    return this.comparingCarsIds.indexOf(car.adac_id, 0) !== -1;
   }
 }
 

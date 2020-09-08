@@ -10,10 +10,10 @@ import { CarService } from '../car.service';
   styleUrls: ['./compare-list.component.scss']
 })
 export class CompareListComponent implements AfterViewInit {
-  ids: string[] = []
+  ids: string[] = [];
 
   displayedColumns: string[] = [];
-  data: Object[] = [];
+  data: object[] = [];
 
   constructor(
     private carService: CarService,
@@ -43,53 +43,77 @@ export class CompareListComponent implements AfterViewInit {
     const attrsToSkip = ['checksum'];
     const attrsToAdd = ['name', 'image'];
 
-    this.data = []
+    this.data = [];
     // TODO: fix implmentation use rxJS properly
     forkJoin(...this.ids.map((id) => this.carService.getCar(+id)))
       .subscribe(cars => {
-        this.displayedColumns = ['name']
-        let newData = []
+        this.displayedColumns = ['name'];
+        let newData = [];
 
-        for (let car of cars) {
-          this.displayedColumns.push(car.name)
-        };
+        for (const car of cars) {
+          this.displayedColumns.push(car.name);
+        }
 
         const attrs = attrsToAdd.concat(cars[0].attributes.map((c) => c.name));
 
-        for (let attr of attrs) {
-          const isAttrToSkip = attrsToSkip.indexOf(attr) != -1;
+        for (const attr of attrs) {
+          const isAttrToSkip = attrsToSkip.indexOf(attr) !== -1;
           if (isAttrToSkip) {
             continue;
           }
-          let cellData = { 'name': { 'value': attr } };
-          for (let car of cars) {
+          const cellData = { name: { value: attr } };
+          for (const car of cars) {
             const carName = car.name;
 
-            const isField = attrsToAdd.indexOf(attr) != -1
+            const isField = attrsToAdd.indexOf(attr) !== -1;
             if (isField) {
-              cellData[carName] = { 'value': car[attr] };
-              if (attr == 'name') {
-                cellData[carName]['url'] = car.url;
+              cellData[carName] = { value: car[attr] };
+              if (attr === 'name') {
+                cellData[carName].url = car.url;
               }
-              if (attr == 'image') {
-                cellData[carName]['name'] = attr;
+              if (attr === 'image') {
+                cellData[carName].name = attr;
               }
             } else {
-              for (let car_attr of car.attributes) {
-                if (car_attr.name == attr) {
-                  cellData[carName] = { 'value': car_attr.value };
+              for (const carAttr of car.attributes) {
+                if (carAttr.name === attr) {
+                  cellData[carName] = { value: carAttr.value };
                   break;
                 }
               }
             }
-          };
-          // TODO: reorder
-          // TODO: add filter for rows with no data
+          }
           newData.push(cellData);
         }
+        // TODO: reorder ?
+
+        const emptyRows = [];
+        // TODO: come up with heat map integration, same values - same color
+        for (const row of newData) {
+          // 2 = 1 value for attribute name + 1 unique value for all other cars
+          if (new Set(['name', 'image']).has(row.name.value)) {
+            continue;
+          }
+          const uniqValues = new Set();
+          let lastAttrValue;
+          for (const key of Object.keys(row)) {
+            const cell = row[key];
+            uniqValues.add(cell.value);
+            lastAttrValue = cell.value;
+          }
+
+          const hasDifferentValues = uniqValues.size !== 2;
+          row.name.hasDifferentValues = hasDifferentValues;
+
+          if (!hasDifferentValues && (lastAttrValue == null || lastAttrValue === '')) {
+            emptyRows.push(row);
+          }
+        }
+
+        newData = newData.filter(item => emptyRows.indexOf(item) === -1);
+
         this.data = newData;
       }
       );
   }
-
 }

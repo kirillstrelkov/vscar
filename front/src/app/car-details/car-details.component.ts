@@ -25,13 +25,13 @@ export class CarDetailsComponent implements OnInit {
   getCar(): void {
     this.carId = +(this.carId || this.route.snapshot.paramMap.get('id'));
     this.carService.getCar(this.carId).subscribe(car => {
-      this.dataSource = car['attributes'];
+      this.dataSource = car.attributes;
       this.car = car;
     });
   }
 
   ngOnInit(): void {
-    this.getCar()
+    this.getCar();
   }
 
 }
