@@ -33,17 +33,17 @@ export class CarListComponent implements AfterViewInit {
           return this.carService.getCars(this.paginator.pageIndex, this.paginator.pageSize);
         }),
         map(data => {
-          this.resultsLength = data['total'];
-          return data['docs']
+          this.resultsLength = data.total;
+          return data.docs;
         }),
         catchError(() => {
-          console.log("Error to fetch data");
+          console.log('Error to fetch data');
           return of<Car[]>([]);
         })
       ).subscribe(data => this.data = data);
   }
 
-  onCompare(car: Car) {
+  onCompare(car: Car): void {
     if (this.isComparing(car)) {
       this.carCompareService.remove(car);
     } else {
@@ -51,7 +51,7 @@ export class CarListComponent implements AfterViewInit {
     }
   }
 
-  isComparing(car: Car) {
+  isComparing(car: Car): boolean {
     return this.carCompareService.contains(car);
   }
 }

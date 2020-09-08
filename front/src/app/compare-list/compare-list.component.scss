@@ -1,9 +1,20 @@
 .compare-list {
-  td {
-    width: 300px;
+  height: 83vh; //  TODO: use vh for header or find better approach
+  max-width: 100%;
+  overflow: auto;
 
+  td.highlight {
+    background-color: #f9a825;
+  }
+
+  table {
+    min-height: 400px;
+
+  }
+
+  td {
     img {
-      width: inherit;
+      max-width: 300px;
     }
   }
 }
