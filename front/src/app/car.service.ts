@@ -17,9 +17,9 @@ export class CarService {
     );
   }
 
-  getCars(page: number = 0, limit: number = 100): Observable<Car[]> {
-    return this.http.get<Car[]>(this.carUrl + `/findByFilter?page=${page + 1}&limit=${limit}`).pipe(
-      catchError(this.handleError<Car[]>('getCars', []))
+  getCars(page: number = 0, limit: number = 100, text: string = ''): Observable<{}> {
+    return this.http.get<{}>(this.carUrl + `/findByFilter?page=${page + 1}&limit=${limit}&text=${text}`).pipe(
+      catchError(this.handleError<{}>('getCars', {}))
     );
   }
 
