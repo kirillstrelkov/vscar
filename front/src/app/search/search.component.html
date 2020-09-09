@@ -1,1 +1,6 @@
-<p>search works!</p>
+<div class="search-bar">
+  <mat-form-field class="example-form-field">
+    <mat-label>Enter car model name</mat-label>
+    <input matInput type="text" (keyup)="onSearchType($event)">
+  </mat-form-field>
+</div>

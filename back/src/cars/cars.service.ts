@@ -9,9 +9,9 @@ export class CarsService {
 
   constructor(@InjectModel(Car.name) private readonly carModel: PaginateModel<Car>) { }
 
-  async findByFilter(page: number, limit: number): Promise<PaginateResult<Car>> {
+  async findByFilter(page: number, limit: number, text: string): Promise<PaginateResult<Car>> {
     limit = limit < this.LIMIT ? limit : this.LIMIT;
-    return this.carModel.paginate({}, { page: page, limit: limit, sort: 'price' });
+    return this.carModel.paginate({name: { $regex: new RegExp(text, 'i') }}, { page: page, limit: limit, sort: 'price' });
   }
 
 

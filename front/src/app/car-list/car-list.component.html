@@ -41,8 +41,7 @@
     <tr mat-row [class]="isComparing(row) ? 'comparing' : ''" *matRowDef="let row; columns: displayedColumns;"></tr>
 
     <tr class=" mat-row" *matNoDataRow>
-      <mat-spinner></mat-spinner>
-      <!-- TODO: spinner should be in center -->
+      <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
     </tr>
   </table>
 

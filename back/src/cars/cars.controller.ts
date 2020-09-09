@@ -8,8 +8,8 @@ export class CarsController {
   constructor(private readonly carsService: CarsService) { }
 
   @Get('findByFilter')
-  async findByFilter(@Query('page') page: number, @Query('limit') limit: number): Promise<PaginateResult<Car>> {
-    return this.carsService.findByFilter(+page, +limit);
+  async findByFilter(@Query('page') page: number, @Query('limit') limit: number, @Query('text') text: string): Promise<PaginateResult<Car>> {
+    return this.carsService.findByFilter(+page, +limit, text);
   }
 
   @Get(':id')
