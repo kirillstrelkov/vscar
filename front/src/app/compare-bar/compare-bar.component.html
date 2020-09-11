@@ -1,4 +1,20 @@
-<div *ngIf="getCars().length > 1">
-  <button mat-raised-button color="primary" (click)="onCompare()">Compare
-    {{ getCars().length }} cars</button>
+<div class='compare-bar mat-elevation-z8' *ngIf="getCars().length > 1">
+  <mat-accordion>
+    <mat-expansion-panel hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Comparison list
+        </mat-panel-title>
+        <mat-panel-description>
+          <div class="description">{{ getCars().length }} cars were added</div>
+          <button mat-raised-button color="primary" (click)="onCompare()">Compare</button>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <ol>
+        <li *ngFor="let car of getCars()">{{car}}</li>
+        <!-- TODO: add car names -->
+      </ol>
+    </mat-expansion-panel>
+  </mat-accordion>
+
 </div>

@@ -6,6 +6,7 @@ import { CompareListComponent } from './compare-list/compare-list.component';
 import { SearchComponent } from './search/search.component';
 
 const routes: Routes = [
+  { path: '', redirectTo: '/cars', pathMatch: 'full' },
   { path: 'cars', component: CarListComponent },
   { path: 'cars/:id', component: CarDetailsComponent },
   { path: 'cars/compare/:ids', component: CompareListComponent },

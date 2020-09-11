@@ -6,6 +6,10 @@ import { SearchService } from '../search.service';
 import { CarService } from '../car.service';
 
 import { CarListComponent } from './car-list.component';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { OverlayModule } from '@angular/cdk/overlay';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 describe('CarListComponent', () => {
   let component: CarListComponent;
@@ -21,19 +25,20 @@ describe('CarListComponent', () => {
   });
 
   beforeEach(() => {
-    const spy = jasmine.createSpyObj('CarService');
-    fixture = TestBed.createComponent(CarListComponent);
-
     TestBed.configureTestingModule({
-      imports: [HttpClientTestingModule],
-      providers: [{ provide: CarService, useValue: spy }, SearchService, CarCompareService]
+      imports: [HttpClientTestingModule, MatSnackBarModule,
+        OverlayModule, MatPaginatorModule, BrowserAnimationsModule],
+      providers: [
+        CarService,
+        SearchService,
+        CarCompareService,
+      ]
     });
 
-    // Inject the http service and test controller for each test
+    fixture = TestBed.createComponent(CarListComponent);
+
     httpClient = TestBed.inject(HttpClient);
     httpTestingController = TestBed.inject(HttpTestingController);
-
-    // TODO: fixme -   NullInjectorError: No provider for HttpClient!
 
     component = fixture.componentInstance;
     fixture.detectChanges();

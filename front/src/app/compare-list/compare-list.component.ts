@@ -20,23 +20,7 @@ export class CompareListComponent implements AfterViewInit {
     private route: ActivatedRoute,
   ) { }
 
-  // TODO: create table:
-  // name, value1, value2, ....
-  // name, MB, VW,...
-  // image, <>, <>
-  // [{'name': 'Getribe', 'car1': 'value'. . .}]
-  // name: string;
-  // id: string; // TODO: check if id or _id should be here
-  // adac_id: number;
-  // image: string;
-  // processed_date: string;
-  // url: string;
-  // power: number;
-  // transmission: string;
-  // fuel: string;
-  // price: number;
-  // checksum: string;
-
+  // TODO: fix - if cars have same name - doesn't work as displayedColumns have duplicates
   ngAfterViewInit() {
     this.ids = this.route.snapshot.paramMap.get('ids').split(',');
 

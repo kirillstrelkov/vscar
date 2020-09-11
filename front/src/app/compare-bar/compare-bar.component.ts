@@ -22,7 +22,7 @@ export class CompareBarComponent implements OnInit {
     return this.carCompareService.comparingCarsIds;
   }
 
-  onCompare() {
+  onCompare(): void {
     const ids = this.getCars().join(',');
     this.router.navigateByUrl(`/cars/compare/${ids}`);
   }

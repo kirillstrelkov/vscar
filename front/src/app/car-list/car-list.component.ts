@@ -42,7 +42,6 @@ export class CarListComponent implements AfterViewInit {
   }
 
   private loadData(): void {
-    console.log(`Text: ${this.searchText}`);
     this.isLoadingResults = true;
 
     this.paginator.page

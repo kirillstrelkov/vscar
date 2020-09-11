@@ -1,0 +1,13 @@
+.compare-bar {
+  display: block;
+  width: 500px;
+  margin: auto;
+
+  mat-expansion-panel-header {
+    padding-right: 0px;
+  }
+
+  .description {
+    flex: 1 1 auto
+  }
+}
