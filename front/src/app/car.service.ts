@@ -11,7 +11,7 @@ export class CarService {
 
   constructor(private http: HttpClient) { }
 
-  getCar(id: number) {
+  getCar(id: number): Observable<Car> {
     return this.http.get<Car>(this.carUrl + '/' + id).pipe(
       catchError(this.handleError<Car>('getCar', null))
     );

@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
 
 import { CompareBarComponent } from './compare-bar.component';
 
@@ -14,6 +15,10 @@ describe('CompareComponent', () => {
   });
 
   beforeEach(() => {
+    TestBed.configureTestingModule({
+      imports: [RouterTestingModule],
+    });
+
     fixture = TestBed.createComponent(CompareBarComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
