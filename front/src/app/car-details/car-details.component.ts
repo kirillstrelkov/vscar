@@ -23,7 +23,6 @@ export class CarDetailsComponent implements OnInit {
   ) { }
 
   getCar(): void {
-    console.log(this.route.snapshot.paramMap);
     this.carId = +(this.carId || this.route.snapshot.paramMap.get('id'));
     this.carService.getCar(this.carId).subscribe(car => {
       this.dataSource = car.attributes;
