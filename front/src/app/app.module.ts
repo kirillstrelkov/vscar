@@ -8,6 +8,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CarComponent } from './car/car.component';
 
 
+
+import { MatSelectModule } from '@angular/material/select';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
@@ -25,7 +27,8 @@ import { CompareBarComponent } from './compare-bar/compare-bar.component';
 import { CompareListComponent } from './compare-list/compare-list.component';
 import { MatInputModule } from '@angular/material/input';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
-
+import { SidebarComponent } from './sidebar/sidebar.component';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
 
 @NgModule({
   declarations: [
@@ -37,6 +40,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     CarListComponent,
     CompareBarComponent,
     CompareListComponent,
+    SidebarComponent,
   ],
   imports: [
     BrowserModule,
@@ -44,7 +48,9 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     HttpClientModule,
     BrowserAnimationsModule,
     // Angular modules:
+    MatAutocompleteModule,
     MatInputModule,
+    MatSelectModule,
     MatSidenavModule,
     MatIconModule,
     MatCardModule,

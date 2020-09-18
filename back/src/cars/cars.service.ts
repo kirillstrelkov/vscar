@@ -2,6 +2,8 @@ import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { PaginateModel, PaginateResult } from 'mongoose';
 import { Car } from './schemas/car.schema';
+import { from, Observable, of } from 'rxjs';
+import { map, filter, pluck, concatAll, catchError, defaultIfEmpty, combineAll, scan, toArray } from 'rxjs/operators';
 
 @Injectable()
 export class CarsService {
@@ -9,17 +11,86 @@ export class CarsService {
 
   constructor(@InjectModel(Car.name) private readonly carModel: PaginateModel<Car>) { }
 
-  async findByFilter(page: number, limit: number, text: string): Promise<PaginateResult<Car>> {
+  async findByFilter(query: any): Promise<PaginateResult<Car>> {
+    const page = query['page'];
+    const text = query['text'];
+    let limit = query['limit'];
     limit = limit < this.LIMIT ? limit : this.LIMIT;
-    return this.carModel.paginate({name: { $regex: new RegExp(text, 'i') }}, { page: page, limit: limit, sort: 'price' });
+    const dbQuery = { name: { $regex: new RegExp(text, 'i') } };
+
+    // db.cars.findOne({
+    //   'attributes.name': 'Getriebeart',
+    //   'attributes.value': { $in: ['Automat. Schaltgetriebe (Doppelkupplung)', 'Automatikgetriebe']; }
+    // });
+
+    const attrQueries = [];
+    for (const [key, value] of Object.entries(query)) {
+      if (['page', 'text', 'limit'].indexOf(key) !== -1) {
+        continue;
+      }
+      attrQueries.push({
+        'attributes.name': key,
+        'attributes.value': { $in: value }
+      });
+    }
+    if (attrQueries.length > 0) {
+      dbQuery['$and'] = attrQueries;
+    }
+
+    return this.carModel.paginate(
+      dbQuery,
+      { page: page, limit: limit, sort: 'price' }
+    );
   }
 
 
   async findOne(id: number): Promise<Car> {
     return this.carModel.findOne({ 'adac_id': id }).exec();
-  }
+  };
 
   async findAll(): Promise<Car[]> {
     return this.carModel.find().limit(10).sort('price').exec();
+  };
+
+  // TODO: move to another service
+  async findNames(text: string): Promise<any> {
+    // TODO: find better implementation
+    return from(this.carModel.findOne().exec()).pipe(
+      pluck('_doc', 'attributes'),
+      concatAll(),
+      filter(attr => attr['name'].match(new RegExp(text, 'i'))),
+      pluck('name'),
+      toArray(),
+      map(names => names.sort())
+    ).toPromise();
+  };
+
+  async findValues(text: string): Promise<any> {
+    // TODO: find better implementation
+
+    return from(this.carModel.aggregate([{
+      $project: {
+        _id: 0,
+        attributes: {
+          $filter: {
+            input: "$attributes",
+            as: "attr",
+            cond: {
+              $eq: ["$$attr.name", text]
+            }
+          }
+        }
+      }
+    }, {
+      $group: {
+        _id: "$attributes.value"
+      }
+    }])).pipe(
+      concatAll(),
+      pluck('_id'),
+      concatAll(),
+      toArray(),
+      map(values => values.sort())
+    ).toPromise();
   }
 }

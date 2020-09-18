@@ -6,7 +6,9 @@ import { catchError, map, startWith, switchMap } from 'rxjs/operators';
 import { Car } from '../car';
 import { CarCompareService } from '../car-compare.service';
 import { CarService } from '../car.service';
-import { SearchService } from '../search.service';
+import { SearchArgs, SearchService } from '../search.service';
+
+// TODO: fix too many requestings
 
 @Component({
   selector: 'app-car-list',
@@ -17,7 +19,7 @@ export class CarListComponent implements AfterViewInit {
   isLoadingResults = false;
   pageSize = 5;
   resultsLength = 0;
-  private searchText = '';
+  private searchArgs = new SearchArgs();
 
   displayedColumns: string[] = ['name', 'transmission', 'fuel', 'power', 'price', 'actions'];
   data: Car[] = [];
@@ -33,9 +35,9 @@ export class CarListComponent implements AfterViewInit {
 
   // TODO: check if implementation can be improved
   ngAfterViewInit(): void {
-    this.searchService.searchText.subscribe(text => {
+    this.searchService.searchArgsOb.subscribe(args => {
       this.paginator.pageIndex = 0;
-      this.searchText = text;
+      this.searchArgs = args;
       this.loadData();
     });
     this.loadData();
@@ -48,7 +50,7 @@ export class CarListComponent implements AfterViewInit {
       .pipe(
         startWith({}),
         switchMap(() => {
-          return this.carService.getCars(this.paginator.pageIndex, this.paginator.pageSize, this.searchText);
+          return this.carService.getCars(this.paginator.pageIndex, this.paginator.pageSize, this.searchArgs.text, this.searchArgs.args);
         }),
         map(data => {
           this.resultsLength = data['total'];
