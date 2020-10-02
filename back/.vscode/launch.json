@@ -4,9 +4,16 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [{
-        "name": "Attach",
-        "port": 9229,
-        "request": "attach",
-        "type": "pwa-node"
-    }]
+            "command": "npm run resetdb",
+            "name": "Run npm run resetdb",
+            "request": "launch",
+            "type": "node-terminal"
+        },
+        {
+            "name": "Attach debugger to backend",
+            "port": 9229,
+            "request": "attach",
+            "type": "pwa-node"
+        }
+    ]
 }
