@@ -3,10 +3,11 @@ import { Observable, of } from 'rxjs';
 import { Car } from './car';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { catchError, map, tap } from 'rxjs/operators';
+import { environment } from 'src/environments/environment';
 
 @Injectable({ providedIn: 'root' })
 export class CarService {
-  private carUrl = 'http://localhost:3000/cars';
+  private carUrl = environment.apiURI;
 
 
   constructor(private http: HttpClient) { }
