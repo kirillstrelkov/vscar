@@ -2,8 +2,8 @@ import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { PaginateModel, PaginateResult } from 'mongoose';
 import { Car } from './schemas/car.schema';
-import { from, Observable, of } from 'rxjs';
-import { map, filter, pluck, concatAll, catchError, defaultIfEmpty, combineAll, scan, toArray } from 'rxjs/operators';
+import { from } from 'rxjs';
+import { map, filter, pluck, concatAll, toArray } from 'rxjs/operators';
 
 @Injectable()
 export class CarsService {
@@ -17,11 +17,6 @@ export class CarsService {
     let limit = query['limit'];
     limit = limit < this.LIMIT ? limit : this.LIMIT;
     const dbQuery = { name: { $regex: new RegExp(text, 'i') } };
-
-    // db.cars.findOne({
-    //   'attributes.name': 'Getriebeart',
-    //   'attributes.value': { $in: ['Automat. Schaltgetriebe (Doppelkupplung)', 'Automatikgetriebe']; }
-    // });
 
     const attrQueries = [];
     for (const [key, value] of Object.entries(query)) {

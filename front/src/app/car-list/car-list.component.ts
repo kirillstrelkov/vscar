@@ -40,7 +40,6 @@ export class CarListComponent implements AfterViewInit {
       this.searchArgs = args;
       this.loadData();
     });
-    this.loadData();
   }
 
   private loadData(): void {

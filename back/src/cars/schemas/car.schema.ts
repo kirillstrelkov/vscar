@@ -9,4 +9,8 @@ export class Car extends Document {
 export const CarSchema = SchemaFactory.createForClass(Car);
 CarSchema.plugin(mongoosePaginate);
 
-// Expected indecies: adac_id, name, price
+CarSchema.index({ 'adac_id': 1 }); // TODO: Add unique: true
+CarSchema.index({ 'name': 1 });
+CarSchema.index({ 'price': 1 });
+CarSchema.index({ 'attributes.name': 1 });
+CarSchema.index({ 'attributes.value': 1 });
