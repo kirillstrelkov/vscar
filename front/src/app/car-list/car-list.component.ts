@@ -72,6 +72,7 @@ export class CarListComponent implements AfterViewInit {
     this.snackBar.open('No data was found', 'Okay..(', {
       horizontalPosition: 'center',
       verticalPosition: 'top',
+      duration: 2000
     });
   }
 

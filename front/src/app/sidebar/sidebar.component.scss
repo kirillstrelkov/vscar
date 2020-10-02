@@ -1,7 +1,10 @@
-mat-drawer {
-  width: 210px;
-
-  mat-icon.delete {
-    cursor: pointer;
+mat-drawer-container{
+  mat-drawer {
+    padding: 16px;
+    width: 250px;
+  
+    mat-icon.delete {
+      cursor: pointer;
+    }
   }
 }
