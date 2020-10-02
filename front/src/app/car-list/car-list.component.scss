@@ -1,0 +1,12 @@
+td.mat-column-name {
+  cursor: pointer;
+}
+
+.mat-row.comparing,
+.mat-row:hover {
+  background-color: rgba(0, 0, 0, .075);
+}
+
+button.compare {
+  min-width: 220px;
+}
