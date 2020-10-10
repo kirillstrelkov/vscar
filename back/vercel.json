@@ -1,7 +1,10 @@
 {
     "version": 2,
+    "functions": {
+        "src/main.js": {}
+    },
     "routes": [{
         "src": "/(.*)",
-        "dest": "/dist/src/main.js"
+        "dest": "/src/main.js"
     }]
 }
