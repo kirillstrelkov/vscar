@@ -2,6 +2,6 @@
     "version": 2,
     "routes": [{
         "src": "/(.*)",
-        "dest": "/src/main.js"
+        "dest": "/dist/src/main.js"
     }]
 }
