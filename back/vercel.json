@@ -1,7 +1,10 @@
 {
     "version": 2,
     "functions": {
-        "src/main.js": {}
+        "src/main.js": {
+            "memory": 1024,
+            "maxDuration": 10
+        }
     },
     "routes": [{
         "src": "/(.*)",
