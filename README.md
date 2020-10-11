@@ -14,11 +14,27 @@ This repository contains code for car comparision app.
 
 Preview - <https://invis.io/5CXW45SJ2D6>
 
+## Live Demo
+
+- Frontend: https://vscar.vercel.app
+- Backend: https://vscar-back.herokuapp.com
+- MongoDB: `mongodb+srv://cluster0.zsfsj.mongodb.net/vscar`
+
 ## Dev
 
 ### Prerequisites
 
+#### Local MongoDB
+
 Mongodb should be up and running. Use `docker` to start mongodb backend + `MongoDB Compass` for UI.
+
+#### Cloud MongoDB
+
+[MongoDB Atlas](https://www.mongodb.com/cloud/atlas) is used as cloud database service.
+
+Set `DATABASE_URI` environment variable to `mongodb+srv://<username>:<password>@cluster0.zsfsj.mongodb.net/vscar`
+
+**NOTE**: `.env` file can be use
 
 ### Backend
 
@@ -110,3 +126,31 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 #### Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+### Deployment
+
+#### Database
+
+Use [MongoDB Compass](https://www.mongodb.com/products/compass) to access database with uri: `mongodb+srv://<username>:<password>@cluster0.zsfsj.mongodb.net/vscar`.
+
+For better performance, indexes for next keys should be created:
+
+- adac_id
+- name
+- price
+- attributes.name
+- attributes.value
+
+#### Backend
+
+To push only backend part use next command:
+
+`git subtree push --prefix back/ heroku master`
+
+Set `DATABASE_URI` config value to `mongodb+srv://<username>:<password>@cluster0.zsfsj.mongodb.net/vscar`
+
+#### Frontend
+
+Angular frontend is attached to [Vercel](https://vercel.com/) via GitHub. For any commit new version will be built.
+
+In `General` -> `Build & Development Settings` use: `ng build --prod` to use production environment.
