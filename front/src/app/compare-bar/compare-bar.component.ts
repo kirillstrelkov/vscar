@@ -18,12 +18,16 @@ export class CompareBarComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  getCars(): number[] {
-    return this.carCompareService.comparingCarsIds;
+  getCars(): Car[] {
+    return this.carCompareService.comparingCars;
+  }
+
+  getCarsIds(): number[] {
+    return this.getCars().map(car => car.adac_id);
   }
 
   onCompare(): void {
-    const ids = this.getCars().join(',');
+    const ids = this.getCarsIds().join(',');
     this.router.navigateByUrl(`/cars/compare/${ids}`);
   }
 
