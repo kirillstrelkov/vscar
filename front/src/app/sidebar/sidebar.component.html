@@ -1,5 +1,5 @@
 <mat-drawer-container class="sidebar">
-  <mat-drawer mode="side" opened>
+  <mat-drawer #drawer mode="side" opened>
     <button mat-button mat-raised-button color="primary" (click)="addFilter()">Add filter</button>
     <div *ngFor="let filter of filters">
       <mat-form-field class="search-form-field" *ngIf="!filter.isReady">
