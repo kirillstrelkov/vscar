@@ -5,24 +5,33 @@ import { Car } from './car';
   providedIn: 'root'
 })
 export class CarCompareService {
-  // TODO: improve?
-  comparingCarsIds: number[] = [];
+  // TODO: improve - speedup?
+  comparingCars: Car[] = [];
+  comparingCarIds: number[] = [];
 
   constructor() { }
 
   add(car: Car): void {
     if (!this.contains(car)) {
-      this.comparingCarsIds.push(car.adac_id);
+      this.comparingCars.push(car);
+      this.comparingCarIds.push(car.adac_id);
     }
   }
+
   remove(car: Car): void {
     if (this.contains(car)) {
-      this.comparingCarsIds.splice(this.comparingCarsIds.indexOf(car.adac_id, 0), 1);
+      const index = this.carIndex(car);
+      this.comparingCarIds.splice(index, 1);
+      this.comparingCars.splice(index, 1);
     }
   }
 
   contains(car: Car): boolean {
-    return this.comparingCarsIds.indexOf(car.adac_id, 0) !== -1;
+    return this.carIndex(car) !== -1;
+  }
+
+  private carIndex(car: Car): number {
+    return this.comparingCarIds.indexOf(car.adac_id, 0);
   }
 }
 

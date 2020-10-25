@@ -11,8 +11,7 @@
         </mat-panel-description>
       </mat-expansion-panel-header>
       <ol>
-        <li *ngFor="let car of getCars()">{{car}}</li>
-        <!-- TODO: add car names -->
+        <li *ngFor="let car of getCars()">{{car.name}}</li>
       </ol>
     </mat-expansion-panel>
   </mat-accordion>
