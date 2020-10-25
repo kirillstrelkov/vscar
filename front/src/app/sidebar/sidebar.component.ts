@@ -1,7 +1,9 @@
-import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { MatSidenav } from '@angular/material/sidenav';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { CarService } from '../car.service';
 import { SearchService } from '../search.service';
+import { SidebarService } from '../sidebar.service';
 
 
 // TODO: come up with better names
@@ -34,14 +36,20 @@ export class AttributeFilter {
   styleUrls: ['./sidebar.component.scss']
 })
 export class SidebarComponent implements OnInit {
+  @ViewChild('drawer') sidenav: MatSidenav;
+
   filters: AttributeFilter[] = [];
 
   constructor(
     private carService: CarService,
     private searchService: SearchService,
+    private sidebarService: SidebarService
   ) { }
 
   ngOnInit(): void {
+    this.sidebarService.sidebarOb.subscribe(() => {
+      this.sidenav.toggle();
+    });
   }
 
   addFilter(): void {
