@@ -1,17 +1,23 @@
+@import "../../styles.scss";
+
 .compare-bar {
-  position:fixed;
-  bottom:0px;
+  position: fixed;
+  bottom: 0px;
   right: 200px;
 
   display: block;
   width: 500px;
-  margin: auto;
+
+  @media only screen and (max-width: $small-width) {
+    right: 0;
+    width: 100%;
+  }
 
   mat-expansion-panel-header {
     padding-right: 0px;
   }
 
   .description {
-    flex: 1 1 auto
+    flex: 1 1 auto;
   }
 }

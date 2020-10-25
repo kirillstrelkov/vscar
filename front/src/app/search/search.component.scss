@@ -1,4 +1,7 @@
-.search-bar .mat-form-field {
-  width: 250px;
-  height: 40px;
+.search-bar {
+  .mat-form-field {
+    width: 250px;
+    height: 40px;
+    margin: 10px;
+  }
 }
