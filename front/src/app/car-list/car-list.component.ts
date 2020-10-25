@@ -20,6 +20,7 @@ export class CarListComponent implements AfterViewInit {
   pageSize = 5;
   resultsLength = 0;
   private searchArgs = new SearchArgs();
+  isMobile = false;
 
   displayedColumns: string[] = ['name', 'transmission', 'fuel', 'power', 'price', 'actions'];
   data: Car[] = [];
@@ -40,6 +41,11 @@ export class CarListComponent implements AfterViewInit {
       this.searchArgs = args;
       this.loadData();
     });
+
+    this.isMobile = window.screen.width < 600;
+    if (this.isMobile) {
+      this.displayedColumns = ['name', 'actions'];
+    }
   }
 
   private loadData(): void {

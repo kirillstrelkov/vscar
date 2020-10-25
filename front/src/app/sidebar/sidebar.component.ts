@@ -36,6 +36,8 @@ export class AttributeFilter {
   styleUrls: ['./sidebar.component.scss']
 })
 export class SidebarComponent implements OnInit {
+  // TODO: side bar should overflow when toggled - only on mobile
+
   @ViewChild('drawer') sidenav: MatSidenav;
 
   filters: AttributeFilter[] = [];

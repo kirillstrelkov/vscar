@@ -1,12 +1,20 @@
+@import "../../styles.scss";
+
 td.mat-column-name {
   cursor: pointer;
 }
 
 .mat-row.comparing,
 .mat-row:hover {
-  background-color: rgba(0, 0, 0, .075);
+  background-color: rgba(0, 0, 0, 0.075);
 }
 
-button.compare {
-  min-width: 220px;
+@media only screen and (max-width: $small-width) {
+  td.mat-cell:last-of-type {
+    padding-right: 5px;
+  }
+
+  td.mat-cell:first-of-type {
+    padding-left: 5px;
+  }
 }
