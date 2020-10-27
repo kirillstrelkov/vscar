@@ -28,6 +28,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 @NgModule({
   declarations: [
@@ -46,6 +47,7 @@ import { MatAutocompleteModule } from '@angular/material/autocomplete';
     HttpClientModule,
     BrowserAnimationsModule,
     // Angular modules:
+    MatTooltipModule,
     MatAutocompleteModule,
     MatInputModule,
     MatSelectModule,

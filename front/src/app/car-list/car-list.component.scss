@@ -9,7 +9,48 @@ td.mat-column-name {
   background-color: rgba(0, 0, 0, 0.075);
 }
 
+.mat-column-power,
+.mat-column-fuel,
+.mat-column-price {
+  text-align: center;
+}
+
+@media only screen and (min-width: $small-width) {
+  .mat-column-name,
+  .mat-column-transmission {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .mat-column-name {
+    max-width: 350px;
+  }
+
+  .mat-column-transmission {
+    max-width: 110px;
+  }
+
+  .mat-column-actions {
+    width: 176px;
+  }
+}
+
 @media only screen and (max-width: $small-width) {
+  .mat-column-name {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .mat-column-name {
+    max-width: 10px;
+  }
+
+  .mat-column-actions {
+    width: 60px;
+  }
+
   td.mat-cell:last-of-type {
     padding-right: 5px;
   }

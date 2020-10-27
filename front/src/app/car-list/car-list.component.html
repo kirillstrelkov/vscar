@@ -4,12 +4,15 @@
   <table mat-table [dataSource]="data" class="mat-elevation-z8">
     <ng-container matColumnDef="name">
       <th mat-header-cell *matHeaderCellDef> Name </th>
-      <td mat-cell *matCellDef="let car" [routerLink]="['/cars', car.adac_id]"> {{car.name}} </td>
+      <td mat-cell matTooltip="{{car.name}}" [matTooltipShowDelay]="1000" *matCellDef="let car"
+        [routerLink]="['/cars', car.adac_id]">
+        {{car.name}} </td>
     </ng-container>
 
     <ng-container matColumnDef="transmission">
       <th mat-header-cell *matHeaderCellDef> Transmission </th>
-      <td mat-cell *matCellDef="let car"> {{car.transmission}} </td>
+      <td mat-cell matTooltip="{{car.transmission}}" [matTooltipShowDelay]="1000" *matCellDef="let car">
+        {{car.transmission}} </td>
     </ng-container>
 
     <ng-container matColumnDef="fuel">
