@@ -9,7 +9,9 @@
 
   table {
     min-height: 400px;
-
+    .mat-row:hover {
+      background-color: lightgray;
+    }
   }
 
   td {
