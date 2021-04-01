@@ -24,6 +24,26 @@ Preview - <https://invis.io/5CXW45SJ2D6>
 
 ### Prerequisites
 
+#### nodejs
+
+For Ubuntu use snap and specify proper version for node:
+
+```bash
+sudo snap install node --classic --channel=14
+```
+
+#### Angular CLI
+
+```bash
+npm install -g @angular/cli
+```
+
+_NOTE: if not installed globally create alias for `ng`:_
+
+```bash
+alias ng=./node_modules/.bin/ng
+```
+
 #### Local MongoDB
 
 Mongodb should be up and running. Use `docker` to start mongodb backend + `MongoDB Compass` for UI.
@@ -32,11 +52,18 @@ Mongodb should be up and running. Use `docker` to start mongodb backend + `Mongo
 
 [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) is used as cloud database service.
 
-Set `DATABASE_URI` environment variable to `mongodb+srv://<username>:<password>@cluster0.zsfsj.mongodb.net/vscar`
+Set `DATABASE_URI` environment variable to `mongodb+srv://user:user@cluster0.zsfsj.mongodb.net/vscar`
 
-**NOTE**: `.env` file can be use
+**NOTE**: `.env` file can be use:
+
+```bash
+DATABASE_URI=mongodb+srv://user:user@cluster0.zsfsj.mongodb.net/vscar
+PORT=3000
+```
 
 ### Backend
+
+Set `PORT` env variable to 3000 or use `.env` file.
 
 Initialize db:
 
@@ -61,7 +88,11 @@ npm run start:dev
 #### Installation
 
 ```bash
-$ npm install
+cd front
+npm install
+
+cd back
+npm install
 ```
 
 #### Running the app
