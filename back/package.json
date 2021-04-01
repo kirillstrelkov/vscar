@@ -22,7 +22,7 @@
     "resetdb": "ts-node ./reset_db.ts"
   },
   "dependencies": {
-    "@nestjs/common": "^7.0.0",
+    "@nestjs/common": "^7.6.15",
     "@nestjs/config": "^0.5.0",
     "@nestjs/core": "^7.0.0",
     "@nestjs/mongoose": "^7.0.2",
@@ -31,7 +31,7 @@
     "cache-manager": "^3.4.0",
     "extract-zip": "^2.0.1",
     "helmet": "^4.1.0",
-    "mongoose": "^5.10.3",
+    "mongoose": "^5.12.3",
     "mongoose-paginate": "^5.0.3",
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.2",
@@ -45,7 +45,6 @@
     "@nestjs/testing": "^7.0.0",
     "@types/express": "^4.17.3",
     "@types/jest": "26.0.10",
-    "@types/mongoose": "^5.7.36",
     "@types/mongoose-paginate": "^5.0.8",
     "@types/node": "^13.9.1",
     "@types/supertest": "^2.0.8",
