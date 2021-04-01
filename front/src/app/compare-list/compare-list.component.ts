@@ -1,7 +1,6 @@
-import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { forkJoin, merge, of } from 'rxjs';
-import { catchError, map } from 'rxjs/operators';
+import { forkJoin } from 'rxjs';
 import { CarService } from '../car.service';
 
 @Component({
@@ -15,6 +14,8 @@ export class CompareListComponent implements AfterViewInit {
   displayedColumns: string[] = [];
   data: object[] = [];
 
+  readonly attrString = "Attribute";
+
   constructor(
     private carService: CarService,
     private route: ActivatedRoute,
@@ -24,58 +25,76 @@ export class CompareListComponent implements AfterViewInit {
   ngAfterViewInit() {
     this.ids = this.route.snapshot.paramMap.get('ids').split(',');
 
-    const attrsToSkip = ['checksum'];
-    const attrsToAdd = ['name', 'image'];
+    const attrsToSkip = new Set(['checksum']);
+    const attrsToAdd = ['image', 'name'];
 
     this.data = [];
     // TODO: fix implmentation use rxJS properly
     forkJoin(...this.ids.map((id) => this.carService.getCar(+id)))
       .subscribe(cars => {
-        this.displayedColumns = ['name'];
-        let newData = [];
+        this.displayedColumns = [this.attrString];
 
         for (const car of cars) {
           this.displayedColumns.push(car.name);
         }
 
         const attrs = attrsToAdd.concat(cars[0].attributes.map((c) => c.name));
-
+        let newData = [];
         for (const attr of attrs) {
-          const isAttrToSkip = attrsToSkip.indexOf(attr) !== -1;
-          if (isAttrToSkip) {
+          if (attrsToSkip.has(attr)) {
             continue;
           }
-          const cellData = { name: { value: attr } };
+
+          let rowData = {};
+          rowData[this.attrString] = { value: attr };
+
+          /* 
+          rowData contains attribute data for cars and attribute name itself, example:
+          {
+            'Attribute': { value: 'Grundpreis'; },
+            'VW Golf': { value: '25000 Euro'; },
+            'Audi A1': { value: '30000 Euro'; }
+          }
+          
+          Would be rendered to:
+          | Attribute  | VW Golf    | Audi A1     |
+          | Grundpreis | 25000 Euro | 30000 Euro  |
+          
+          NOTE: in some cases contains additional information
+          */
           for (const car of cars) {
             const carName = car.name;
 
             const isField = attrsToAdd.indexOf(attr) !== -1;
             if (isField) {
-              cellData[carName] = { value: car[attr] };
+              rowData[carName] = { value: car[attr] };
               if (attr === 'name') {
-                cellData[carName].url = car.url;
+                rowData[carName].url = car.url;
               }
               if (attr === 'image') {
-                cellData[carName].name = attr;
+                rowData[carName].name = attr;
               }
             } else {
               for (const carAttr of car.attributes) {
                 if (carAttr.name === attr) {
-                  cellData[carName] = { value: carAttr.value };
+                  rowData[carName] = { value: carAttr.value };
                   break;
                 }
               }
             }
           }
-          newData.push(cellData);
-        }
+          newData.push(rowData);
+        };
         // TODO: reorder ?
 
+
+        // Remove empty rows and set difference flag if attributes are different
         const emptyRows = [];
+        const nameAndImage = new Set(['name', 'image']);
         // TODO: come up with heat map integration, same values - same color
         for (const row of newData) {
           // 2 = 1 value for attribute name + 1 unique value for all other cars
-          if (new Set(['name', 'image']).has(row.name.value)) {
+          if (nameAndImage.has(row[this.attrString].value)) {
             continue;
           }
           const uniqValues = new Set();
@@ -87,7 +106,7 @@ export class CompareListComponent implements AfterViewInit {
           }
 
           const hasDifferentValues = uniqValues.size !== 2;
-          row.name.hasDifferentValues = hasDifferentValues;
+          row[this.attrString].hasDifferentValues = hasDifferentValues;
 
           if (!hasDifferentValues && (lastAttrValue == null || lastAttrValue === '')) {
             emptyRows.push(row);
