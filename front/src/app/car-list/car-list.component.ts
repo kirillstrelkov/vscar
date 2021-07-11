@@ -1,7 +1,7 @@
-import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { merge, of } from 'rxjs';
+import { of } from 'rxjs';
 import { catchError, map, startWith, switchMap } from 'rxjs/operators';
 import { Car } from '../car';
 import { CarCompareService } from '../car-compare.service';
@@ -55,7 +55,7 @@ export class CarListComponent implements AfterViewInit {
       .pipe(
         startWith({}),
         switchMap(() => {
-          return this.carService.getCars(this.paginator.pageIndex, this.paginator.pageSize, this.searchArgs.text, this.searchArgs.args);
+          return this.carService.getCars(this.paginator.pageIndex, this.paginator.pageSize, this.searchArgs.getText(), this.searchArgs.getArgs());
         }),
         map(data => {
           this.resultsLength = data['total'];

@@ -1,9 +1,9 @@
 import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { PaginateModel, PaginateResult } from 'mongoose';
-import { Car } from './schemas/car.schema';
 import { from } from 'rxjs';
-import { map, filter, pluck, concatAll, toArray } from 'rxjs/operators';
+import { concatAll, filter, map, pluck, toArray } from 'rxjs/operators';
+import { Car } from './schemas/car.schema';
 
 @Injectable()
 export class CarsService {
@@ -16,7 +16,7 @@ export class CarsService {
     const text = query['text'];
     let limit = query['limit'];
     limit = limit < this.LIMIT ? limit : this.LIMIT;
-    const dbQuery = { name: { $regex: new RegExp(text, 'i') } };
+    const dbQuery = {};
 
     const attrQueries = [];
     for (const [key, value] of Object.entries(query)) {
@@ -28,8 +28,14 @@ export class CarsService {
         'attributes.value': { $in: value }
       });
     }
+
     if (attrQueries.length > 0) {
       dbQuery['$and'] = attrQueries;
+      if (text.length > 0) {
+        attrQueries.push({ 'name': { $regex: new RegExp(text, 'i') } });
+      }
+    } else if (text.length > 0) {
+      dbQuery['name'] = { $regex: new RegExp(text, 'i') };
     }
 
     return this.carModel.paginate(

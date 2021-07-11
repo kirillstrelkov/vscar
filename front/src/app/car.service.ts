@@ -1,9 +1,9 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
-import { Car } from './car';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { catchError, map, tap } from 'rxjs/operators';
+import { catchError } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
+import { Car } from './car';
 
 @Injectable({ providedIn: 'root' })
 export class CarService {
@@ -22,9 +22,9 @@ export class CarService {
     let url = this.carUrl + `/findByFilter?page=${page + 1}&limit=${limit}&text=${text}`;
     if (args !== null) {
       // TODO: improve
-      for (const [attrName, attrValues] of Object.entries(args)) {
+      for (const [attrName, attrValues] of args) {
         for (const attrValue of attrValues) {
-          url += `&${attrName}[]=${attrValue}`;
+          url += `&${encodeURIComponent(attrName)}[]=${encodeURIComponent(attrValue)}`;
         }
       }
     }
@@ -35,13 +35,13 @@ export class CarService {
   }
 
   getAttributes(text: string = ''): Observable<[]> {
-    return this.http.get<[]>(this.carUrl + `/attributes/names?text=${text}`).pipe(
+    return this.http.get<[]>(this.carUrl + `/attributes/names?text=${encodeURIComponent(text)}`).pipe(
       catchError(this.handleError<[]>('getAttributes', []))
     );
   }
 
   getAttributeValues(text: string = ''): Observable<[]> {
-    return this.http.get<[]>(this.carUrl + `/attributes/values?text=${text}`).pipe(
+    return this.http.get<[]>(this.carUrl + `/attributes/values?text=${encodeURIComponent(text)}`).pipe(
       catchError(this.handleError<[]>('getAttributeValues', []))
     );
   }

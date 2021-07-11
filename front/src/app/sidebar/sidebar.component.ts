@@ -65,9 +65,9 @@ export class SidebarComponent implements OnInit {
   }
 
   removeFilter(filter: AttributeFilter): void {
-    // TODO: remove attributes arguments from this.searchService
-    //     this.searchService.changeSearchText(null, args);
+    this.searchService.removeArgument(filter.name);
     this.filters.splice(this.filters.indexOf(filter), 1);
+    this.searchService.changeSearchText(null, null);
   }
 
   onSearch(event: any, filter: AttributeFilter): void {
@@ -86,7 +86,7 @@ export class SidebarComponent implements OnInit {
 
   onChange(value: any, attrName: string): void {
     const args = new Map();
-    args[attrName] = value;
+    args.set(attrName, value);
     this.searchService.changeSearchText(null, args);
   }
 }
