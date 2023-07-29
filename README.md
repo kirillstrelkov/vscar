@@ -16,8 +16,8 @@ Preview - <https://invis.io/5CXW45SJ2D6>
 
 ## Live Demo
 
-- Frontend: https://vscar.vercel.app
-- Backend: https://vscar-back.herokuapp.com
+- Frontend: <https://vscar.vercel.app>
+- Backend: <https://vscar-back.herokuapp.com>
 - MongoDB: `mongodb+srv://cluster0.zsfsj.mongodb.net/vscar`
 
 ## Dev
@@ -47,6 +47,14 @@ alias ng=./node_modules/.bin/ng
 #### Local MongoDB
 
 Mongodb should be up and running. Use `docker` to start mongodb backend + `MongoDB Compass` for UI.
+
+Start MongoDB in Docker:
+
+```
+docker run --name mongodb -d -p 27017:27017 mongo
+```
+
+Set `DATABASE_URI` environment variable to `mongodb://127.0.0.1:27017/vscar`
 
 #### Cloud MongoDB
 
