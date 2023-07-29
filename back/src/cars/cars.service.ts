@@ -1,10 +1,9 @@
 import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { PaginateModel, PaginateResult } from 'mongoose';
-import { from } from 'rxjs';
-import { concatAll, filter, map, pluck, toArray } from 'rxjs/operators';
+import { from, iif } from 'rxjs';
+import { concatAll, filter, map, mergeMap, pluck, toArray } from 'rxjs/operators';
 import { Car } from './schemas/car.schema';
-
 @Injectable()
 export class CarsService {
   private readonly LIMIT: number = 100;
@@ -55,10 +54,10 @@ export class CarsService {
 
   // TODO: move to another service
   async findNames(text: string): Promise<any> {
-    // TODO: find better implementation
     return from(this.carModel.findOne().exec()).pipe(
       pluck('_doc', 'attributes'),
       concatAll(),
+      filter(attr => !attr['name'].endsWith('fixed')),
       filter(attr => attr['name'].match(new RegExp(text, 'i'))),
       pluck('name'),
       toArray(),
@@ -67,9 +66,15 @@ export class CarsService {
   };
 
   async findValues(text: string): Promise<any> {
-    // TODO: find better implementation
+    // attribute is numeric so take attribute data from column_data
+    let numeric_attr = from(this.carModel.findOne({}, { _id: 0, attributes: { $elemMatch: { name: { $eq: text } } } }).exec()).pipe(
+      pluck('_doc', 'attributes'),
+      map(arr => arr[0]),
+      pluck('column_data'),
+    );
 
-    return from(this.carModel.aggregate([{
+    // find all values for attribute if type is string
+    let str_attr = from(this.carModel.aggregate([{
       $project: {
         _id: 0,
         attributes: {
@@ -92,6 +97,17 @@ export class CarsService {
       concatAll(),
       toArray(),
       map(values => values.sort())
+    );
+
+    return from(this.carModel.findOne({}, { _id: 0, attributes: { $elemMatch: { name: { $eq: text } } } }).exec()).pipe(
+      pluck('_doc', 'attributes'),
+      map(arr => arr[0]),
+      pluck('column_data'),
+      mergeMap(data => iif(
+        () => data.type == 'str',
+        str_attr,
+        numeric_attr,
+      ))
     ).toPromise();
   }
 }
