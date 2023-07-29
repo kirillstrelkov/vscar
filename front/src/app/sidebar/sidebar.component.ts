@@ -5,7 +5,6 @@ import { CarService } from '../car.service';
 import { SearchService } from '../search.service';
 import { SidebarService } from '../sidebar.service';
 
-
 // TODO: come up with better names
 export class AttributeFilter {
   constructor(name: string) {
@@ -13,6 +12,8 @@ export class AttributeFilter {
     this.nameOptions = [];
     this.valueOptions = [];
     this.status = '';
+    this.min = 0;
+    this.max = 0;
 
     this.subject = new BehaviorSubject(this.name);
     this.observable = this.subject.asObservable();
@@ -23,6 +24,9 @@ export class AttributeFilter {
   valueOptions: string[];
   status: string;
   isReady = false;
+  isNumeric = false;
+  min: number;
+  max: number;
 
   // TODO: check implementation
   subject: BehaviorSubject<string>;
@@ -78,8 +82,17 @@ export class SidebarComponent implements OnInit {
     filter.status = 'Loading...';
     filter.name = attrName;
     filter.isReady = true;
-    this.carService.getAttributeValues(attrName).subscribe(a => {
-      filter.valueOptions = a;
+    this.carService.getAttributeValues(attrName).subscribe(attrs => {
+      filter.isNumeric = !Array.isArray(attrs);
+
+      if (filter.isNumeric) {
+        console.log(attrs);
+        filter.valueOptions = attrs['additional_values'];
+        filter.min = attrs['range']['min'];
+        filter.max = attrs['range']['max'];
+      } else {
+        filter.valueOptions = attrs;
+      }
       filter.status = filter.name;
     });
   }

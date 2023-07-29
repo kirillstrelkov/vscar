@@ -6,5 +6,9 @@ mat-drawer-container{
     mat-icon.delete {
       cursor: pointer;
     }
+
+    mat-slider{
+      width: 200px;
+    }
   }
 }
