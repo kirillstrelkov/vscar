@@ -1,6 +1,5 @@
 import { CacheInterceptor, CacheModule, Module } from '@nestjs/common';
-import { ConfigModule } from '@nestjs/config';
-import { ConfigService } from '@nestjs/config';
+import { ConfigModule, ConfigService } from '@nestjs/config';
 import { APP_INTERCEPTOR } from '@nestjs/core';
 
 import { MongooseModule } from '@nestjs/mongoose';
