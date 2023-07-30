@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { CarService } from '../car.service';
 import { SearchService } from '../search.service';
 
 @Component({
@@ -17,7 +16,6 @@ export class SearchComponent implements OnInit {
   }
 
   onSearchType(event: any): void {
-    // TODO: check for performance
     this.searchService.changeSearchText(event.target.value);
   }
 }
