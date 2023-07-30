@@ -15,6 +15,7 @@ td.mat-column-name {
 }
 
 @media only screen and (min-width: $small-width) {
+
   .mat-column-name,
   .mat-column-transmission {
     text-overflow: ellipsis;
@@ -31,7 +32,11 @@ td.mat-column-name {
   }
 
   .mat-column-actions {
-    width: 176px;
+    width: 260px;
+
+    button {
+      width: inherit
+    }
   }
 }
 
