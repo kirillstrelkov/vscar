@@ -13,7 +13,7 @@ import { SearchArgs, SearchService } from '../search.service';
 @Component({
   selector: 'app-car-list',
   templateUrl: './car-list.component.html',
-  styleUrls: ['./car-list.component.scss']
+  styleUrls: ['./car-list.component.scss'],
 })
 export class CarListComponent implements AfterViewInit {
   isLoadingResults = false;
@@ -22,21 +22,28 @@ export class CarListComponent implements AfterViewInit {
   private searchArgs = new SearchArgs();
   isMobile = false;
 
-  displayedColumns: string[] = ['name', 'transmission', 'fuel', 'power', 'price', 'actions'];
+  displayedColumns: string[] = [
+    'name',
+    'transmission',
+    'fuel',
+    'power',
+    'price',
+    'actions',
+  ];
   data: Car[] = [];
 
   constructor(
     private carService: CarService,
     private searchService: SearchService,
     private carCompareService: CarCompareService,
-    private snackBar: MatSnackBar,
+    private snackBar: MatSnackBar
   ) { }
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
   // TODO: check if implementation can be improved
   ngAfterViewInit(): void {
-    this.searchService.searchArgsOb.subscribe(args => {
+    this.searchService.searchArgsOb.subscribe((args) => {
       this.paginator.pageIndex = 0;
       this.searchArgs = args;
       this.loadData();
@@ -55,9 +62,15 @@ export class CarListComponent implements AfterViewInit {
       .pipe(
         startWith({}),
         switchMap(() => {
-          return this.carService.getCars(this.paginator.pageIndex, this.paginator.pageSize, this.searchArgs.getText(), this.searchArgs.getArgs());
+          return this.carService.getCars(
+            this.paginator.pageIndex,
+            this.paginator.pageSize,
+            this.searchArgs.getText(),
+            this.searchArgs.getAttributes(),
+            this.searchArgs.getRange()
+          );
         }),
-        map(data => {
+        map((data) => {
           this.resultsLength = data['total'];
           return data['docs'];
         }),
@@ -65,10 +78,11 @@ export class CarListComponent implements AfterViewInit {
           console.log('Error to fetch data');
           return of<Car[]>([]);
         })
-      ).subscribe(data => {
+      )
+      .subscribe((data) => {
         this.data = data;
         this.isLoadingResults = false;
-        if (data.length === 0) {
+        if (data === undefined || data.length === 0) {
           this.openSnackBar();
         }
       });
@@ -78,7 +92,7 @@ export class CarListComponent implements AfterViewInit {
     this.snackBar.open('No data was found', 'Okay..(', {
       horizontalPosition: 'center',
       verticalPosition: 'top',
-      duration: 2000
+      duration: 2000,
     });
   }
 

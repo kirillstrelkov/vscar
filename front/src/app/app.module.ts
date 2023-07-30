@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
@@ -27,7 +28,6 @@ import { CompareListComponent } from './compare-list/compare-list.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { SearchComponent } from './search/search.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
-
 
 
 
@@ -65,6 +65,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
     MatSnackBarModule,
     MatSliderModule,
     MatFormFieldModule,
+    MatCheckboxModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

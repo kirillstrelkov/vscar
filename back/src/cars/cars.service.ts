@@ -18,29 +18,85 @@ export class CarsService {
     const dbQuery = {};
 
     const attrQueries = [];
-    for (const [key, value] of Object.entries(query)) {
+    console.log(Object.entries(query));
+    for (let [key, values] of Object.entries(query)) {
       if (['page', 'text', 'limit'].indexOf(key) !== -1) {
         continue;
       }
-      attrQueries.push({
-        'attributes.name': key,
-        'attributes.value': { $in: value }
-      });
+      if (key.indexOf('_range') !== -1) {
+        key = key.replace('_range', '|fixed');
+        attrQueries.push({
+          "attributes": {
+            $elemMatch: {
+              name: key,
+              value: { $gte: parseInt(values[0]), $lte: parseInt(values[1]) }
+            }
+          }
+        });
+      } else {
+        attrQueries.push({
+          "attributes": {
+            $elemMatch: {
+              name: key,
+              value: {
+                $in: (values as string[]).map((v: string) => v === 'null' ? null : v)
+              }
+            }
+          }
+        });
+      }
     }
 
     if (attrQueries.length > 0) {
+      console.log(JSON.stringify(attrQueries, null, "  "));
       dbQuery['$and'] = attrQueries;
-      if (text.length > 0) {
-        attrQueries.push({ 'name': { $regex: new RegExp(text, 'i') } });
-      }
-    } else if (text.length > 0) {
+    }
+
+    if (text.length > 0) {
       dbQuery['name'] = { $regex: new RegExp(text, 'i') };
     }
 
-    return this.carModel.paginate(
-      dbQuery,
-      { page: page, limit: limit, sort: 'price' }
-    );
+    console.log(JSON.stringify(dbQuery, null, "  "));
+    console.log(dbQuery);
+
+    const pipeline = [
+      { $match: dbQuery },
+      { $sort: { 'price': 1 } },
+      {
+        $facet: {
+          paginatedResults: [
+            { $skip: (page - 1) * limit },
+            { $limit: limit }
+          ],
+          totalCount: [
+            { $count: 'total' }
+          ]
+        }
+      },
+      { $unwind: '$paginatedResults' },
+      { $replaceRoot: { newRoot: '$paginatedResults' } }
+    ];
+
+
+    const paginatedResultsQuery = this.carModel.aggregate(pipeline).exec();
+    const totalCountQuery = this.carModel.estimatedDocumentCount();
+
+    const combinedQueries$ = from(Promise.all([totalCountQuery, paginatedResultsQuery]));
+
+    return combinedQueries$.pipe(
+      map(([totalCount, paginatedResults]) => {
+        const totalPages = Math.ceil(totalCount / limit);
+        const offset = (page - 1) * limit;
+        return {
+          docs: paginatedResults,
+          total: totalCount,
+          limit: limit,
+          page,
+          pages: totalPages,
+          offset
+        };
+      })
+    ).toPromise();
   }
 
 
