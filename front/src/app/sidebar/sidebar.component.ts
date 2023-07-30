@@ -11,6 +11,7 @@ export class AttributeFilter {
     this.name = name;
     this.nameOptions = [];
     this.valueOptions = [];
+    this.selected = [];
     this.status = '';
     this.min = 0;
     this.max = 0;
@@ -24,6 +25,7 @@ export class AttributeFilter {
   name: string;
   nameOptions: string[];
   valueOptions: string[];
+  selected: string[];
   status: string;
   isReady = false;
   isNumeric = false;
@@ -31,6 +33,7 @@ export class AttributeFilter {
   max: number;
   currentMin: number;
   currentMax: number;
+  useRange = false;
 
   // TODO: check implementation
   subject: BehaviorSubject<string>;
@@ -90,7 +93,6 @@ export class SidebarComponent implements OnInit {
       filter.isNumeric = !Array.isArray(attrs);
 
       if (filter.isNumeric) {
-        console.log(attrs); // TODO: remove
         filter.valueOptions = attrs['additional_values'];
         filter.min = attrs['range']['min'];
         filter.max = attrs['range']['max'];
@@ -100,27 +102,46 @@ export class SidebarComponent implements OnInit {
         filter.valueOptions = attrs;
       }
       filter.status = filter.name;
+      console.log(filter);
     });
   }
 
-  onChange(value: any, attrName: string): void {
-    const args = new Map();
-    args.set(attrName, value);
-    this.searchService.changeSearchText(null, args);
+  onChange(values: string[], filter: AttributeFilter): void {
+    filter.selected = values;
+    this.search(filter);
   }
 
   onRangeChange(event: any, filter: AttributeFilter): void {
     let value = event.target.valueAsNumber;
     if (filter.min <= value && value <= filter.max) {
-      if (event.target.className.indexOf("right") !== -1) {
+      const isRight = event.target.className.indexOf("slider-right") !== -1;
+
+      if (isRight) {
         filter.currentMax = value;
       } else {
         filter.currentMin = value;
       }
-      if (event.type === 'change') {
-        // send request
+
+      if (event.type === 'change' && filter.useRange) {
+        this.search(filter);
       }
     }
   }
 
+  onChangeUseRange(event: any, filter: AttributeFilter): void {
+    filter.useRange = event.checked;
+    this.search(filter);
+  }
+
+  search(filter: AttributeFilter): void {
+    const attributes = new Map();
+    attributes.set(filter.name, filter.selected);
+
+    let range = null;
+    if (filter.useRange) {
+      range = [filter.currentMin, filter.currentMax];
+    }
+
+    this.searchService.changeSearchText(null, attributes, range);
+  }
 }

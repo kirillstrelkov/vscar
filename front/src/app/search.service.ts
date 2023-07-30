@@ -6,12 +6,13 @@ export class SearchArgs {
 
   constructor(text: string = '') {
     this.text = text;
-    this.args = new Map();
+    this.attributesAndValues = new Map();
   }
 
 
   private text: string;
-  private args: Map<string, string[]>;
+  private attributesAndValues: Map<string, string[]>;
+  private range: number[];
 
   setText(text: string): void {
     this.text = text;
@@ -21,16 +22,24 @@ export class SearchArgs {
     return this.text;
   }
 
-  addArgument(name: string, value: string[]): void {
-    this.args.set(name, value);
+  addAttribute(name: string, value: string[]): void {
+    this.attributesAndValues.set(name, value);
   }
 
   removeArgument(name: string): void {
-    this.args.delete(name);
+    this.attributesAndValues.delete(name);
   }
 
-  getArgs(): Map<string, string[]> {
-    return this.args;
+  getAttributes(): Map<string, string[]> {
+    return this.attributesAndValues;
+  }
+
+  setRange(range: number[]): void {
+    this.range = range;
+  }
+
+  getRange(): number[] {
+    return this.range;
   }
 }
 
@@ -45,15 +54,23 @@ export class SearchService {
 
   constructor() { }
 
-  changeSearchText(text: string = null, args: Map<string, string[]> = null): void {
+  changeSearchText(text: string = null, attributes: Map<string, string[]> = null, range: number[] = null): void {
     if (text !== null) {
       this.searchArgs.setText(text);
     }
-    if (args !== null) {
-      for (const [key, value] of args) {
-        this.searchArgs.addArgument(key, value);
+
+    if (attributes !== null) {
+      for (const [key, value] of attributes) {
+        this.searchArgs.addAttribute(key, value);
       }
     }
+
+    if (range !== null) {
+      this.searchArgs.setRange(range);
+    } else {
+      this.searchArgs.setRange([]);
+    }
+
     this.searchSubject.next(this.searchArgs);
   }
 
