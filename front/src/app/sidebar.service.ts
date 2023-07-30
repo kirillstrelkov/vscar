@@ -5,7 +5,7 @@ import { Subject } from 'rxjs';
   providedIn: 'root'
 })
 export class SidebarService {
-  private subject = new Subject();
+  private subject = new Subject<void>();
   sidebarOb = this.subject.asObservable();
 
   constructor() { }
