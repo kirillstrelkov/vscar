@@ -1,14 +1,28 @@
-mat-drawer-container{
+mat-drawer-container {
   mat-drawer {
-    padding: 16px;
+    padding: 15px;
     width: 250px;
-  
+
+    mat-form-field.search-form-field {
+      width: 85%;
+    }
+
     mat-icon.delete {
       cursor: pointer;
     }
 
-    mat-slider{
-      width: 200px;
+    div.range mat-form-field {
+      margin-bottom: -1.25em;
+    }
+
+    mat-form-field.min,
+    mat-form-field.max {
+      width: 95px;
+    }
+
+    mat-slider {
+      width: 75%;
+      margin: 0 25px;
     }
   }
 }

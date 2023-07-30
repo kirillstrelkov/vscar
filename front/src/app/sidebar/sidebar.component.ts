@@ -14,6 +14,8 @@ export class AttributeFilter {
     this.status = '';
     this.min = 0;
     this.max = 0;
+    this.currentMin = 0;
+    this.currentMax = 0;
 
     this.subject = new BehaviorSubject(this.name);
     this.observable = this.subject.asObservable();
@@ -27,6 +29,8 @@ export class AttributeFilter {
   isNumeric = false;
   min: number;
   max: number;
+  currentMin: number;
+  currentMax: number;
 
   // TODO: check implementation
   subject: BehaviorSubject<string>;
@@ -86,10 +90,12 @@ export class SidebarComponent implements OnInit {
       filter.isNumeric = !Array.isArray(attrs);
 
       if (filter.isNumeric) {
-        console.log(attrs);
+        console.log(attrs); // TODO: remove
         filter.valueOptions = attrs['additional_values'];
         filter.min = attrs['range']['min'];
         filter.max = attrs['range']['max'];
+        filter.currentMin = filter.min;
+        filter.currentMax = filter.max;
       } else {
         filter.valueOptions = attrs;
       }
@@ -102,4 +108,19 @@ export class SidebarComponent implements OnInit {
     args.set(attrName, value);
     this.searchService.changeSearchText(null, args);
   }
+
+  onRangeChange(event: any, filter: AttributeFilter): void {
+    let value = event.target.valueAsNumber;
+    if (filter.min <= value && value <= filter.max) {
+      if (event.target.className.indexOf("right") !== -1) {
+        filter.currentMax = value;
+      } else {
+        filter.currentMin = value;
+      }
+      if (event.type === 'change') {
+        // send request
+      }
+    }
+  }
+
 }
