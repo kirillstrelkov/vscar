@@ -22,7 +22,7 @@ export class CarService {
     limit: number = 100,
     text: string = '',
     attributes: Map<string, string[]> = null,
-    range: number[] = null
+    ranges: Map<string, number[]> = null
   ): Observable<{}> {
     let url = this.carUrl + `/findByFilter?page=${page + 1}`;
     url += `&limit=${limit}&text=${text}`;
@@ -35,8 +35,8 @@ export class CarService {
         for (const attrValue of attrValues) {
           url += `&${attrEncoded}[]=${encodeURIComponent(attrValue)}`;
         }
-        if (range !== null && range.length == 2) {
-          console.log(range);
+        if (ranges.has(attrName)) {
+          let range = ranges.get(attrName);
           url += `&${attrEncoded}_range[]=${encodeURIComponent(range[0])}`;
           url += `&${attrEncoded}_range[]=${encodeURIComponent(range[1])}`;
         }

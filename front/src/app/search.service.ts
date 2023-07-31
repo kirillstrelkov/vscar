@@ -7,12 +7,12 @@ export class SearchArgs {
   constructor(text: string = '') {
     this.text = text;
     this.attributesAndValues = new Map();
+    this.attributesAndRanges = new Map();
   }
-
 
   private text: string;
   private attributesAndValues: Map<string, string[]>;
-  private range: number[];
+  private attributesAndRanges: Map<string, number[]>;
 
   setText(text: string): void {
     this.text = text;
@@ -28,18 +28,23 @@ export class SearchArgs {
 
   removeArgument(name: string): void {
     this.attributesAndValues.delete(name);
+    this.removeRange(name);
+  }
+
+  removeRange(name: string): void {
+    this.attributesAndRanges.delete(name);
   }
 
   getAttributes(): Map<string, string[]> {
     return this.attributesAndValues;
   }
 
-  setRange(range: number[]): void {
-    this.range = range;
+  setRange(name: string, range: number[]): void {
+    this.attributesAndRanges.set(name, range);
   }
 
-  getRange(): number[] {
-    return this.range;
+  getRanges(): Map<string, number[]> {
+    return this.attributesAndRanges;
   }
 }
 
@@ -54,7 +59,7 @@ export class SearchService {
 
   constructor() { }
 
-  changeSearchText(text: string = null, attributes: Map<string, string[]> = null, range: number[] = null): void {
+  changeSearchText(text: string = null, attributes: Map<string, string[]> = null, ranges: Map<string, number[]> = null): void {
     if (text !== null) {
       this.searchArgs.setText(text);
     }
@@ -65,14 +70,19 @@ export class SearchService {
       }
     }
 
-    if (range !== null) {
-      this.searchArgs.setRange(range);
-    } else {
-      this.searchArgs.setRange([]);
+    if (ranges !== null) {
+      for (const [key, value] of ranges) {
+        this.searchArgs.setRange(key, value);
+      }
     }
 
     this.searchSubject.next(this.searchArgs);
   }
+
+  removeRange(name: string) {
+    this.searchArgs.removeRange(name);
+  }
+
 
   removeArgument(name: string) {
     this.searchArgs.removeArgument(name);

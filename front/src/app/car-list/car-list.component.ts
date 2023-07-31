@@ -67,7 +67,7 @@ export class CarListComponent implements AfterViewInit {
             this.paginator.pageSize,
             this.searchArgs.getText(),
             this.searchArgs.getAttributes(),
-            this.searchArgs.getRange()
+            this.searchArgs.getRanges()
           );
         }),
         map((data) => {
