@@ -2,13 +2,15 @@
 
 .compare-bar {
   position: fixed;
-  bottom: 0px;
-  right: 200px;
+  top: 0px;
+  right: 20px;
+  z-index: 1;
 
   display: block;
   width: 500px;
 
   @media only screen and (max-width: $small-width) {
+    bottom: 0;
     right: 0;
     width: 100%;
   }
@@ -19,5 +21,17 @@
 
   .description {
     flex: 1 1 auto;
+  }
+
+  mat-list-item {
+    height: 25px;
+  }
+
+  .mat-mdc-list-item-icon:hover {
+    color: rgba(0, 0, 0, 1);
+  }
+
+  mat-icon.delete {
+    cursor: pointer;
   }
 }
