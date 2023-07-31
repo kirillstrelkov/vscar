@@ -31,4 +31,7 @@ export class CompareBarComponent implements OnInit {
     this.router.navigateByUrl(`/cars/compare/${ids}`);
   }
 
+  removeCar(car: Car): void {
+    this.carCompareService.remove(car);
+  }
 }
