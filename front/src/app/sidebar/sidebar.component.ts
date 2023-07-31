@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { BehaviorSubject, Observable, Subject } from 'rxjs';
+import { debounceTime } from 'rxjs/operators';
 import { CarService } from '../car.service';
 import { SearchService } from '../search.service';
 import { SidebarService } from '../sidebar.service';
@@ -52,6 +53,7 @@ export class SidebarComponent implements OnInit {
   @ViewChild('drawer') sidenav: MatSidenav;
 
   filters: AttributeFilter[] = [];
+  subject: Subject<any> = new Subject();
 
   constructor(
     private carService: CarService,
@@ -63,6 +65,13 @@ export class SidebarComponent implements OnInit {
     this.sidebarService.sidebarOb.subscribe(() => {
       this.sidenav.toggle();
     });
+
+    this.subject
+      .pipe(debounceTime(500))
+      .subscribe((filter: AttributeFilter) => {
+        this.search(filter);
+      }
+      );
   }
 
   addFilter(): void {
@@ -78,7 +87,7 @@ export class SidebarComponent implements OnInit {
   removeFilter(filter: AttributeFilter): void {
     this.searchService.removeArgument(filter.name);
     this.filters.splice(this.filters.indexOf(filter), 1);
-    this.searchService.changeSearchText(null, null);
+    this.searchService.changeSearchText();
   }
 
   onSearch(event: any, filter: AttributeFilter): void {
@@ -102,13 +111,12 @@ export class SidebarComponent implements OnInit {
         filter.valueOptions = attrs;
       }
       filter.status = filter.name;
-      console.log(filter);
     });
   }
 
   onChange(values: string[], filter: AttributeFilter): void {
     filter.selected = values;
-    this.search(filter);
+    this.subject.next(filter);
   }
 
   onRangeChange(event: any, filter: AttributeFilter): void {
@@ -122,26 +130,28 @@ export class SidebarComponent implements OnInit {
         filter.currentMin = value;
       }
 
-      if (event.type === 'change' && filter.useRange) {
-        this.search(filter);
+      if (filter.useRange) {
+        this.subject.next(filter);
       }
     }
   }
 
   onChangeUseRange(event: any, filter: AttributeFilter): void {
     filter.useRange = event.checked;
-    this.search(filter);
+    this.subject.next(filter);
   }
 
   search(filter: AttributeFilter): void {
     const attributes = new Map();
     attributes.set(filter.name, filter.selected);
 
-    let range = null;
+    const ranges = new Map();
     if (filter.useRange) {
-      range = [filter.currentMin, filter.currentMax];
+      ranges.set(filter.name, [filter.currentMin, filter.currentMax]);
+    } else {
+      this.searchService.removeRange(filter.name);
     }
 
-    this.searchService.changeSearchText(null, attributes, range);
+    this.searchService.changeSearchText(null, attributes, ranges);
   }
 }
