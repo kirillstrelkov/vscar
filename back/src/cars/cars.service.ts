@@ -83,10 +83,19 @@ export class CarsService {
 
     return from(this.carModel.aggregate(pipeline).exec()).pipe(
       map((paginatedResultsData) => {
-        const paginatedResults = paginatedResultsData[0].paginatedResults;
-        const totalCount = paginatedResultsData[0].totalCount[0].total;
-        const totalPages = Math.ceil(totalCount / limit);
-        const offset = (page - 1) * limit;
+        let totalPages = 0;
+        let totalCount = 0;
+        let paginatedResults = [];
+        let offset = 0;
+        if (
+          paginatedResultsData[0].paginatedResults.length > 0 &&
+          paginatedResultsData[0].totalCount.length > 0
+        ) {
+          paginatedResults = paginatedResultsData[0].paginatedResults;
+          totalCount = paginatedResultsData[0].totalCount[0].total;
+          totalPages = Math.ceil(totalCount / limit);
+          offset = (page - 1) * limit;
+        }
         return {
           docs: paginatedResults,
           total: totalCount,
