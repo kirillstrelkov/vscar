@@ -4,6 +4,7 @@ import { PaginateModel, PaginateResult } from 'mongoose';
 import { from, iif } from 'rxjs';
 import { concatAll, filter, map, mergeMap, pluck, toArray } from 'rxjs/operators';
 import { Car } from './schemas/car.schema';
+
 @Injectable()
 export class CarsService {
   private readonly LIMIT: number = 100;
@@ -18,23 +19,26 @@ export class CarsService {
     const dbQuery = {};
 
     const attrQueries = [];
-    console.log(Object.entries(query));
-    for (let [key, values] of Object.entries(query)) {
-      if (['page', 'text', 'limit'].indexOf(key) !== -1) {
-        continue;
-      }
-      if (key.indexOf('_range') !== -1) {
-        key = key.replace('_range', '|fixed');
-        attrQueries.push({
+    for (let attrData of query['attributes']) {
+      const key = attrData['name'];
+      const values = attrData['values'];
+      const range = attrData['range'];
+      const rangeMin = attrData['range']['min'];
+      const rangeMax = attrData['range']['max'];
+
+      let attrQuery = [];
+      if (rangeMin !== undefined && rangeMax !== undefined) {
+        attrQuery.push({
           "attributes": {
             $elemMatch: {
-              name: key,
-              value: { $gte: parseInt(values[0]), $lte: parseInt(values[1]) }
+              name: key + '|fixed',
+              value: { $gte: parseInt(range['min']), $lte: parseInt(range['max']), }
             }
           }
         });
-      } else {
-        attrQueries.push({
+      }
+      if (values.length > 0) {
+        attrQuery.push({
           "attributes": {
             $elemMatch: {
               name: key,
@@ -45,19 +49,20 @@ export class CarsService {
           }
         });
       }
+
+      if (attrQuery.length > 0)
+        attrQueries.push({
+          $or: attrQuery,
+        });
     }
 
     if (attrQueries.length > 0) {
-      console.log(JSON.stringify(attrQueries, null, "  "));
       dbQuery['$and'] = attrQueries;
     }
 
     if (text.length > 0) {
       dbQuery['name'] = { $regex: new RegExp(text, 'i') };
     }
-
-    console.log(JSON.stringify(dbQuery, null, "  "));
-    console.log(dbQuery);
 
     const pipeline = [
       { $match: dbQuery },

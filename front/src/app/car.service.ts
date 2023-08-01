@@ -24,31 +24,35 @@ export class CarService {
     attributes: Map<string, string[]> = null,
     ranges: Map<string, number[]> = null
   ): Observable<{}> {
-    let url = this.carUrl + `/findByFilter?page=${page + 1}`;
-    url += `&limit=${limit}&text=${text}`;
+    let jsonRequest = {
+      page: page + 1,
+      limit: limit,
+      text: text,
+      attributes: [],
+    };
+
+    const url = this.carUrl + '/findByFilter';
 
     if (attributes !== null) {
-      // TODO: improve
-
       for (const [attrName, attrValues] of attributes) {
-        let attrEncoded = encodeURIComponent(attrName);
+        let attrData = {
+          name: attrName,
+          values: [],
+          range: {},
+        };
         for (const attrValue of attrValues) {
-          url += `&${attrEncoded}[]=${encodeURIComponent(attrValue)}`;
+          attrData.values.push(attrValue);
         }
         if (ranges.has(attrName)) {
           let range = ranges.get(attrName);
-          url += `&${attrEncoded}_range[]=${encodeURIComponent(range[0])}`;
-          url += `&${attrEncoded}_range[]=${encodeURIComponent(range[1])}`;
+          attrData.range = { min: range[0], max: range[1] };
         }
+        jsonRequest.attributes.push(attrData);
       }
     }
 
-    console.log(url);
-
-    // TODO: note max url length is around 65k characters - find better implementation
-    // TODO: use post
     return this.http
-      .get<{}>(url)
+      .post<{}>(url, jsonRequest)
       .pipe(catchError(this.handleError<{}>('getCars', {})));
   }
 
