@@ -1,4 +1,4 @@
-import { Controller, Get, Param, Query, Req } from '@nestjs/common';
+import { Body, Controller, Get, Param, Post, Query } from '@nestjs/common';
 import { PaginateResult } from 'mongoose';
 import { CarsService } from './cars.service';
 import { Car } from './schemas/car.schema';
@@ -7,14 +7,9 @@ import { Car } from './schemas/car.schema';
 export class CarsController {
   constructor(private readonly carsService: CarsService) { }
 
-  // TODO: check implementation
-  @Get('findByFilter')
-  async findByFilter(@Req() req): Promise<PaginateResult<Car>> {
-    const query = req.query;
-    for (const key of ['page', 'limit']) {
-      query[key] = +query[key];
-    };
-    return this.carsService.findByFilter(query);
+  @Post('findByFilter')
+  async findByFilter(@Body() jsonRequest): Promise<PaginateResult<Car>> {
+    return this.carsService.findByFilter(jsonRequest);
   }
 
   @Get(':id')
