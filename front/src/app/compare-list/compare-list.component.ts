@@ -41,7 +41,7 @@ export class CompareListComponent implements AfterViewInit {
         const attrs = attrsToAdd.concat(cars[0].attributes.map((c) => c.name));
         let newData = [];
         for (const attr of attrs) {
-          if (attrsToSkip.has(attr)) {
+          if (attrsToSkip.has(attr) || attr.indexOf('fixed') !== -1) {
             continue;
           }
 
