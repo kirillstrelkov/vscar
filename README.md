@@ -84,9 +84,7 @@ Start backend:
 
 ```bash
 cd back
-# For debug use:
-# npm run start:debug
-npm run start:dev
+npm run start
 ```
 
 #### Description
