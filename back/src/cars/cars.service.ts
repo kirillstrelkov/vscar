@@ -166,4 +166,11 @@ export class CarsService {
       ))
     ).toPromise();
   }
+
+  async getProcessedDate(): Promise<string> {
+    return from(this.carModel.findOne().select('processed_date').exec()).pipe(
+      map((car: Car) => car.toJSON()['processed_date'].split('.')[0]),
+    ).toPromise();
+  }
+
 }

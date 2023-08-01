@@ -68,6 +68,13 @@ export class CarService {
       .pipe(catchError(this.handleError<[]>('getAttributeValues', [])));
   }
 
+  getVersion(): Observable<string> {
+    return this.http
+      .get(this.carUrl + '/db/version', { responseType: 'text' })
+      .pipe(catchError(this.handleError<string>('getVersion', null)));
+
+  }
+
   private handleError<T>(operation = 'operation', result?: T) {
     return (error: any): Observable<T> => {
       console.error(error); // log to console instead

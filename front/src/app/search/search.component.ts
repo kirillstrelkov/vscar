@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Subject } from 'rxjs';
 import { debounceTime } from 'rxjs/operators';
+import { CarService } from '../car.service';
 import { SearchService } from '../search.service';
 
 @Component({
@@ -10,9 +11,12 @@ import { SearchService } from '../search.service';
 })
 export class SearchComponent implements OnInit {
   subject: Subject<any> = new Subject();
+  version: string = "";
 
   constructor(
     private searchService: SearchService,
+    private carService: CarService,
+
   ) { }
 
   ngOnInit(): void {
@@ -22,6 +26,9 @@ export class SearchComponent implements OnInit {
         this.searchService.changeSearchText(value);
       }
       );
+    this.carService.getVersion().subscribe((version: any) => {
+      this.version = version;
+    });
   }
 
   onSearchType(event: any): void {

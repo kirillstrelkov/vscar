@@ -1,4 +1,4 @@
-import { Controller, Get, Param, Query, Req, Res } from '@nestjs/common';
+import { Controller, Get, Param, Query, Req } from '@nestjs/common';
 import { PaginateResult } from 'mongoose';
 import { CarsService } from './cars.service';
 import { Car } from './schemas/car.schema';
@@ -37,4 +37,10 @@ export class CarsController {
   async findValues(@Query('text') text: string): Promise<any> {
     return this.carsService.findValues(text);
   }
+
+  @Get('db/version')
+  async getVersion(): Promise<string> {
+    return this.carsService.getProcessedDate();
+  }
+
 }
