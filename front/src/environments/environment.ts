@@ -1,4 +1,4 @@
 export const environment = {
-  apiURI: 'https://car-vs-back.onrender.com/cars',
-  production: true
+    production: false,
+    apiURI: 'http://localhost:3000/cars'
 };
