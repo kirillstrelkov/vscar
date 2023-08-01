@@ -106,7 +106,25 @@ export class CarsService {
 
 
   async findOne(id: number): Promise<Car> {
-    return this.carModel.findOne({ 'adac_id': id }).exec();
+    return this.carModel.findOne({ 'adac_id': id }, {
+      attributes: {
+        $filter: {
+          input: "$attributes",
+          as: "attr",
+          cond: { $not: { $regexMatch: { input: "$$attr.name", regex: /fixed/i } } }
+        }
+      },
+      _id: 0,
+      name: 1,
+      url: 1,
+      adac_id: 1,
+      processed_date: 1,
+      image: 1,
+      fuel: 1,
+      transmission: 1,
+      power: 1,
+      price: 1,
+    }).exec();
   };
 
   async findAll(): Promise<Car[]> {

@@ -26,7 +26,7 @@ export class CarDetailsComponent implements OnInit {
     this.carId = +(this.carId || this.route.snapshot.paramMap.get('id'));
     this.carService.getCar(this.carId).subscribe(car => {
       // TODO: move filtering to backend
-      this.dataSource = car.attributes.filter(attr => attr.name.indexOf('fixed') === -1);
+      this.dataSource = car.attributes;
       this.car = car;
     });
   }
