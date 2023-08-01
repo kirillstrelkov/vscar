@@ -77,19 +77,14 @@ export class CarsService {
             { $count: 'total' }
           ]
         }
-      },
-      { $unwind: '$paginatedResults' },
-      { $replaceRoot: { newRoot: '$paginatedResults' } }
+      }
     ];
 
 
-    const paginatedResultsQuery = this.carModel.aggregate(pipeline).exec();
-    const totalCountQuery = this.carModel.estimatedDocumentCount();
-
-    const combinedQueries$ = from(Promise.all([totalCountQuery, paginatedResultsQuery]));
-
-    return combinedQueries$.pipe(
-      map(([totalCount, paginatedResults]) => {
+    return from(this.carModel.aggregate(pipeline).exec()).pipe(
+      map((paginatedResultsData) => {
+        const paginatedResults = paginatedResultsData[0].paginatedResults;
+        const totalCount = paginatedResultsData[0].totalCount[0].total;
         const totalPages = Math.ceil(totalCount / limit);
         const offset = (page - 1) * limit;
         return {
