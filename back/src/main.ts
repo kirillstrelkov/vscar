@@ -1,8 +1,8 @@
+import { ConfigService } from '@nestjs/config';
 import { NestFactory } from '@nestjs/core';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
-import { AppModule } from './app.module';
 import * as helmet from 'helmet';
-import { ConfigService } from '@nestjs/config';
+import { AppModule } from './app.module';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
@@ -12,7 +12,7 @@ async function bootstrap() {
   const options = new DocumentBuilder()
     .setTitle('Cars')
     .setDescription('The cars API description')
-    .setVersion('1.0')
+    .setVersion('1.1')
     .build();
   const document = SwaggerModule.createDocument(app, options);
   SwaggerModule.setup('api', app, document);

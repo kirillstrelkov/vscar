@@ -2,6 +2,7 @@
 
 mat-toolbar-row span {
   padding-left: 20px;
+
   @media only screen and (max-width: $small-width) {
     display: none;
   }
