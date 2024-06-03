@@ -2,18 +2,21 @@
 extern crate rocket;
 extern crate dotenv_codegen;
 
+
+use std::collections::HashSet;
+
 use crate::rocket::futures::StreamExt;
 use dotenv_codegen::dotenv;
 use rocket::http::Status;
 use rocket::serde::json::Json;
 use rocket::State;
 use rocket_db_pools::mongodb::{
-    bson::{doc, Bson, Document},
-    options::{ClientOptions, FindOptions},
+    bson::{bson, doc, Bson, Document},
+    options::{AggregateOptions, ClientOptions, FindOneOptions, FindOptions},
     Client,
 };
 type MongoDbConnection = State<Client>;
-use futures::stream;
+use futures::{stream, TryStreamExt};
 // use serde::{Deserialize, Serialize};
 // #[derive(Serialize, Deserialize, Debug)]
 // struct Car {
@@ -32,7 +35,7 @@ fn index() -> &'static str {
 // POST /cars​/findByFilter
 
 // GET /cars​/attributes​/names
-#[get("/cars/attributes/names/<text>")]
+#[get("/cars/attributes/names?<text>")]
 async fn find_names(db: &MongoDbConnection, text: &str) -> Result<Json<Vec<String>>, Status> {
     // Initialize the MongoDB client and select the database and collection
     let collection: rocket_db_pools::mongodb::Collection<Document> =
@@ -71,47 +74,65 @@ async fn find_names(db: &MongoDbConnection, text: &str) -> Result<Json<Vec<Strin
 
 // TODO: fixme
 // GET /cars​/attributes​/values
-// #[get("/cars​/attributes​/values/<text>")]
-// async fn find_values(db: &MongoDbConnection, text: String) -> Result<Json<Vec<String>>, Status> {
-//     let collection: rocket_db_pools::mongodb::Collection<Document> =
-//         db.database("vscar").collection("cars");
+#[get("/cars/attributes/values?<text>")]
+async fn find_values(db: &MongoDbConnection, text: String) -> Result<Json<Document>, Status> {
+    let collection: rocket_db_pools::mongodb::Collection<Document> =
+        db.database("vscar").collection("cars");
 
-//     // Query to find a document with the matching 'name' attribute
-//     let filter = doc! { "attributes": { "$elemMatch": { "name": text } } };
-//     let projection = doc! { "_id": 0, "attributes": 1 };
-//     let maybe_doc = collection.find_one(Some(filter), None).await;
-//     let doc = match maybe_doc {
-//         Ok(doc) => doc.unwrap(),
-//         Err(_) => return Err(Status::NotFound),
-//     };
+    // Query to find a document with the matching 'name' attribute
+    let filter = doc! { "attributes": { "$elemMatch": { "name": text.clone() } } };
+    let find_options = FindOneOptions::builder().projection(doc! { "attributes.$": 1 }).build();
 
-//     // Process the document based on the type of the 'column_data'
-//     if let Some(attributes) = doc.get_array("attributes").ok() {
-//         for attr in attributes {
-//             match attr.as_document() {
-//                 Ok(attr_doc) => {
-//                     if let Some(column_data) = attr_doc.get("column_data") {
-//                         match column_data {
-//                             Bson::Array(_) => {
-//                                 // Process numeric attributes
-//                                 // ...
+    let maybe_doc = collection.find_one(filter, Some(find_options)).await;
+    let doc = match maybe_doc {
+        Ok(doc) => doc.unwrap(),
+        Err(_) => return Err(Status::NotFound),
+    };
 
-//                             }
-//                             Bson::String(_) => {
-//                                 // Process string attributes
-//                                 // ...
-//                             }
-//                             _ => (),
-//                         }
-//                     }
-//                 }
-//                 _ => (),
-//             }
-//         }
-//     }
+    info!("out: {}", doc);
 
-//     Ok(Json(vec![]))
-// }
+    // Process the document based on the type of the 'column_data'
+    if let Some(attributes) = doc.get_array("attributes").ok() {
+        let first_element = &attributes[0].as_document();
+        let col_data = first_element.unwrap().get("column_data").unwrap().as_document().unwrap();
+        let att_type = col_data.get_str("type").unwrap_or("str");
+
+        match att_type {
+            "int" => {
+                return Ok(Json(col_data.clone()));
+            }
+            "str" => {
+                let mut o = HashSet::new();
+
+                let options = AggregateOptions::builder().build();
+                let mut cursor = collection.aggregate([
+                    doc! { "$unwind": "$attributes" },
+                    doc! { "$match": {"attributes.name": text.clone()} },
+                    doc! { "$project": {"_id": 0, "value": "$attributes.value"} },
+                ], options).await.unwrap();
+
+                while let Some(doc) = cursor.try_next().await.unwrap() {
+                    let v = doc.get_str("value").ok();
+                    if v.is_some()
+                    {
+                        o.insert(v.unwrap().to_string());
+                    }
+                }
+                  
+                let mut v = Vec::from_iter(o);
+                v.sort();
+                let a = doc! { "a" : v};
+                
+                return Ok(Json(a));
+            }
+            _ => {
+                return Err(Status::NotFound);
+            }
+        }
+    }
+
+    Ok(Json(doc))
+}
 
 #[get("/cars/db/version")]
 async fn db_version(db: &MongoDbConnection) -> Result<String, Status> {
@@ -167,10 +188,11 @@ async fn get_car(db: &MongoDbConnection, id: i32) -> Result<Json<Document>, Stat
 async fn rocket() -> _ {
     // add port
     let mongodb_uri = dotenv!("DATABASE_URI");
+    info!("One: {}", mongodb_uri);
     let client_options = ClientOptions::parse(mongodb_uri).await.unwrap();
     let client = Client::with_options(client_options).unwrap();
 
     rocket::build()
         .manage(client)
-        .mount("/", routes![get_car, get_cars, find_names, db_version])
+        .mount("/", routes![get_car, get_cars, find_names, db_version, find_values])
 }
