@@ -71,6 +71,8 @@ PORT=3000
 
 ### Backend
 
+> NOTE: before running mongodb should be up and running
+
 Set `PORT` env variable to 3000 or use `.env` file.
 
 Initialize db:
