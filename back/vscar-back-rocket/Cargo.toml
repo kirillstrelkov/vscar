@@ -1,5 +1,5 @@
 [package]
-name = "hello-rocket"
+name = "vscar-back-rocket"
 version = "0.1.0"
 edition = "2021"
 
@@ -7,12 +7,18 @@ edition = "2021"
 
 [dependencies]
 rocket = { version = "0.5.1", features = ["json"] }
+serde = { version = "1.0.203", features = ["derive"] }
+
 # mongodb = "2.8.2"
 serde_json = "1.0.117"
 dotenv = "0.15.0"
 dotenv_codegen = "0.15.0"
 log = "0.4.21"
 futures = "0.3"
+assertables = "7.0.1"
+regex = "1.10.4"
+env_logger = "0.11.5"
+rocket_cors = "0.6.0"
 
 [dependencies.rocket_db_pools]
 version = "0.2.0"
