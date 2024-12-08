@@ -104,7 +104,7 @@ def run_find_by_filter_perf(url: str) -> None:
 
 @click.command()
 @click.option("--url", required=True, help="The url to test")
-def cli(url) -> None:
+def cli(url: str) -> None:
     """Measures backend APIs calls."""
     url = url.strip("/")
     run_basic_perf(url)
