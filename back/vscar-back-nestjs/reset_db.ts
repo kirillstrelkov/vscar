@@ -26,7 +26,7 @@ async function load_json_to_db(path: string) {
 }
 
 async function main() {
-    const input_archive = "../db/db.zip";
+    const input_archive = "../../db/db.zip";
 
     const tempDirectory = require('temp-dir');
 
