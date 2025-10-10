@@ -70,12 +70,15 @@
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "buildTarget": "car-vs-fe:build:development"
+          },
           "configurations": {
             "production": {
-              "browserTarget": "car-vs-fe:build:production"
+              "buildTarget": "car-vs-fe:build:production"
             },
             "development": {
-              "browserTarget": "car-vs-fe:build:development"
+              "buildTarget": "car-vs-fe:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -83,7 +86,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "car-vs-fe:build"
+            "buildTarget": "car-vs-fe:build"
           }
         },
         "test": {
@@ -109,15 +112,11 @@
           }
         },
         "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
+          "builder": "@angular-eslint/builder:lint",
           "options": {
-            "tsConfig": [
-              "tsconfig.app.json",
-              "tsconfig.spec.json",
-              "e2e/tsconfig.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
             ]
           }
         },
@@ -135,5 +134,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }

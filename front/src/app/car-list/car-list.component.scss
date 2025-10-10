@@ -1,4 +1,4 @@
-@import "../../styles.scss";
+@use "../../styles.scss";
 
 td.mat-column-name {
   cursor: pointer;
@@ -14,7 +14,7 @@ td.mat-column-name {
   text-align: center;
 }
 
-@media only screen and (min-width: $small-width) {
+@media only screen and (min-width: styles.$small-width) {
 
   .mat-column-name,
   .mat-column-transmission {
@@ -40,7 +40,7 @@ td.mat-column-name {
   }
 }
 
-@media only screen and (max-width: $small-width) {
+@media only screen and (max-width: styles.$small-width) {
   .mat-column-name {
     text-overflow: ellipsis;
     overflow: hidden;

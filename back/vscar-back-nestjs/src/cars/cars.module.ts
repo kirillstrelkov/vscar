@@ -9,4 +9,4 @@ import { Car, CarSchema } from './schemas/car.schema';
   controllers: [CarsController],
   providers: [CarsService],
 })
-export class CarsModule { }
+export class CarsModule {}
