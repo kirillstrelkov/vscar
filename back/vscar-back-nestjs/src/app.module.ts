@@ -1,6 +1,7 @@
-import { CacheInterceptor, CacheModule, Module } from '@nestjs/common';
+import { CacheInterceptor, CacheModule } from '@nestjs/cache-manager';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { APP_INTERCEPTOR } from '@nestjs/core';
+import { Module } from '@nestjs/common';
 
 import { MongooseModule } from '@nestjs/mongoose';
 import configuration from 'config/configuration';
@@ -13,7 +14,7 @@ import { CarsModule } from './cars/cars.module';
     CacheModule.register({ ttl: 7 * 24 * 60 * 60 }), // 7 days
     ConfigModule.forRoot({
       load: [configuration],
-      isGlobal: true
+      isGlobal: true,
     }),
     MongooseModule.forRootAsync({
       imports: [ConfigModule],
@@ -22,7 +23,7 @@ import { CarsModule } from './cars/cars.module';
       }),
       inject: [ConfigService],
     }),
-    CarsModule
+    CarsModule,
   ],
   controllers: [AppController],
   providers: [
@@ -32,4 +33,4 @@ import { CarsModule } from './cars/cars.module';
     },
   ],
 })
-export class AppModule { }
+export class AppModule {}

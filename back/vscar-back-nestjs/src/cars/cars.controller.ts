@@ -5,7 +5,7 @@ import { Car } from './schemas/car.schema';
 
 @Controller('cars')
 export class CarsController {
-  constructor(private readonly carsService: CarsService) { }
+  constructor(private readonly carsService: CarsService) {}
 
   @Post('findByFilter')
   async findByFilter(@Body() jsonRequest): Promise<PaginateResult<Car>> {
@@ -37,5 +37,4 @@ export class CarsController {
   async getVersion(): Promise<string> {
     return this.carsService.getProcessedDate();
   }
-
 }

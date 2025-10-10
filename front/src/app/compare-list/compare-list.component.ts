@@ -2,11 +2,47 @@ import { AfterViewInit, Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { forkJoin } from 'rxjs';
 import { CarService } from '../car.service';
+import { MatSliderModule } from '@angular/material/slider'; // Import Module for MatSlider
+import { MatFormFieldModule } from '@angular/material/form-field'; // Import Module for MatFormField/MatLabel
+import { MatIconModule } from '@angular/material/icon';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatSelectModule } from '@angular/material/select'; // MatSelect often bundles MatOption
+import { RouterModule } from '@angular/router';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { MatInputModule } from '@angular/material/input';
+import {
+  MatDrawerContent,
+  MatSidenav,
+  MatSidenavModule,
+} from '@angular/material/sidenav';
+
+import { SearchComponent } from '../search/search.component';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatTableModule } from '@angular/material/table';
+import { CommonModule } from '@angular/common';
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
   selector: 'app-compare-list',
+  imports: [
+    MatAutocompleteModule,
+    RouterModule,
+    MatSidenavModule,
+    MatSliderModule,
+    MatFormFieldModule,
+    MatIconModule,
+    MatCheckboxModule,
+    MatSelectModule,
+    MatInputModule,
+    MatToolbarModule,
+    MatProgressSpinnerModule,
+    MatTableModule,
+    MatButtonModule,
+    CommonModule,
+  ],
   templateUrl: './compare-list.component.html',
-  styleUrls: ['./compare-list.component.scss']
+  styleUrls: ['./compare-list.component.scss'],
 })
 export class CompareListComponent implements AfterViewInit {
   ids: string[] = [];
@@ -14,12 +50,9 @@ export class CompareListComponent implements AfterViewInit {
   displayedColumns: string[] = [];
   data: object[] = [];
 
-  readonly attrString = "Attribute";
+  readonly attrString = 'Attribute';
 
-  constructor(
-    private carService: CarService,
-    private route: ActivatedRoute,
-  ) { }
+  constructor(private carService: CarService, private route: ActivatedRoute) {}
 
   // TODO: fix - if cars have same name - doesn't work as displayedColumns have duplicates
   ngAfterViewInit() {
@@ -30,8 +63,8 @@ export class CompareListComponent implements AfterViewInit {
 
     this.data = [];
     // TODO: fix implmentation use rxJS properly
-    forkJoin(...this.ids.map((id) => this.carService.getCar(+id)))
-      .subscribe(cars => {
+    forkJoin(...this.ids.map((id) => this.carService.getCar(+id))).subscribe(
+      (cars) => {
         this.displayedColumns = [this.attrString];
 
         for (const car of cars) {
@@ -84,9 +117,8 @@ export class CompareListComponent implements AfterViewInit {
             }
           }
           newData.push(rowData);
-        };
+        }
         // TODO: reorder ?
-
 
         // Remove empty rows and set difference flag if attributes are different
         const emptyRows = [];
@@ -108,15 +140,18 @@ export class CompareListComponent implements AfterViewInit {
           const hasDifferentValues = uniqValues.size !== 2;
           row[this.attrString].hasDifferentValues = hasDifferentValues;
 
-          if (!hasDifferentValues && (lastAttrValue == null || lastAttrValue === '')) {
+          if (
+            !hasDifferentValues &&
+            (lastAttrValue == null || lastAttrValue === '')
+          ) {
             emptyRows.push(row);
           }
         }
 
-        newData = newData.filter(item => emptyRows.indexOf(item) === -1);
+        newData = newData.filter((item) => emptyRows.indexOf(item) === -1);
 
         this.data = newData;
       }
-      );
+    );
   }
 }

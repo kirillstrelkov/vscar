@@ -20,7 +20,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule } from './app.routes';
 import { AppComponent } from './app.component';
 import { CarDetailsComponent } from './car-details/car-details.component';
 import { CarListComponent } from './car-list/car-list.component';
@@ -30,45 +30,8 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { SearchComponent } from './search/search.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 
+import { bootstrapApplication } from '@angular/platform-browser';
 
-
-@NgModule({
-  declarations: [
-    AppComponent,
-    CarDetailsComponent,
-    SearchComponent,
-    NavBarComponent,
-    CarListComponent,
-    CompareBarComponent,
-    CompareListComponent,
-    SidebarComponent,
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    BrowserAnimationsModule,
-    // Angular modules:
-    MatTooltipModule,
-    MatAutocompleteModule,
-    MatInputModule,
-    MatSelectModule,
-    MatSidenavModule,
-    MatIconModule,
-    MatCardModule,
-    MatToolbarModule,
-    MatTableModule,
-    MatButtonModule,
-    MatExpansionModule,
-    MatPaginatorModule,
-    MatProgressSpinnerModule,
-    MatSnackBarModule,
-    MatSliderModule,
-    MatFormFieldModule,
-    MatCheckboxModule,
-    MatListModule,
-  ],
+bootstrapApplication(AppComponent, {
   providers: [],
-  bootstrap: [AppComponent]
-})
-export class AppModule { }
+});

@@ -1,7 +1,7 @@
 import { ConfigService } from '@nestjs/config';
 import { NestFactory } from '@nestjs/core';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
-import * as helmet from 'helmet';
+import helmet from 'helmet';
 import { AppModule } from './app.module';
 
 async function bootstrap() {
@@ -18,7 +18,7 @@ async function bootstrap() {
   SwaggerModule.setup('api', app, document);
 
   const config = app.get<ConfigService>(ConfigService);
-  await app.listen(config.get<number>('PORT'));
+  await app.listen(config.get<number>('PORT', 3000));
   console.log(`Application is running on: ${await app.getUrl()}`);
 }
 bootstrap();

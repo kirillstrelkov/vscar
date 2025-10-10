@@ -1,10 +1,24 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { MatSidenav } from '@angular/material/sidenav';
+import {
+  MatDrawerContent,
+  MatSidenav,
+  MatSidenavModule,
+} from '@angular/material/sidenav';
 import { BehaviorSubject, Observable, Subject } from 'rxjs';
 import { debounceTime } from 'rxjs/operators';
 import { CarService } from '../car.service';
 import { SearchService } from '../search.service';
 import { SidebarService } from '../sidebar.service';
+import { MatSliderModule } from '@angular/material/slider'; // Import Module for MatSlider
+import { MatFormFieldModule } from '@angular/material/form-field'; // Import Module for MatFormField/MatLabel
+import { MatIconModule } from '@angular/material/icon';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatSelectModule } from '@angular/material/select'; // MatSelect often bundles MatOption
+import { RouterModule } from '@angular/router';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { MatInputModule } from '@angular/material/input';
+import { CommonModule } from '@angular/common';
+import { MatButtonModule } from '@angular/material/button';
 
 // TODO: come up with better names
 export class AttributeFilter {
@@ -41,11 +55,23 @@ export class AttributeFilter {
   observable: Observable<string>;
 }
 
-
 @Component({
   selector: 'app-sidebar',
+  imports: [
+    MatAutocompleteModule,
+    RouterModule,
+    MatSidenavModule,
+    MatSliderModule,
+    MatFormFieldModule,
+    MatIconModule,
+    MatCheckboxModule,
+    MatSelectModule,
+    MatInputModule,
+    CommonModule,
+    MatButtonModule,
+  ],
   templateUrl: './sidebar.component.html',
-  styleUrls: ['./sidebar.component.scss']
+  styleUrls: ['./sidebar.component.scss'],
 })
 export class SidebarComponent implements OnInit {
   // TODO: side bar should overflow when toggled - only on mobile
@@ -59,7 +85,7 @@ export class SidebarComponent implements OnInit {
     private carService: CarService,
     private searchService: SearchService,
     private sidebarService: SidebarService
-  ) { }
+  ) {}
 
   ngOnInit(): void {
     this.sidebarService.sidebarOb.subscribe(() => {
@@ -70,15 +96,16 @@ export class SidebarComponent implements OnInit {
       .pipe(debounceTime(500))
       .subscribe((filter: AttributeFilter) => {
         this.search(filter);
-      }
-      );
+      });
   }
 
   addFilter(): void {
     const filter = new AttributeFilter('Attribute name');
 
-    filter.observable.subscribe(text => {
-      this.carService.getAttributes(text).subscribe(a => filter.nameOptions = a);
+    filter.observable.subscribe((text) => {
+      this.carService
+        .getAttributes(text)
+        .subscribe((a) => (filter.nameOptions = a));
     });
 
     this.filters.push(filter);
@@ -98,7 +125,7 @@ export class SidebarComponent implements OnInit {
     filter.status = 'Loading...';
     filter.name = attrName;
     filter.isReady = true;
-    this.carService.getAttributeValues(attrName).subscribe(attrs => {
+    this.carService.getAttributeValues(attrName).subscribe((attrs) => {
       filter.isNumeric = !Array.isArray(attrs);
 
       if (filter.isNumeric) {
@@ -122,7 +149,7 @@ export class SidebarComponent implements OnInit {
   onRangeChange(event: any, filter: AttributeFilter): void {
     let value = event.target.valueAsNumber;
     if (filter.min <= value && value <= filter.max) {
-      const isRight = event.target.className.indexOf("slider-right") !== -1;
+      const isRight = event.target.className.indexOf('slider-right') !== -1;
 
       if (isRight) {
         filter.currentMax = value;

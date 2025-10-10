@@ -1,4 +1,4 @@
-@import "../../styles.scss";
+@use "../../styles.scss";
 
 .compare-bar {
   position: fixed;
@@ -9,7 +9,7 @@
   display: block;
   width: 500px;
 
-  @media only screen and (max-width: $small-width) {
+  @media only screen and (max-width: styles.$small-width) {
     bottom: 0;
     right: 0;
     width: 100%;
