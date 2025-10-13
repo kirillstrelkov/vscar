@@ -1,0 +1,39 @@
+[project]
+name = "vscar-pytest"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "click>=8.3.0",
+    "easelenium>=0.7.2",
+    "loguru>=0.7.3",
+    "requests>=2.32.5",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.4.2",
+    "pytest-bdd>=8.1.0",
+    "pytest-retry>=1.7.0",
+    "ruff>=0.14.0",
+]
+
+[tool.ruff]
+line-length = 120
+indent-width = 4
+
+[tool.ruff.lint]
+select = ["ALL"]
+ignore = ["INP001", "D203", "D213", "COM812"]
+unfixable = ["B"]
+
+[tool.ruff.lint.per-file-ignores]
+"**/test_*" = ["S101", "FBT001"]
+"**/steps/*" = ["S101", "FBT001"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
+line-ending = "auto"

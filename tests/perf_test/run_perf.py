@@ -1,7 +1,8 @@
 """CLI to measure performance of backend."""
 
 import time
-from typing import Any, Callable
+from collections.abc import Callable
+from typing import Any
 
 import click
 import requests
@@ -10,8 +11,9 @@ from loguru import logger
 
 def bench_func(
     function: Callable,
-    *args: Any,
-):
+    *args: Any,  # noqa: ANN401
+) -> float:
+    """Benchmark function execution time in milliseconds."""
     start_time = time.time()
     function(*args)
     end_time = time.time()
@@ -19,7 +21,8 @@ def bench_func(
     return (end_time - start_time) * 1000
 
 
-def _req(method: str, url: str, json: dict | None = None):
+def _req(method: str, url: str, json: dict | None = None) -> requests.Response:
+    """Perform HTTP request and checks for errors."""
     response = requests.request(method, url, json=json, timeout=100)
     if response.status_code not in {
         requests.status_codes.codes.OK,
@@ -42,7 +45,7 @@ def _log_time(exec_time: float, url: str) -> None:
 
 
 def run_basic_perf(url: str) -> None:
-    """Measures backend APIs calls."""
+    """Measure backend APIs calls."""
     for func, full_url, data in [
         (_get, f"{url}/cars/db/version", None),
         (
@@ -76,6 +79,7 @@ def run_basic_perf(url: str) -> None:
 
 
 def run_find_by_filter_perf(url: str) -> None:
+    """Measure performance of findByFilter API."""
     times = []
     url = f"{url}/cars/findByFilter"
     total = 5000
