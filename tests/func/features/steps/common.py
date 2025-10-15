@@ -71,6 +71,11 @@ def __add_attribute(browser: Browser, attribute: str) -> None:
     browser.type(by_xpath=f"{xpath_form_field}//input", text=attribute)
     __choose_from_combobox(browser, attribute)
 
+    # wait for label is loaded
+    browser.wait_for_visible(
+        by_xpath=f"//mat-drawer//mat-form-field//mat-label[contains(text(), '{attribute}')]",
+    )
+
 
 @when(parsers.parse('I select "{value}" as "{attribute}"'))
 def step_impl_when_select_as_attribute(browser: Browser, value: str, attribute: str) -> None:

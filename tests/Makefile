@@ -13,3 +13,5 @@ test_api:
 
 test_func:
 	./.venv/bin/python -m pytest func --retries 3
+
+test: test_api test_func
