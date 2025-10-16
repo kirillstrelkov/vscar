@@ -272,5 +272,5 @@ if __name__ == "__main__":
         "main:app",
         host=os.getenv("HOST", "0.0.0.0"),  # noqa: S104
         port=int(os.getenv("PORT", "3000")),
-        reload=True,
+        reload=not bool(os.getenv("PROD", "")),
     )
