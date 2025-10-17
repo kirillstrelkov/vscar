@@ -1,28 +1,32 @@
-FROM node:24.10.0-slim AS base
+FROM node:24-alpine AS builder
 
-ENV PNPM_HOME="/pnpm"
-ENV PATH="$PNPM_HOME:$PATH"
-RUN corepack enable
-ENV CI="true"
-
-RUN groupadd -g 1234 user && \
-    useradd -m -u 1234 -g user user
-
-COPY . /app
+ENV PNPM_HOME="/usr/local/bin"
+RUN npm install -g pnpm
 WORKDIR /app
 
-FROM base AS prod-deps
-RUN --mount=type=cache,id=pnpm,target=/pnpm/store pnpm install --prod --frozen-lockfile
+COPY package*.json pnpm-lock.yaml ./
 
-FROM base AS build
-RUN --mount=type=cache,id=pnpm,target=/pnpm/store pnpm install --frozen-lockfile
+RUN pnpm install --frozen-lockfile --store-dir /pnpm-store 
+
+COPY . .
 RUN pnpm run build
 
-FROM base
-COPY --from=prod-deps /app/node_modules /app/node_modules
-COPY --from=build /app/dist /app/dist
-EXPOSE 3000
 
-USER user
+FROM node:24-alpine AS runtime
 
-CMD [ "pnpm", "start:prod" ]
+ENV PNPM_HOME="/usr/local/bin"
+RUN npm install -g pnpm
+RUN adduser -D nestjs-user
+USER nestjs-user
+WORKDIR /app
+
+COPY --from=builder /app/dist ./dist
+
+COPY --from=builder /app/package.json ./
+COPY --from=builder /app/pnpm-lock.yaml ./ 
+
+COPY --from=builder /pnpm-store /pnpm-store
+
+RUN pnpm install --prod --store-dir /pnpm-store
+
+CMD ["node", "dist/src/main"]
