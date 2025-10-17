@@ -1,15 +1,21 @@
-FROM python:3.12-slim
+FROM python:3.12-slim AS builder
 
-COPY --from=ghcr.io/astral-sh/uv:latest /uv /uvx /bin/
+RUN pip install --no-cache-dir "uv==0.9.1"
 
-COPY . /app
+COPY *.py pyproject.toml uv.lock /app/
+
 WORKDIR /app
+
+RUN uv sync --no-install-project --no-dev --locked 
+
+FROM python:3.12-slim
 
 RUN groupadd -g 1234 user && \
     useradd -m -u 1234 -g user user
 
+COPY --from=builder --chown=user:user /app /app
+
 USER user
+WORKDIR /app
 
-RUN uv sync --locked
-
-CMD ["uv", "run", "main.py"]
+CMD [".venv/bin/uvicorn", "main:app", "--host", "0.0.0.0", "--port", "3000"]
