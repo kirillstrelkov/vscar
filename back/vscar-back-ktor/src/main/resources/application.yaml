@@ -1,0 +1,10 @@
+ktor:
+  application:
+    modules:
+      - com.vscar.ApplicationKt.module
+  deployment:
+    port: "$PORT:3000"
+
+mongodb:
+  uri: "$DATABASE_URI:mongodb://localhost:27017/vscar"
+  db_name: "$DATABASE_NAME:vscar"
