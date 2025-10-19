@@ -1,16 +1,27 @@
-all: fix fmt check build test
+APP_NAME := vscar-back-rocket-app
+
+.PHONY: all fmt check clean test
+
+all: fmt check test
 
 clean:
 	cargo clean
 
-check:
+check: check-docker check-make
+	cargo fix --allow-dirty
 	cargo check
 	cargo clippy
+
+check-docker:
+	docker run --rm -i hadolint/hadolint < Dockerfile
+
+check-make:
+	go run github.com/checkmake/checkmake/cmd/checkmake@latest Makefile
 
 fmt:
 	cargo fmt
 
-build:
+build: clean
 	cargo build
 
 test:
@@ -22,11 +33,8 @@ cov:
 run:
 	cargo run
 
-fix:
-	cargo fix --allow-dirty
+docker-build:
+	docker build -t ${APP_NAME} .
 
-docker_build:
-	docker build -t vscar-back-rocket-app .
-
-docker_run:
-	docker run -e ROCKET_PORT=3000 -e ROCKET_ADDRESS=0.0.0.0 -e DATABASE_URI=mongodb://172.17.0.1:27017/vscar -p 3000:3000 vscar-back-rocket-app
+docker-run:
+	docker run --rm -e ROCKET_PORT=3000 -e ROCKET_ADDRESS=0.0.0.0 -e DATABASE_URI=mongodb://172.17.0.1:27017/vscar -p 3000:3000 ${APP_NAME}
