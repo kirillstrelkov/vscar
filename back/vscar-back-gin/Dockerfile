@@ -17,4 +17,6 @@ COPY --from=builder /app/vscar-back-gin /usr/local/bin/
 
 USER appuser
 
+EXPOSE 3000
+
 CMD ["vscar-back-gin"]
