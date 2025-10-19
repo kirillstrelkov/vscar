@@ -8,6 +8,7 @@ dependencies = [
     "click>=8.3.0",
     "easelenium>=0.7.2",
     "loguru>=0.7.3",
+    "python-dotenv>=1.1.1",
     "requests>=2.32.5",
 ]
 

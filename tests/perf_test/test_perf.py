@@ -1,6 +1,11 @@
-from functools import partial
 import time
+from functools import partial
+
 import requests
+from dotenv import load_dotenv
+
+load_dotenv()
+
 
 _DATA = [
     "/cars",
@@ -49,9 +54,7 @@ def _run_data(url):
     # Calculate statistics
     avg, min_time, max_time = calculate_statistics(times)
 
-    print(
-        f"Ran the function {times_run} times, avg: {avg:.5f}, min: {min_time:.5f}, max: {max_time:.5f}, url: {url}"
-    )
+    print(f"Ran the function {times_run} times, avg: {avg:.5f}, min: {min_time:.5f}, max: {max_time:.5f}, url: {url}")
 
 
 def __main():
