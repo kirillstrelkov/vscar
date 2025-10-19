@@ -12,4 +12,6 @@ COPY --from=builder /app/target/release/vscar-back-rocket /usr/local/bin/
 
 USER appuser
 
+EXPOSE 3000
+
 CMD ["vscar-back-rocket"]
