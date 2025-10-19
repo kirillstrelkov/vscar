@@ -18,4 +18,6 @@ COPY --from=builder --chown=user:user /app /app
 USER user
 WORKDIR /app
 
+EXPOSE 3000
+
 CMD [".venv/bin/uvicorn", "main:app", "--host", "0.0.0.0", "--port", "3000"]
