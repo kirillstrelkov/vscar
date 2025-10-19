@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { Router } from '@angular/router';
 import { Car } from '../car';
 import { CarCompareService } from '../car-compare.service';
@@ -10,12 +10,7 @@ import { MatSelectModule } from '@angular/material/select'; // MatSelect often b
 import { RouterModule } from '@angular/router';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatInputModule } from '@angular/material/input';
-import {
-  MatDrawerContent,
-  MatSidenav,
-  MatSidenavModule,
-} from '@angular/material/sidenav';
-import { SearchComponent } from '../search/search.component';
+import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatTableModule } from '@angular/material/table';
@@ -47,13 +42,9 @@ import { MatButtonModule } from '@angular/material/button';
   templateUrl: './compare-bar.component.html',
   styleUrls: ['./compare-bar.component.scss'],
 })
-export class CompareBarComponent implements OnInit {
-  constructor(
-    private carCompareService: CarCompareService,
-    private router: Router
-  ) {}
-
-  ngOnInit(): void {}
+export class CompareBarComponent {
+  private carCompareService = inject(CarCompareService);
+  private router = inject(Router);
 
   getCars(): Car[] {
     return this.carCompareService.comparingCars;

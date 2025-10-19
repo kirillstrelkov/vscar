@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, inject, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Car } from '../car';
 import { CarService } from '../car.service';
@@ -10,19 +10,12 @@ import { MatSelectModule } from '@angular/material/select'; // MatSelect often b
 import { RouterModule } from '@angular/router';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatInputModule } from '@angular/material/input';
-import {
-  MatDrawerContent,
-  MatSidenav,
-  MatSidenavModule,
-} from '@angular/material/sidenav';
-import { SearchComponent } from '../search/search.component';
+import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatTableModule } from '@angular/material/table';
 import { MatListModule } from '@angular/material/list';
 import { MatExpansionModule } from '@angular/material/expansion';
-import { CompareListComponent } from '../compare-list/compare-list.component';
-import { CompareBarComponent } from '../compare-bar/compare-bar.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatPaginatorModule } from '@angular/material/paginator';
@@ -56,14 +49,15 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./car-details.component.scss'],
 })
 export class CarDetailsComponent implements OnInit {
-  @Input('car-id')
+  @Input()
   carId: number;
 
   car: Car;
   displayedColumns: string[] = ['name', 'value'];
   dataSource = [];
 
-  constructor(private carService: CarService, private route: ActivatedRoute) {}
+  private carService = inject(CarService);
+  private route = inject(ActivatedRoute);
 
   getCar(): void {
     this.carId = +(this.carId || this.route.snapshot.paramMap.get('id'));

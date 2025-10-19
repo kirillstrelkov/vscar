@@ -2,15 +2,18 @@
   "name": "car-vs-fe",
   "version": "1.0.0",
   "scripts": {
+    "clean": "rimraf dist && rm -rf node_modules",
+    "format": "prettier --write \"src/**/*.ts\"",
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "lint": "ng lint",
-    "lint:fix": "ng lint --fix",
+    "lint-fix": "ng lint --fix",
     "test": "ng test"
   },
   "private": true,
+  "type": "module",
   "dependencies": {
     "@angular/animations": "^20.3.4",
     "@angular/cdk": "^20.2.8",
@@ -28,21 +31,22 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^20.3.5",
-    "@angular-eslint/builder": "^20.3.0",
-    "@angular-eslint/eslint-plugin": "^20.3.0",
-    "@angular-eslint/eslint-plugin-template": "^20.3.0",
-    "@angular-eslint/schematics": "^20.3.0",
+    "@angular-eslint/builder": "20.3.0",
     "@angular/cli": "~20.3.5",
     "@angular/compiler-cli": "^20.3.4",
+    "@eslint/js": "^9.35.0",
     "@types/jasmine": "~5.1.9",
-    "@typescript-eslint/eslint-plugin": "^8.46.0",
-    "@typescript-eslint/parser": "^8.46.0",
+    "angular-eslint": "20.3.0",
+    "eslint": "^9.35.0",
     "jasmine-core": "~5.12.0",
     "karma": "~6.4.4",
     "karma-chrome-launcher": "~3.2.0",
     "karma-coverage": "~2.2.1",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
-    "typescript": "~5.9.3"
+    "prettier": "^3.6.2",
+    "prettier-plugin-organize-imports": "^4.3.0",
+    "typescript": "~5.9.3",
+    "typescript-eslint": "8.40.0"
   }
 }

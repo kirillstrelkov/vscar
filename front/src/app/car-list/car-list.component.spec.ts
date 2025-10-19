@@ -1,5 +1,8 @@
 import { HttpClient } from '@angular/common/http';
-import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
+import {
+  HttpClientTestingModule,
+  HttpTestingController,
+} from '@angular/common/http/testing';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { CarCompareService } from '../car-compare.service';
 import { SearchService } from '../search.service';
@@ -14,25 +17,23 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 describe('CarListComponent', () => {
   let component: CarListComponent;
   let fixture: ComponentFixture<CarListComponent>;
-  let httpClient: HttpClient;
-  let httpTestingController: HttpTestingController;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [CarListComponent]
-    })
-      .compileComponents();
+      declarations: [CarListComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [HttpClientTestingModule, MatSnackBarModule,
-        OverlayModule, MatPaginatorModule, BrowserAnimationsModule],
-      providers: [
-        CarService,
-        SearchService,
-        CarCompareService,
-      ]
+      imports: [
+        HttpClientTestingModule,
+        MatSnackBarModule,
+        OverlayModule,
+        MatPaginatorModule,
+        BrowserAnimationsModule,
+      ],
+      providers: [CarService, SearchService, CarCompareService],
     });
 
     fixture = TestBed.createComponent(CarListComponent);

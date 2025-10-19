@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { Subject } from 'rxjs';
 import { debounceTime } from 'rxjs/operators';
 import { CarService } from '../car.service';
@@ -11,11 +11,7 @@ import { MatSelectModule } from '@angular/material/select'; // MatSelect often b
 import { RouterModule } from '@angular/router';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatInputModule } from '@angular/material/input';
-import {
-  MatDrawerContent,
-  MatSidenav,
-  MatSidenavModule,
-} from '@angular/material/sidenav';
+import { MatSidenavModule } from '@angular/material/sidenav';
 
 @Component({
   selector: 'app-search',
@@ -34,24 +30,21 @@ import {
   styleUrls: ['./search.component.scss'],
 })
 export class SearchComponent implements OnInit {
-  subject: Subject<any> = new Subject();
-  version: string = '';
-
-  constructor(
-    private searchService: SearchService,
-    private carService: CarService
-  ) {}
+  subject = new Subject<string>();
+  version = '';
+  private searchService = inject(SearchService);
+  private carService = inject(CarService);
 
   ngOnInit(): void {
     this.subject.pipe(debounceTime(500)).subscribe((value: string) => {
       this.searchService.changeSearchText(value);
     });
-    this.carService.getVersion().subscribe((version: any) => {
+    this.carService.getVersion().subscribe((version: string) => {
       this.version = version;
     });
   }
 
-  onSearchType(event: any): void {
-    this.subject.next(event.target.value);
+  onSearchType(event: Event): void {
+    this.subject.next((event.target as HTMLInputElement).value);
   }
 }

@@ -1,10 +1,8 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 
-
 export class SearchArgs {
-
-  constructor(text: string = '') {
+  constructor(text = '') {
     this.text = text;
     this.attributesAndValues = new Map();
     this.attributesAndRanges = new Map();
@@ -49,7 +47,7 @@ export class SearchArgs {
 }
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class SearchService {
   private searchArgs = new SearchArgs();
@@ -57,9 +55,11 @@ export class SearchService {
 
   searchArgsOb = this.searchSubject.asObservable();
 
-  constructor() { }
-
-  changeSearchText(text: string = null, attributes: Map<string, string[]> = null, ranges: Map<string, number[]> = null): void {
+  changeSearchText(
+    text: string = null,
+    attributes: Map<string, string[]> = null,
+    ranges: Map<string, number[]> = null,
+  ): void {
     if (text !== null) {
       this.searchArgs.setText(text);
     }
@@ -82,7 +82,6 @@ export class SearchService {
   removeRange(name: string) {
     this.searchArgs.removeRange(name);
   }
-
 
   removeArgument(name: string) {
     this.searchArgs.removeArgument(name);
