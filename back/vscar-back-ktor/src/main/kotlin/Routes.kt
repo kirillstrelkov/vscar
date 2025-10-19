@@ -9,9 +9,7 @@ import io.ktor.server.routing.*
 fun Route.carRoutes(carService: CarService) {
   route("/cars") {
     post("/findByFilter") {
-      println("query...")
       val query = call.receive<FilterQuery>()
-      println("query: $query")
       val result = carService.findByFilter(query)
       call.respond(result)
     }

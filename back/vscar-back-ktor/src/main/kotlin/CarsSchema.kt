@@ -91,7 +91,6 @@ class CarService(database: MongoDatabase) {
 
   suspend fun findAll(): List<Car> {
     val cars = collection.find().limit(10).toList()
-    println("log: " + cars.size)
     return cars
   }
 
