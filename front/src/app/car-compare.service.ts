@@ -2,14 +2,12 @@ import { Injectable } from '@angular/core';
 import { Car } from './car';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class CarCompareService {
   // TODO: improve - speedup?
   comparingCars: Car[] = [];
   comparingCarIds: number[] = [];
-
-  constructor() { }
 
   add(car: Car): void {
     if (!this.contains(car)) {
@@ -34,4 +32,3 @@ export class CarCompareService {
     return this.comparingCarIds.indexOf(car.adac_id, 0);
   }
 }
-

@@ -9,9 +9,8 @@ describe('CompareComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [CompareBarComponent]
-    })
-      .compileComponents();
+      declarations: [CompareBarComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

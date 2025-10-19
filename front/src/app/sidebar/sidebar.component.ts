@@ -1,9 +1,5 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import {
-  MatDrawerContent,
-  MatSidenav,
-  MatSidenavModule,
-} from '@angular/material/sidenav';
+import { Component, inject, OnInit, ViewChild } from '@angular/core';
+import { MatSidenav, MatSidenavModule } from '@angular/material/sidenav';
 import { BehaviorSubject, Observable, Subject } from 'rxjs';
 import { debounceTime } from 'rxjs/operators';
 import { CarService } from '../car.service';
@@ -12,7 +8,10 @@ import { SidebarService } from '../sidebar.service';
 import { MatSliderModule } from '@angular/material/slider'; // Import Module for MatSlider
 import { MatFormFieldModule } from '@angular/material/form-field'; // Import Module for MatFormField/MatLabel
 import { MatIconModule } from '@angular/material/icon';
-import { MatCheckboxModule } from '@angular/material/checkbox';
+import {
+  MatCheckboxChange,
+  MatCheckboxModule,
+} from '@angular/material/checkbox';
 import { MatSelectModule } from '@angular/material/select'; // MatSelect often bundles MatOption
 import { RouterModule } from '@angular/router';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
@@ -75,17 +74,14 @@ export class AttributeFilter {
 })
 export class SidebarComponent implements OnInit {
   // TODO: side bar should overflow when toggled - only on mobile
+  private carService = inject(CarService);
+  private searchService = inject(SearchService);
+  private sidebarService = inject(SidebarService);
 
   @ViewChild('drawer') sidenav: MatSidenav;
 
   filters: AttributeFilter[] = [];
-  subject: Subject<any> = new Subject();
-
-  constructor(
-    private carService: CarService,
-    private searchService: SearchService,
-    private sidebarService: SidebarService
-  ) {}
+  subject = new Subject<AttributeFilter>();
 
   ngOnInit(): void {
     this.sidebarService.sidebarOb.subscribe(() => {
@@ -117,8 +113,8 @@ export class SidebarComponent implements OnInit {
     this.searchService.changeSearchText();
   }
 
-  onSearch(event: any, filter: AttributeFilter): void {
-    filter.subject.next(event.target.value);
+  onSearch(event: Event, filter: AttributeFilter): void {
+    filter.subject.next((event.target as HTMLInputElement).value);
   }
 
   onAttrNameChange(attrName: string, filter: AttributeFilter): void {
@@ -146,10 +142,11 @@ export class SidebarComponent implements OnInit {
     this.subject.next(filter);
   }
 
-  onRangeChange(event: any, filter: AttributeFilter): void {
-    let value = event.target.valueAsNumber;
+  onRangeChange(event: Event, filter: AttributeFilter): void {
+    const value = (event.target as HTMLInputElement).valueAsNumber;
     if (filter.min <= value && value <= filter.max) {
-      const isRight = event.target.className.indexOf('slider-right') !== -1;
+      const isRight =
+        (event.target as HTMLElement).className.indexOf('slider-right') !== -1;
 
       if (isRight) {
         filter.currentMax = value;
@@ -163,7 +160,7 @@ export class SidebarComponent implements OnInit {
     }
   }
 
-  onChangeUseRange(event: any, filter: AttributeFilter): void {
+  onChangeUseRange(event: MatCheckboxChange, filter: AttributeFilter): void {
     filter.useRange = event.checked;
     this.subject.next(filter);
   }

@@ -1,4 +1,4 @@
-import { AfterViewInit, Component } from '@angular/core';
+import { AfterViewInit, Component, inject } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { forkJoin } from 'rxjs';
 import { CarService } from '../car.service';
@@ -10,13 +10,8 @@ import { MatSelectModule } from '@angular/material/select'; // MatSelect often b
 import { RouterModule } from '@angular/router';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatInputModule } from '@angular/material/input';
-import {
-  MatDrawerContent,
-  MatSidenav,
-  MatSidenavModule,
-} from '@angular/material/sidenav';
+import { MatSidenavModule } from '@angular/material/sidenav';
 
-import { SearchComponent } from '../search/search.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatTableModule } from '@angular/material/table';
@@ -52,7 +47,8 @@ export class CompareListComponent implements AfterViewInit {
 
   readonly attrString = 'Attribute';
 
-  constructor(private carService: CarService, private route: ActivatedRoute) {}
+  private carService = inject(CarService);
+  private route = inject(ActivatedRoute);
 
   // TODO: fix - if cars have same name - doesn't work as displayedColumns have duplicates
   ngAfterViewInit() {
@@ -78,7 +74,7 @@ export class CompareListComponent implements AfterViewInit {
             continue;
           }
 
-          let rowData = {};
+          const rowData = {};
           rowData[this.attrString] = { value: attr };
 
           /* 
@@ -151,7 +147,7 @@ export class CompareListComponent implements AfterViewInit {
         newData = newData.filter((item) => emptyRows.indexOf(item) === -1);
 
         this.data = newData;
-      }
+      },
     );
   }
 }

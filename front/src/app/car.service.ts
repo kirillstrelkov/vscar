@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { inject, Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
@@ -8,23 +8,22 @@ import { Car } from './car';
 @Injectable({ providedIn: 'root' })
 export class CarService {
   private carUrl = environment.apiURI;
-
-  constructor(private http: HttpClient) { }
+  private http = inject(HttpClient);
 
   getCar(id: number): Observable<Car> {
     return this.http
       .get<Car>(this.carUrl + '/' + id)
-      .pipe(catchError(this.handleError<Car>('getCar', null)));
+      .pipe(catchError(this.handleError<Car>(null)));
   }
 
   getCars(
-    page: number = 0,
-    limit: number = 100,
-    text: string = '',
+    page = 0,
+    limit = 100,
+    text = '',
     attributes: Map<string, string[]> = null,
-    ranges: Map<string, number[]> = null
-  ): Observable<{}> {
-    let jsonRequest = {
+    ranges: Map<string, number[]> = null,
+  ): Observable<unknown> {
+    const jsonRequest = {
       page: page + 1,
       limit: limit,
       text: text,
@@ -35,7 +34,7 @@ export class CarService {
 
     if (attributes !== null) {
       for (const [attrName, attrValues] of attributes) {
-        let attrData = {
+        const attrData = {
           name: attrName,
           values: [],
           range: {},
@@ -44,7 +43,7 @@ export class CarService {
           attrData.values.push(attrValue);
         }
         if (ranges.has(attrName)) {
-          let range = ranges.get(attrName);
+          const range = ranges.get(attrName);
           attrData.range = { min: range[0], max: range[1] };
         }
         jsonRequest.attributes.push(attrData);
@@ -52,36 +51,35 @@ export class CarService {
     }
 
     return this.http
-      .post<{}>(url, jsonRequest)
-      .pipe(catchError(this.handleError<{}>('getCars', {})));
+      .post<unknown>(url, jsonRequest)
+      .pipe(catchError(this.handleError<unknown>(null)));
   }
 
-  getAttributes(text: string = ''): Observable<[]> {
+  getAttributes(text = ''): Observable<[]> {
     return this.http
-      .get<[]>(
-        this.carUrl + `/attributes/names?text=${encodeURIComponent(text)}`
-      )
-      .pipe(catchError(this.handleError<[]>('getAttributes', [])));
+      .get<
+        []
+      >(this.carUrl + `/attributes/names?text=${encodeURIComponent(text)}`)
+      .pipe(catchError(this.handleError<[]>([])));
   }
 
-  getAttributeValues(text: string = ''): Observable<[]> {
+  getAttributeValues(text = ''): Observable<[]> {
     return this.http
-      .get<[]>(
-        this.carUrl + `/attributes/values?text=${encodeURIComponent(text)}`
-      )
-      .pipe(catchError(this.handleError<[]>('getAttributeValues', [])));
+      .get<
+        []
+      >(this.carUrl + `/attributes/values?text=${encodeURIComponent(text)}`)
+      .pipe(catchError(this.handleError<[]>([])));
   }
 
   getVersion(): Observable<string> {
     return this.http
       .get(this.carUrl + '/db/version', { responseType: 'text' })
-      .pipe(catchError(this.handleError<string>('getVersion', null)));
-
+      .pipe(catchError(this.handleError<string>(null)));
   }
 
-  private handleError<T>(operation = 'operation', result?: T) {
-    return (error: any): Observable<T> => {
-      console.error(error); // log to console instead
+  private handleError<T>(result?: T) {
+    return (error: unknown): Observable<T> => {
+      console.error(error);
       return of(result as T);
     };
   }

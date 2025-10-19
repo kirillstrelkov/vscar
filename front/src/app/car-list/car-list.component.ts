@@ -21,18 +21,12 @@ import { MatSelectModule } from '@angular/material/select'; // MatSelect often b
 import { RouterModule } from '@angular/router';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatInputModule } from '@angular/material/input';
-import {
-  MatDrawerContent,
-  MatSidenav,
-  MatSidenavModule,
-} from '@angular/material/sidenav';
-import { SearchComponent } from '../search/search.component';
+import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatTableModule } from '@angular/material/table';
 import { MatListModule } from '@angular/material/list';
 import { MatExpansionModule } from '@angular/material/expansion';
-import { CompareListComponent } from '../compare-list/compare-list.component';
 import { CompareBarComponent } from '../compare-bar/compare-bar.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatTooltipModule } from '@angular/material/tooltip';
@@ -83,13 +77,10 @@ export class CarListComponent implements AfterViewInit {
   ];
   data: Car[] = [];
   private cdr = inject(ChangeDetectorRef);
-
-  constructor(
-    private carService: CarService,
-    private searchService: SearchService,
-    private carCompareService: CarCompareService,
-    private snackBar: MatSnackBar
-  ) {}
+  private carService = inject(CarService);
+  private searchService = inject(SearchService);
+  private carCompareService = inject(CarCompareService);
+  private snackBar = inject(MatSnackBar);
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
@@ -120,7 +111,7 @@ export class CarListComponent implements AfterViewInit {
             this.paginator.pageSize,
             this.searchArgs.getText(),
             this.searchArgs.getAttributes(),
-            this.searchArgs.getRanges()
+            this.searchArgs.getRanges(),
           );
         }),
         map((data) => {
@@ -130,7 +121,7 @@ export class CarListComponent implements AfterViewInit {
         catchError(() => {
           console.log('Error to fetch data');
           return of<Car[]>([]);
-        })
+        }),
       )
       .subscribe((data) => {
         this.data = data;

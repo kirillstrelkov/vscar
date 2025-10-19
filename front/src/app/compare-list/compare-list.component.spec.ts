@@ -11,21 +11,22 @@ describe('CompareListComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [CompareListComponent]
-    })
-      .compileComponents();
+      declarations: [CompareListComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [HttpClientTestingModule],
-      providers: [{
-        provide: ActivatedRoute,
-        useValue: {
-          snapshot: { paramMap: convertToParamMap({ ids: '250123,304470' }) }
+      providers: [
+        {
+          provide: ActivatedRoute,
+          useValue: {
+            snapshot: { paramMap: convertToParamMap({ ids: '250123,304470' }) },
+          },
         },
-      }, CarService]
-
+        CarService,
+      ],
     });
 
     fixture = TestBed.createComponent(CompareListComponent);

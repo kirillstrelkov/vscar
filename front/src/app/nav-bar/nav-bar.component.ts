@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { SidebarService } from '../sidebar.service';
 import { MatSliderModule } from '@angular/material/slider'; // Import Module for MatSlider
 import { MatFormFieldModule } from '@angular/material/form-field'; // Import Module for MatFormField/MatLabel
@@ -8,12 +8,7 @@ import { MatSelectModule } from '@angular/material/select'; // MatSelect often b
 import { RouterModule } from '@angular/router';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatInputModule } from '@angular/material/input';
-import {
-  MatDrawerContent,
-  MatSidenav,
-  MatSidenavModule,
-} from '@angular/material/sidenav';
-import { AppComponent } from '../app.component';
+import { MatSidenavModule } from '@angular/material/sidenav';
 import { SearchComponent } from '../search/search.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
@@ -37,10 +32,8 @@ import { MatButtonModule } from '@angular/material/button';
   templateUrl: './nav-bar.component.html',
   styleUrls: ['./nav-bar.component.scss'],
 })
-export class NavBarComponent implements OnInit {
-  constructor(private sidebarService: SidebarService) {}
-
-  ngOnInit(): void {}
+export class NavBarComponent {
+  private sidebarService = inject(SidebarService);
 
   toggleSidenav(): void {
     this.sidebarService.toggle();
