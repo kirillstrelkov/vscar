@@ -1,11 +1,17 @@
 """Common steps for BDD tests."""
 
+import os
+
+from dotenv import load_dotenv
 from easelenium.browser import Browser
 from pytest_bdd import given, parsers, then, when
 
+load_dotenv()
+
+
 __XPATH_TD_CONTAINS = "//td[contains(text(), '{}')]"
 __PORT = 4200
-__URL = f"http://localhost:{__PORT}"
+__URL = os.getenv("HOST", f"http://localhost:{__PORT}")
 
 
 @given(parsers.parse('I am on "{path}"'))
@@ -128,8 +134,10 @@ def step_impl_then_should_not_see(browser: Browser, text: str) -> None:
 @then(parsers.parse('I should see that in row "{row}" values are highlighted'))
 def step_impl_then_row_highlighted(browser: Browser, row: str) -> None:
     """Check that row has highlight class."""
+    xpath = __XPATH_TD_CONTAINS.format(row)
+    browser.wait_for_visible(by_xpath=xpath)
     assert "highlight" in browser.get_attribute(
-        by_xpath=__XPATH_TD_CONTAINS.format(row),
+        by_xpath=xpath,
         attr="class",
     )
 

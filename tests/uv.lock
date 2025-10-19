@@ -580,6 +580,7 @@ dependencies = [
     { name = "click" },
     { name = "easelenium" },
     { name = "loguru" },
+    { name = "python-dotenv" },
     { name = "requests" },
 ]
 
@@ -596,6 +597,7 @@ requires-dist = [
     { name = "click", specifier = ">=8.3.0" },
     { name = "easelenium", specifier = ">=0.7.2" },
     { name = "loguru", specifier = ">=0.7.3" },
+    { name = "python-dotenv", specifier = ">=1.1.1" },
     { name = "requests", specifier = ">=2.32.5" },
 ]
 
