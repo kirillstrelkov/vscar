@@ -1,3 +1,5 @@
+import org.gradle.api.JavaVersion
+
 plugins {
   alias(libs.plugins.kotlin.jvm)
   alias(libs.plugins.ktor)
@@ -43,3 +45,7 @@ spotless {
     endWithNewline()
   }
 }
+
+ktor { docker { jreVersion.set(JavaVersion.VERSION_21) } }
+
+jib { from { image = "eclipse-temurin:21-jre-alpine" } }
