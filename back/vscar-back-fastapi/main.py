@@ -9,10 +9,14 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import PlainTextResponse, RedirectResponse
 
-from db import lifespan
+from db import db_lifespan
 
-app = FastAPI(lifespan=lifespan)
 load_dotenv()
+
+
+app = FastAPI(
+    lifespan=db_lifespan,
+)
 
 __PROJECTION_SKIP_ID = {"_id": False}
 __LIMIT = 100
@@ -31,7 +35,7 @@ app.add_middleware(
 
 
 @app.post("/cars/findByFilter")
-def find_by_filter(query: dict[str, Any]):  # noqa: ANN201
+async def find_by_filter(query: dict[str, Any]):  # noqa: ANN201
     """Find cars by filter."""
     page = int(query.get("page", 1))
     text = query.get("text", "")
@@ -112,7 +116,8 @@ def find_by_filter(query: dict[str, Any]):  # noqa: ANN201
         },
     ]
 
-    paginated_data = list(app.collection.aggregate(pipeline))
+    cursor = await app.collection.aggregate(pipeline)
+    paginated_data = await cursor.to_list(length=None)
 
     if not paginated_data or not paginated_data[0].get("totalCount"):
         return {
@@ -156,9 +161,9 @@ def find_by_filter(query: dict[str, Any]):  # noqa: ANN201
 
 
 @app.get("/cars/attributes/names")
-def get_attribute_names(text: str = "") -> list[str]:
+async def get_attribute_names(text: str = "") -> list[str]:
     """Get attribute names."""
-    document = app.collection.find_one({})
+    document = await app.collection.find_one({})
 
     if not document:
         return []
@@ -183,11 +188,11 @@ def get_attribute_names(text: str = "") -> list[str]:
 
 
 @app.get("/cars/attributes/values")
-def get_attribute_values(text: str):  # noqa: ANN201
+async def get_attribute_values(text: str):  # noqa: ANN201
     """Get attribute values."""
     projection = {"_id": 0, "attributes": {"$elemMatch": {"name": text}}}
 
-    doc_metadata = app.collection.find_one({}, projection)
+    doc_metadata = await app.collection.find_one({}, projection)
 
     if not doc_metadata or not doc_metadata.get("attributes"):
         return []
@@ -217,8 +222,8 @@ def get_attribute_values(text: str):  # noqa: ANN201
             },
         ]
 
-        cursor = app.collection.aggregate(pipeline)
-        results = cursor.to_list(length=None)
+        cursor = await app.collection.aggregate(pipeline)
+        results = await cursor.to_list(length=None)
 
         flat_values = []
         for item in results:
@@ -234,16 +239,16 @@ def get_attribute_values(text: str):  # noqa: ANN201
 
 
 @app.get("/cars/db/version", response_class=PlainTextResponse)
-def get_db_version() -> str:
+async def get_db_version() -> str:
     """Get current DB version."""
-    car = app.collection.find_one()
+    car = await app.collection.find_one()
     return car["processed_date"].split(".")[0]
 
 
 @app.get("/cars")
-def get_cars():  # noqa: ANN201
+async def get_cars():  # noqa: ANN201
     """Get all cars."""
-    return app.collection.find(
+    return await app.collection.find(
         projection=__PROJECTION_SKIP_ID,
         limit=10,
         sort=[
@@ -253,16 +258,16 @@ def get_cars():  # noqa: ANN201
 
 
 @app.get("/cars/{id}")
-def get_car(id: int):  # noqa: A002, ANN201
+async def get_car(id: int):  # noqa: A002, ANN201
     """Get car by id."""
-    return app.collection.find_one(
+    return await app.collection.find_one(
         {"adac_id": id},
         projection=__PROJECTION_SKIP_ID,
     )
 
 
 @app.get("/")
-def get_root():  # noqa: ANN201
+async def get_root():  # noqa: ANN201
     """Redirect to docs."""
     return RedirectResponse(url="/docs")
 

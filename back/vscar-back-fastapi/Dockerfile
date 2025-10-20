@@ -20,4 +20,4 @@ WORKDIR /app
 
 EXPOSE 3000
 
-CMD [".venv/bin/uvicorn", "main:app", "--host", "0.0.0.0", "--port", "3000"]
+CMD [".venv/bin/uvicorn", "main:app", "--workers","4", "--host", "0.0.0.0", "--port", "3000"]
