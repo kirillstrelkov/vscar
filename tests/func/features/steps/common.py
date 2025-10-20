@@ -11,7 +11,7 @@ load_dotenv()
 
 __XPATH_TD_CONTAINS = "//td[contains(text(), '{}')]"
 __PORT = 4200
-__URL = os.getenv("HOST", f"http://localhost:{__PORT}")
+__URL = os.getenv("URL", f"http://localhost:{__PORT}")
 
 
 @given(parsers.parse('I am on "{path}"'))
