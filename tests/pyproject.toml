@@ -7,9 +7,12 @@ requires-python = ">=3.12"
 dependencies = [
     "click>=8.3.0",
     "easelenium>=0.7.2",
+    "ipykernel>=7.0.1",
     "loguru>=0.7.3",
+    "pandas>=2.3.3",
     "python-dotenv>=1.1.1",
     "requests>=2.32.5",
+    "seaborn>=0.13.2",
 ]
 
 [dependency-groups]
