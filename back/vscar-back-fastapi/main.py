@@ -1,6 +1,7 @@
 """FastAPI vscar backend service."""
 
 import os
+from math import ceil
 from typing import Any
 
 import uvicorn
@@ -105,9 +106,9 @@ async def find_by_filter(query: dict[str, Any]):  # noqa: ANN201
     skip = (page - 1) * limit
 
     pipeline = [
-        {"$project": __PROJECTION_SKIP_ID},
         {"$match": db_query},
         {"$sort": {"price": 1}},
+        {"$project": __PROJECTION_SKIP_ID},
         {
             "$facet": {
                 "paginatedResults": [{"$skip": skip}, {"$limit": limit}],
@@ -140,7 +141,7 @@ async def find_by_filter(query: dict[str, Any]):  # noqa: ANN201
     paginated_results = facet_data.get("paginatedResults", [])
     total_count = facet_data.get("totalCount", [{}])[0].get("total", 0)
 
-    total_pages = total_count // limit + (1 if total_count % limit > 0 else 0)
+    total_pages = ceil(total_count / limit)
     offset = (page - 1) * limit
 
     return {
