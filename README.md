@@ -20,8 +20,12 @@ For better performance, indexes for next keys should be created:
 
 ## Backend
 
-Check /back folder
+Check [/back](/back) folder
+
+### Performance analysis
+
+Check [tests/perf_test/Analysis.ipynb](tests/perf_test/Analysis.ipynb)
 
 ## Frontend
 
-Check /front folder
+Check [/front](/front) folder
