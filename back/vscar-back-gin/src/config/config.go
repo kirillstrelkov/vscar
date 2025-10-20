@@ -18,7 +18,7 @@ type Config struct {
 func LoadConfig() Config {
 	port := os.Getenv("PORT")
 	if port == "" {
-		port = "8080" // default port
+		port = "3000" // default port
 	}
 
 	env := os.Getenv("ENV")

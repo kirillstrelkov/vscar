@@ -1,6 +1,7 @@
 /* (C) 2025 */
 package com.vscar.vscar_back_spring;
 
+import static java.util.stream.Collectors.toList;
 import static org.springframework.data.mongodb.core.aggregation.Aggregation.group;
 import static org.springframework.data.mongodb.core.aggregation.Aggregation.match;
 import static org.springframework.data.mongodb.core.aggregation.Aggregation.newAggregation;
@@ -17,7 +18,6 @@ import com.vscar.vscar_back_spring.dto.PaginatedResult;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.mongodb.core.MongoTemplate;
@@ -87,10 +87,11 @@ public class CarsService {
         List<String> uniqueValues =
             results.stream()
                 .map(StringValueProjection::value)
-                .filter(java.util.Optional::isPresent)
-                .map(Optional::get)
+                .filter(java.util.Objects::nonNull)
+                .flatMap(Optional::stream)
+                .filter(java.util.Objects::nonNull)
                 .sorted()
-                .collect(Collectors.toList());
+                .collect(toList());
 
         yield uniqueValues;
       }
@@ -136,14 +137,21 @@ public class CarsService {
       if (attr.range().isPresent()) {
         QueryRange range = attr.range().get();
         if (range.min().isPresent() || range.max().isPresent()) {
-          Criteria rangeForFixedAttr = Criteria.where("name").is(key + "|fixed");
+          List<Criteria> rangeConditions = new ArrayList<>();
+          rangeConditions.add(Criteria.where("name").is(key + "|fixed"));
+
+          Criteria valueCriteria = Criteria.where("value");
           if (range.min().isPresent()) {
-            rangeForFixedAttr = rangeForFixedAttr.and("value").gte(range.min().get());
+            valueCriteria.gte(range.min().get());
           }
           if (range.max().isPresent()) {
-            rangeForFixedAttr = rangeForFixedAttr.and("value").lte(range.max().get());
+            valueCriteria.lte(range.max().get());
           }
-          Criteria rangeCriteria = Criteria.where("attributes").elemMatch(rangeForFixedAttr);
+          rangeConditions.add(valueCriteria);
+
+          Criteria rangeCriteria =
+              Criteria.where("attributes")
+                  .elemMatch(new Criteria().andOperator(rangeConditions.toArray(Criteria[]::new)));
           attrCriteria.add(rangeCriteria);
         }
       }
