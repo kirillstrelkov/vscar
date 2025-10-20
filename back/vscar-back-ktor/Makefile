@@ -21,7 +21,7 @@ clean:
 	./gradlew clean
 
 run:
-	./gradlew bootRun
+	./gradlew run
 
 build:
 	./gradlew bootJar
@@ -30,4 +30,4 @@ docker-build:
 	./gradlew jibDockerBuild --image="${APP_NAME}:latest"
 
 docker-run:
-	docker run --rm -e DATABASE_URI=mongodb://172.17.0.1:27017/vscar -p 3000:3000 ${APP_NAME}
+	docker run --cpus=4 --rm -e DATABASE_URI=mongodb://172.17.0.1:27017/vscar -p 3000:3000 ${APP_NAME}

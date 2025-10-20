@@ -32,4 +32,4 @@ docker-build:
 	docker build -t ${APP_NAME} .
 
 docker-run:
-	docker run --init --rm -e DATABASE_URI=mongodb://172.17.0.1:27017/vscar -p 3000:3000 ${APP_NAME}
+	docker run --cpus=4 --init --rm -e DATABASE_URI=mongodb://172.17.0.1:27017/vscar -p 3000:3000 ${APP_NAME}

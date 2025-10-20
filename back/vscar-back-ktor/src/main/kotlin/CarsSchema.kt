@@ -29,7 +29,7 @@ data class Car(
   @SerialName("processed_date") val processedDate: String,
   val image: String,
   val fuel: String,
-  val transmission: String,
+  val transmission: String?,
   val power: Int,
   val price: Int,
   val attributes: List<CarAttribute>,

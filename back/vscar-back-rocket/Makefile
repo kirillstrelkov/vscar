@@ -31,10 +31,10 @@ cov:
 	cargo llvm-cov --html
 
 run:
-	cargo run
+	RUST_LOG=info cargo run --release
 
 docker-build:
 	docker build -t ${APP_NAME} .
 
 docker-run:
-	docker run --rm -e ROCKET_PORT=3000 -e ROCKET_ADDRESS=0.0.0.0 -e DATABASE_URI=mongodb://172.17.0.1:27017/vscar -p 3000:3000 ${APP_NAME}
+	docker run --cpus=4 --rm -e ROCKET_PORT=3000 -e ROCKET_ADDRESS=0.0.0.0 -e DATABASE_URI=mongodb://172.17.0.1:27017/vscar -p 3000:3000 ${APP_NAME}

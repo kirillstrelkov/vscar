@@ -29,4 +29,4 @@ docker-build:
 	./gradlew bootBuildImage --imageName ${APP_NAME}
 
 docker-run:
-	docker run --rm -e DATABASE_URI=mongodb://172.17.0.1:27017/vscar -p 3000:3000 ${APP_NAME}
+	docker run --cpus=4 --rm -e DATABASE_URI=mongodb://172.17.0.1:27017/vscar -p 3000:3000 ${APP_NAME}
