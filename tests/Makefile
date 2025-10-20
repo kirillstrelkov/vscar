@@ -25,3 +25,17 @@ test-func:
 	./.venv/bin/python -m pytest func --retries 3
 
 test: test-api test-func
+
+images-show:
+	docker images | grep "REPOSITORY\|vscar-back" | sort -k7 -h
+
+images-build:
+	./.venv/bin/python build_dockers.py
+
+quick-perf-check:
+	./.venv/bin/python perf_test/perf_utils.py --simple
+
+run-perf-back-%:
+	./.venv/bin/python perf_test/run_perf_back.py --app $* --force
+	./.venv/bin/python perf_test/run_perf_back.py --app $* --force --parallel
+

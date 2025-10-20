@@ -1,6 +1,6 @@
 all: fmt check
 
-cur_dir = $(shell pwd)
+cur_dir = $(shell pwd)/..
 py = $(cur_dir)/.venv/bin/python
 
 init:
@@ -24,3 +24,4 @@ check:
 
 run:
 	$(py) run_perf.py --url http://localhost:3000/
+
