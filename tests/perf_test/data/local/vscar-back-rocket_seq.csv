@@ -1,482 +1,482 @@
 ,test_type,app,exec_time,response_code,request_data,parallel
-0,loop_through_pages,vscar-back-rocket,    261.37,200,"{'page': 1, 'limit': 100, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8000, 'max': 50000}}]}",False
-1,loop_through_pages,vscar-back-rocket,    253.77,200,"{'page': 2, 'limit': 100, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8000, 'max': 50000}}]}",False
-2,loop_through_pages,vscar-back-rocket,    198.86,200,"{'page': 3, 'limit': 100, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8000, 'max': 50000}}]}",False
-3,loop_through_pages,vscar-back-rocket,    214.99,200,"{'page': 4, 'limit': 100, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8000, 'max': 50000}}]}",False
-4,loop_through_pages,vscar-back-rocket,    253.51,200,"{'page': 5, 'limit': 100, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8000, 'max': 50000}}]}",False
-5,loop_through_pages,vscar-back-rocket,    193.11,200,"{'page': 6, 'limit': 100, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8000, 'max': 50000}}]}",False
-6,loop_through_pages,vscar-back-rocket,    200.16,200,"{'page': 7, 'limit': 100, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8000, 'max': 50000}}]}",False
-7,loop_through_pages,vscar-back-rocket,    185.78,200,"{'page': 8, 'limit': 100, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8000, 'max': 50000}}]}",False
-8,loop_through_pages,vscar-back-rocket,    200.69,200,"{'page': 9, 'limit': 100, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8000, 'max': 50000}}]}",False
-9,loop_through_pages,vscar-back-rocket,    199.96,200,"{'page': 10, 'limit': 100, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8000, 'max': 50000}}]}",False
-10,loop_through_pages,vscar-back-rocket,    191.55,200,"{'page': 11, 'limit': 100, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8000, 'max': 50000}}]}",False
-11,loop_through_pages,vscar-back-rocket,    197.67,200,"{'page': 12, 'limit': 100, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8000, 'max': 50000}}]}",False
-12,loop_through_pages,vscar-back-rocket,    202.39,200,"{'page': 13, 'limit': 100, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8000, 'max': 50000}}]}",False
-13,loop_through_pages,vscar-back-rocket,    191.83,200,"{'page': 14, 'limit': 100, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8000, 'max': 50000}}]}",False
-14,loop_through_pages,vscar-back-rocket,    197.17,200,"{'page': 15, 'limit': 100, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8000, 'max': 50000}}]}",False
-15,loop_through_pages,vscar-back-rocket,    197.45,200,"{'page': 16, 'limit': 100, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8000, 'max': 50000}}]}",False
-16,loop_through_pages,vscar-back-rocket,    199.39,200,"{'page': 17, 'limit': 100, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8000, 'max': 50000}}]}",False
-17,loop_through_pages,vscar-back-rocket,    198.70,200,"{'page': 18, 'limit': 100, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8000, 'max': 50000}}]}",False
-18,loop_through_pages,vscar-back-rocket,    196.37,200,"{'page': 19, 'limit': 100, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8000, 'max': 50000}}]}",False
-19,loop_through_pages,vscar-back-rocket,    184.61,200,"{'page': 20, 'limit': 100, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8000, 'max': 50000}}]}",False
-20,loop_through_pages,vscar-back-rocket,    198.52,200,"{'page': 21, 'limit': 100, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8000, 'max': 50000}}]}",False
-21,loop_through_pages,vscar-back-rocket,    201.79,200,"{'page': 22, 'limit': 100, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8000, 'max': 50000}}]}",False
-22,loop_through_pages,vscar-back-rocket,    210.32,200,"{'page': 23, 'limit': 100, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8000, 'max': 50000}}]}",False
-23,loop_through_pages,vscar-back-rocket,    192.40,200,"{'page': 24, 'limit': 100, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8000, 'max': 50000}}]}",False
-24,loop_through_pages,vscar-back-rocket,    191.16,200,"{'page': 25, 'limit': 100, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8000, 'max': 50000}}]}",False
-25,loop_through_pages,vscar-back-rocket,    197.96,200,"{'page': 26, 'limit': 100, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8000, 'max': 50000}}]}",False
-26,loop_through_pages,vscar-back-rocket,    191.80,200,"{'page': 27, 'limit': 100, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8000, 'max': 50000}}]}",False
-27,loop_through_pages,vscar-back-rocket,    203.19,200,"{'page': 28, 'limit': 100, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8000, 'max': 50000}}]}",False
-28,loop_through_pages,vscar-back-rocket,    202.92,200,"{'page': 29, 'limit': 100, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8000, 'max': 50000}}]}",False
-29,loop_through_pages,vscar-back-rocket,    195.56,200,"{'page': 30, 'limit': 100, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8000, 'max': 50000}}]}",False
-30,loop_through_pages,vscar-back-rocket,    195.43,200,"{'page': 31, 'limit': 100, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8000, 'max': 50000}}]}",False
-31,loop_through_pages,vscar-back-rocket,    193.95,200,"{'page': 32, 'limit': 100, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8000, 'max': 50000}}]}",False
-32,loop_through_pages,vscar-back-rocket,    205.72,200,"{'page': 33, 'limit': 100, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8000, 'max': 50000}}]}",False
-33,loop_through_pages,vscar-back-rocket,    197.14,200,"{'page': 34, 'limit': 100, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8000, 'max': 50000}}]}",False
-34,loop_through_pages,vscar-back-rocket,    194.15,200,"{'page': 35, 'limit': 100, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8000, 'max': 50000}}]}",False
-35,loop_through_pages,vscar-back-rocket,    201.85,200,"{'page': 36, 'limit': 100, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8000, 'max': 50000}}]}",False
-36,loop_through_pages,vscar-back-rocket,    185.65,200,"{'page': 37, 'limit': 100, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8000, 'max': 50000}}]}",False
-37,loop_through_pages,vscar-back-rocket,    206.06,200,"{'page': 38, 'limit': 100, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8000, 'max': 50000}}]}",False
-38,loop_through_pages,vscar-back-rocket,    203.11,200,"{'page': 39, 'limit': 100, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8000, 'max': 50000}}]}",False
-39,loop_through_pages,vscar-back-rocket,    192.48,200,"{'page': 40, 'limit': 100, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8000, 'max': 50000}}]}",False
-40,loop_through_pages,vscar-back-rocket,    198.13,200,"{'page': 41, 'limit': 100, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8000, 'max': 50000}}]}",False
-41,loop_through_pages,vscar-back-rocket,    192.08,200,"{'page': 42, 'limit': 100, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8000, 'max': 50000}}]}",False
-42,loop_through_pages,vscar-back-rocket,    196.57,200,"{'page': 43, 'limit': 100, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8000, 'max': 50000}}]}",False
-43,loop_through_pages,vscar-back-rocket,    202.89,200,"{'page': 44, 'limit': 100, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8000, 'max': 50000}}]}",False
-44,loop_through_pages,vscar-back-rocket,    209.92,200,"{'page': 45, 'limit': 100, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8000, 'max': 50000}}]}",False
-45,loop_through_pages,vscar-back-rocket,    201.76,200,"{'page': 46, 'limit': 100, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8000, 'max': 50000}}]}",False
-46,loop_through_pages,vscar-back-rocket,    139.53,200,"{'page': 47, 'limit': 100, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8000, 'max': 50000}}]}",False
-47,loop_through_pages,vscar-back-rocket,    101.21,200,"{'page': 48, 'limit': 100, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8000, 'max': 50000}}]}",False
-48,loop_through_pages,vscar-back-rocket,    100.22,200,"{'page': 49, 'limit': 100, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8000, 'max': 50000}}]}",False
-49,loop_through_pages,vscar-back-rocket,     99.49,200,"{'page': 50, 'limit': 100, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8000, 'max': 50000}}]}",False
-50,loop_through_pages,vscar-back-rocket,    105.08,200,"{'page': 51, 'limit': 100, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8000, 'max': 50000}}]}",False
-51,loop_through_pages,vscar-back-rocket,    100.94,200,"{'page': 52, 'limit': 100, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8000, 'max': 50000}}]}",False
-52,loop_through_pages,vscar-back-rocket,    101.25,200,"{'page': 53, 'limit': 100, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8000, 'max': 50000}}]}",False
-53,loop_through_pages,vscar-back-rocket,    100.38,200,"{'page': 54, 'limit': 100, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8000, 'max': 50000}}]}",False
-54,loop_through_pages,vscar-back-rocket,    100.72,200,"{'page': 55, 'limit': 100, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8000, 'max': 50000}}]}",False
-55,loop_through_pages,vscar-back-rocket,     99.70,200,"{'page': 56, 'limit': 100, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8000, 'max': 50000}}]}",False
-56,loop_through_pages,vscar-back-rocket,    103.08,200,"{'page': 57, 'limit': 100, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8000, 'max': 50000}}]}",False
-57,loop_through_pages,vscar-back-rocket,    101.94,200,"{'page': 58, 'limit': 100, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8000, 'max': 50000}}]}",False
-58,loop_through_pages,vscar-back-rocket,    103.16,200,"{'page': 59, 'limit': 100, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8000, 'max': 50000}}]}",False
-59,loop_through_pages,vscar-back-rocket,    101.01,200,"{'page': 60, 'limit': 100, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8000, 'max': 50000}}]}",False
-60,price_in_steps,vscar-back-rocket,     26.90,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8000, 'max': 8100}}]}",False
-61,price_in_steps,vscar-back-rocket,      2.75,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8100, 'max': 8200}}]}",False
-62,price_in_steps,vscar-back-rocket,     14.55,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8200, 'max': 8300}}]}",False
-63,price_in_steps,vscar-back-rocket,      2.44,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8300, 'max': 8400}}]}",False
-64,price_in_steps,vscar-back-rocket,      1.22,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8400, 'max': 8500}}]}",False
-65,price_in_steps,vscar-back-rocket,     33.05,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8500, 'max': 8600}}]}",False
-66,price_in_steps,vscar-back-rocket,      2.93,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8600, 'max': 8700}}]}",False
-67,price_in_steps,vscar-back-rocket,      3.59,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8700, 'max': 8800}}]}",False
-68,price_in_steps,vscar-back-rocket,      1.48,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8800, 'max': 8900}}]}",False
-69,price_in_steps,vscar-back-rocket,      2.31,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8900, 'max': 9000}}]}",False
-70,price_in_steps,vscar-back-rocket,      2.00,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 9000, 'max': 9100}}]}",False
-71,price_in_steps,vscar-back-rocket,      1.88,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 9100, 'max': 9200}}]}",False
-72,price_in_steps,vscar-back-rocket,      2.49,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 9200, 'max': 9300}}]}",False
-73,price_in_steps,vscar-back-rocket,      1.88,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 9300, 'max': 9400}}]}",False
-74,price_in_steps,vscar-back-rocket,      1.56,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 9400, 'max': 9500}}]}",False
-75,price_in_steps,vscar-back-rocket,      1.77,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 9500, 'max': 9600}}]}",False
-76,price_in_steps,vscar-back-rocket,      1.18,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 9600, 'max': 9700}}]}",False
-77,price_in_steps,vscar-back-rocket,      1.28,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 9700, 'max': 9800}}]}",False
-78,price_in_steps,vscar-back-rocket,      1.61,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 9800, 'max': 9900}}]}",False
-79,price_in_steps,vscar-back-rocket,      2.80,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 9900, 'max': 10000}}]}",False
-80,price_in_steps,vscar-back-rocket,      2.94,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 10000, 'max': 10100}}]}",False
-81,price_in_steps,vscar-back-rocket,      1.99,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 10100, 'max': 10200}}]}",False
-82,price_in_steps,vscar-back-rocket,      1.28,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 10200, 'max': 10300}}]}",False
-83,price_in_steps,vscar-back-rocket,      1.90,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 10300, 'max': 10400}}]}",False
-84,price_in_steps,vscar-back-rocket,      1.88,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 10400, 'max': 10500}}]}",False
-85,price_in_steps,vscar-back-rocket,      1.67,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 10500, 'max': 10600}}]}",False
-86,price_in_steps,vscar-back-rocket,      1.27,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 10600, 'max': 10700}}]}",False
-87,price_in_steps,vscar-back-rocket,      2.42,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 10700, 'max': 10800}}]}",False
-88,price_in_steps,vscar-back-rocket,      1.79,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 10800, 'max': 10900}}]}",False
-89,price_in_steps,vscar-back-rocket,      1.55,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 10900, 'max': 11000}}]}",False
-90,price_in_steps,vscar-back-rocket,      1.65,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 11000, 'max': 11100}}]}",False
-91,price_in_steps,vscar-back-rocket,      2.17,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 11100, 'max': 11200}}]}",False
-92,price_in_steps,vscar-back-rocket,      1.97,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 11200, 'max': 11300}}]}",False
-93,price_in_steps,vscar-back-rocket,      1.18,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 11300, 'max': 11400}}]}",False
-94,price_in_steps,vscar-back-rocket,      3.09,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 11400, 'max': 11500}}]}",False
-95,price_in_steps,vscar-back-rocket,      2.62,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 11500, 'max': 11600}}]}",False
-96,price_in_steps,vscar-back-rocket,      1.14,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 11600, 'max': 11700}}]}",False
-97,price_in_steps,vscar-back-rocket,      1.76,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 11700, 'max': 11800}}]}",False
-98,price_in_steps,vscar-back-rocket,      1.36,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 11800, 'max': 11900}}]}",False
-99,price_in_steps,vscar-back-rocket,      2.08,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 11900, 'max': 12000}}]}",False
-100,price_in_steps,vscar-back-rocket,      1.95,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 12000, 'max': 12100}}]}",False
-101,price_in_steps,vscar-back-rocket,      2.55,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 12100, 'max': 12200}}]}",False
-102,price_in_steps,vscar-back-rocket,      3.00,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 12200, 'max': 12300}}]}",False
-103,price_in_steps,vscar-back-rocket,      1.79,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 12300, 'max': 12400}}]}",False
-104,price_in_steps,vscar-back-rocket,      1.40,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 12400, 'max': 12500}}]}",False
-105,price_in_steps,vscar-back-rocket,      1.00,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 12500, 'max': 12600}}]}",False
-106,price_in_steps,vscar-back-rocket,      0.95,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 12600, 'max': 12700}}]}",False
-107,price_in_steps,vscar-back-rocket,      1.03,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 12700, 'max': 12800}}]}",False
-108,price_in_steps,vscar-back-rocket,      1.05,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 12800, 'max': 12900}}]}",False
-109,price_in_steps,vscar-back-rocket,      3.58,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 12900, 'max': 13000}}]}",False
-110,price_in_steps,vscar-back-rocket,      2.26,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 13000, 'max': 13100}}]}",False
-111,price_in_steps,vscar-back-rocket,      3.16,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 13100, 'max': 13200}}]}",False
-112,price_in_steps,vscar-back-rocket,      1.72,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 13200, 'max': 13300}}]}",False
-113,price_in_steps,vscar-back-rocket,      1.45,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 13300, 'max': 13400}}]}",False
-114,price_in_steps,vscar-back-rocket,      1.00,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 13400, 'max': 13500}}]}",False
-115,price_in_steps,vscar-back-rocket,      1.13,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 13500, 'max': 13600}}]}",False
-116,price_in_steps,vscar-back-rocket,      1.71,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 13600, 'max': 13700}}]}",False
-117,price_in_steps,vscar-back-rocket,      3.31,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 13700, 'max': 13800}}]}",False
-118,price_in_steps,vscar-back-rocket,      1.18,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 13800, 'max': 13900}}]}",False
-119,price_in_steps,vscar-back-rocket,      1.31,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 13900, 'max': 14000}}]}",False
-120,price_in_steps,vscar-back-rocket,      1.39,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 14000, 'max': 14100}}]}",False
-121,price_in_steps,vscar-back-rocket,      2.76,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 14100, 'max': 14200}}]}",False
-122,price_in_steps,vscar-back-rocket,      2.38,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 14200, 'max': 14300}}]}",False
-123,price_in_steps,vscar-back-rocket,      4.56,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 14300, 'max': 14400}}]}",False
-124,price_in_steps,vscar-back-rocket,      2.05,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 14400, 'max': 14500}}]}",False
-125,price_in_steps,vscar-back-rocket,      1.71,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 14500, 'max': 14600}}]}",False
-126,price_in_steps,vscar-back-rocket,      2.46,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 14600, 'max': 14700}}]}",False
-127,price_in_steps,vscar-back-rocket,      1.79,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 14700, 'max': 14800}}]}",False
-128,price_in_steps,vscar-back-rocket,      2.57,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 14800, 'max': 14900}}]}",False
-129,price_in_steps,vscar-back-rocket,      7.93,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 14900, 'max': 15000}}]}",False
-130,price_in_steps,vscar-back-rocket,      3.99,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 15000, 'max': 15100}}]}",False
-131,price_in_steps,vscar-back-rocket,      2.72,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 15100, 'max': 15200}}]}",False
-132,price_in_steps,vscar-back-rocket,      1.09,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 15200, 'max': 15300}}]}",False
-133,price_in_steps,vscar-back-rocket,      2.65,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 15300, 'max': 15400}}]}",False
-134,price_in_steps,vscar-back-rocket,      1.94,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 15400, 'max': 15500}}]}",False
-135,price_in_steps,vscar-back-rocket,      5.61,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 15500, 'max': 15600}}]}",False
-136,price_in_steps,vscar-back-rocket,      3.33,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 15600, 'max': 15700}}]}",False
-137,price_in_steps,vscar-back-rocket,      3.39,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 15700, 'max': 15800}}]}",False
-138,price_in_steps,vscar-back-rocket,      4.39,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 15800, 'max': 15900}}]}",False
-139,price_in_steps,vscar-back-rocket,      2.39,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 15900, 'max': 16000}}]}",False
-140,price_in_steps,vscar-back-rocket,      3.97,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 16000, 'max': 16100}}]}",False
-141,price_in_steps,vscar-back-rocket,      1.99,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 16100, 'max': 16200}}]}",False
-142,price_in_steps,vscar-back-rocket,      2.48,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 16200, 'max': 16300}}]}",False
-143,price_in_steps,vscar-back-rocket,      3.39,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 16300, 'max': 16400}}]}",False
-144,price_in_steps,vscar-back-rocket,      4.07,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 16400, 'max': 16500}}]}",False
-145,price_in_steps,vscar-back-rocket,      1.79,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 16500, 'max': 16600}}]}",False
-146,price_in_steps,vscar-back-rocket,      2.43,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 16600, 'max': 16700}}]}",False
-147,price_in_steps,vscar-back-rocket,      4.40,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 16700, 'max': 16800}}]}",False
-148,price_in_steps,vscar-back-rocket,      4.58,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 16800, 'max': 16900}}]}",False
-149,price_in_steps,vscar-back-rocket,      6.48,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 16900, 'max': 17000}}]}",False
-150,price_in_steps,vscar-back-rocket,      3.16,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 17000, 'max': 17100}}]}",False
-151,price_in_steps,vscar-back-rocket,      3.29,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 17100, 'max': 17200}}]}",False
-152,price_in_steps,vscar-back-rocket,      4.68,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 17200, 'max': 17300}}]}",False
-153,price_in_steps,vscar-back-rocket,      5.71,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 17300, 'max': 17400}}]}",False
-154,price_in_steps,vscar-back-rocket,      3.24,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 17400, 'max': 17500}}]}",False
-155,price_in_steps,vscar-back-rocket,      1.91,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 17500, 'max': 17600}}]}",False
-156,price_in_steps,vscar-back-rocket,      3.13,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 17600, 'max': 17700}}]}",False
-157,price_in_steps,vscar-back-rocket,      3.20,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 17700, 'max': 17800}}]}",False
-158,price_in_steps,vscar-back-rocket,      4.12,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 17800, 'max': 17900}}]}",False
-159,price_in_steps,vscar-back-rocket,      4.48,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 17900, 'max': 18000}}]}",False
-160,price_in_steps,vscar-back-rocket,      2.47,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 18000, 'max': 18100}}]}",False
-161,price_in_steps,vscar-back-rocket,      2.49,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 18100, 'max': 18200}}]}",False
-162,price_in_steps,vscar-back-rocket,      4.38,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 18200, 'max': 18300}}]}",False
-163,price_in_steps,vscar-back-rocket,      4.35,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 18300, 'max': 18400}}]}",False
-164,price_in_steps,vscar-back-rocket,      1.35,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 18400, 'max': 18500}}]}",False
-165,price_in_steps,vscar-back-rocket,      5.32,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 18500, 'max': 18600}}]}",False
-166,price_in_steps,vscar-back-rocket,      7.02,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 18600, 'max': 18700}}]}",False
-167,price_in_steps,vscar-back-rocket,      4.20,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 18700, 'max': 18800}}]}",False
-168,price_in_steps,vscar-back-rocket,      3.51,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 18800, 'max': 18900}}]}",False
-169,price_in_steps,vscar-back-rocket,      7.96,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 18900, 'max': 19000}}]}",False
-170,price_in_steps,vscar-back-rocket,      3.50,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 19000, 'max': 19100}}]}",False
-171,price_in_steps,vscar-back-rocket,      2.54,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 19100, 'max': 19200}}]}",False
-172,price_in_steps,vscar-back-rocket,      1.24,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 19200, 'max': 19300}}]}",False
-173,price_in_steps,vscar-back-rocket,      2.50,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 19300, 'max': 19400}}]}",False
-174,price_in_steps,vscar-back-rocket,      5.42,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 19400, 'max': 19500}}]}",False
-175,price_in_steps,vscar-back-rocket,      7.65,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 19500, 'max': 19600}}]}",False
-176,price_in_steps,vscar-back-rocket,      6.97,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 19600, 'max': 19700}}]}",False
-177,price_in_steps,vscar-back-rocket,      5.92,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 19700, 'max': 19800}}]}",False
-178,price_in_steps,vscar-back-rocket,      3.40,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 19800, 'max': 19900}}]}",False
-179,price_in_steps,vscar-back-rocket,      9.59,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 19900, 'max': 20000}}]}",False
-180,price_in_steps,vscar-back-rocket,      5.44,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 20000, 'max': 20100}}]}",False
-181,price_in_steps,vscar-back-rocket,      5.63,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 20100, 'max': 20200}}]}",False
-182,price_in_steps,vscar-back-rocket,      3.82,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 20200, 'max': 20300}}]}",False
-183,price_in_steps,vscar-back-rocket,      4.97,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 20300, 'max': 20400}}]}",False
-184,price_in_steps,vscar-back-rocket,      5.01,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 20400, 'max': 20500}}]}",False
-185,price_in_steps,vscar-back-rocket,      4.25,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 20500, 'max': 20600}}]}",False
-186,price_in_steps,vscar-back-rocket,      4.95,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 20600, 'max': 20700}}]}",False
-187,price_in_steps,vscar-back-rocket,      3.04,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 20700, 'max': 20800}}]}",False
-188,price_in_steps,vscar-back-rocket,      5.14,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 20800, 'max': 20900}}]}",False
-189,price_in_steps,vscar-back-rocket,      6.66,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 20900, 'max': 21000}}]}",False
-190,price_in_steps,vscar-back-rocket,      5.93,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 21000, 'max': 21100}}]}",False
-191,price_in_steps,vscar-back-rocket,      5.51,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 21100, 'max': 21200}}]}",False
-192,price_in_steps,vscar-back-rocket,      2.54,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 21200, 'max': 21300}}]}",False
-193,price_in_steps,vscar-back-rocket,      5.34,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 21300, 'max': 21400}}]}",False
-194,price_in_steps,vscar-back-rocket,      4.58,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 21400, 'max': 21500}}]}",False
-195,price_in_steps,vscar-back-rocket,      3.21,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 21500, 'max': 21600}}]}",False
-196,price_in_steps,vscar-back-rocket,      7.12,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 21600, 'max': 21700}}]}",False
-197,price_in_steps,vscar-back-rocket,      9.35,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 21700, 'max': 21800}}]}",False
-198,price_in_steps,vscar-back-rocket,      3.93,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 21800, 'max': 21900}}]}",False
-199,price_in_steps,vscar-back-rocket,      5.53,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 21900, 'max': 22000}}]}",False
-200,price_in_steps,vscar-back-rocket,      3.08,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 22000, 'max': 22100}}]}",False
-201,price_in_steps,vscar-back-rocket,      4.61,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 22100, 'max': 22200}}]}",False
-202,price_in_steps,vscar-back-rocket,      4.04,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 22200, 'max': 22300}}]}",False
-203,price_in_steps,vscar-back-rocket,      5.86,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 22300, 'max': 22400}}]}",False
-204,price_in_steps,vscar-back-rocket,      7.57,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 22400, 'max': 22500}}]}",False
-205,price_in_steps,vscar-back-rocket,      5.71,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 22500, 'max': 22600}}]}",False
-206,price_in_steps,vscar-back-rocket,      2.73,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 22600, 'max': 22700}}]}",False
-207,price_in_steps,vscar-back-rocket,     10.24,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 22700, 'max': 22800}}]}",False
-208,price_in_steps,vscar-back-rocket,      5.07,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 22800, 'max': 22900}}]}",False
-209,price_in_steps,vscar-back-rocket,     11.65,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 22900, 'max': 23000}}]}",False
-210,price_in_steps,vscar-back-rocket,      5.67,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 23000, 'max': 23100}}]}",False
-211,price_in_steps,vscar-back-rocket,      6.75,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 23100, 'max': 23200}}]}",False
-212,price_in_steps,vscar-back-rocket,      6.18,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 23200, 'max': 23300}}]}",False
-213,price_in_steps,vscar-back-rocket,     13.03,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 23300, 'max': 23400}}]}",False
-214,price_in_steps,vscar-back-rocket,      7.46,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 23400, 'max': 23500}}]}",False
-215,price_in_steps,vscar-back-rocket,      5.52,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 23500, 'max': 23600}}]}",False
-216,price_in_steps,vscar-back-rocket,      4.04,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 23600, 'max': 23700}}]}",False
-217,price_in_steps,vscar-back-rocket,      7.12,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 23700, 'max': 23800}}]}",False
-218,price_in_steps,vscar-back-rocket,      6.09,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 23800, 'max': 23900}}]}",False
-219,price_in_steps,vscar-back-rocket,      9.03,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 23900, 'max': 24000}}]}",False
-220,price_in_steps,vscar-back-rocket,      5.49,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 24000, 'max': 24100}}]}",False
-221,price_in_steps,vscar-back-rocket,      6.74,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 24100, 'max': 24200}}]}",False
-222,price_in_steps,vscar-back-rocket,      9.78,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 24200, 'max': 24300}}]}",False
-223,price_in_steps,vscar-back-rocket,      5.87,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 24300, 'max': 24400}}]}",False
-224,price_in_steps,vscar-back-rocket,      8.35,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 24400, 'max': 24500}}]}",False
-225,price_in_steps,vscar-back-rocket,      8.76,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 24500, 'max': 24600}}]}",False
-226,price_in_steps,vscar-back-rocket,      5.03,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 24600, 'max': 24700}}]}",False
-227,price_in_steps,vscar-back-rocket,     11.32,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 24700, 'max': 24800}}]}",False
-228,price_in_steps,vscar-back-rocket,     10.45,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 24800, 'max': 24900}}]}",False
-229,price_in_steps,vscar-back-rocket,     10.64,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 24900, 'max': 25000}}]}",False
-230,price_in_steps,vscar-back-rocket,     10.21,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 25000, 'max': 25100}}]}",False
-231,price_in_steps,vscar-back-rocket,      7.83,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 25100, 'max': 25200}}]}",False
-232,price_in_steps,vscar-back-rocket,     10.88,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 25200, 'max': 25300}}]}",False
-233,price_in_steps,vscar-back-rocket,      8.39,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 25300, 'max': 25400}}]}",False
-234,price_in_steps,vscar-back-rocket,      3.66,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 25400, 'max': 25500}}]}",False
-235,price_in_steps,vscar-back-rocket,      5.64,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 25500, 'max': 25600}}]}",False
-236,price_in_steps,vscar-back-rocket,     10.82,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 25600, 'max': 25700}}]}",False
-237,price_in_steps,vscar-back-rocket,      8.66,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 25700, 'max': 25800}}]}",False
-238,price_in_steps,vscar-back-rocket,     13.67,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 25800, 'max': 25900}}]}",False
-239,price_in_steps,vscar-back-rocket,     10.26,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 25900, 'max': 26000}}]}",False
-240,price_in_steps,vscar-back-rocket,      8.48,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 26000, 'max': 26100}}]}",False
-241,price_in_steps,vscar-back-rocket,      8.37,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 26100, 'max': 26200}}]}",False
-242,price_in_steps,vscar-back-rocket,     12.83,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 26200, 'max': 26300}}]}",False
-243,price_in_steps,vscar-back-rocket,      9.78,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 26300, 'max': 26400}}]}",False
-244,price_in_steps,vscar-back-rocket,     13.57,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 26400, 'max': 26500}}]}",False
-245,price_in_steps,vscar-back-rocket,     10.47,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 26500, 'max': 26600}}]}",False
-246,price_in_steps,vscar-back-rocket,     11.44,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 26600, 'max': 26700}}]}",False
-247,price_in_steps,vscar-back-rocket,      8.25,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 26700, 'max': 26800}}]}",False
-248,price_in_steps,vscar-back-rocket,     10.90,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 26800, 'max': 26900}}]}",False
-249,price_in_steps,vscar-back-rocket,      9.14,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 26900, 'max': 27000}}]}",False
-250,price_in_steps,vscar-back-rocket,     11.72,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 27000, 'max': 27100}}]}",False
-251,price_in_steps,vscar-back-rocket,      8.03,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 27100, 'max': 27200}}]}",False
-252,price_in_steps,vscar-back-rocket,     10.87,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 27200, 'max': 27300}}]}",False
-253,price_in_steps,vscar-back-rocket,     10.33,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 27300, 'max': 27400}}]}",False
-254,price_in_steps,vscar-back-rocket,      6.05,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 27400, 'max': 27500}}]}",False
-255,price_in_steps,vscar-back-rocket,      6.66,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 27500, 'max': 27600}}]}",False
-256,price_in_steps,vscar-back-rocket,     13.63,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 27600, 'max': 27700}}]}",False
-257,price_in_steps,vscar-back-rocket,      8.21,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 27700, 'max': 27800}}]}",False
-258,price_in_steps,vscar-back-rocket,      8.31,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 27800, 'max': 27900}}]}",False
-259,price_in_steps,vscar-back-rocket,     13.90,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 27900, 'max': 28000}}]}",False
-260,price_in_steps,vscar-back-rocket,     16.06,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 28000, 'max': 28100}}]}",False
-261,price_in_steps,vscar-back-rocket,      6.97,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 28100, 'max': 28200}}]}",False
-262,price_in_steps,vscar-back-rocket,     16.90,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 28200, 'max': 28300}}]}",False
-263,price_in_steps,vscar-back-rocket,     11.10,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 28300, 'max': 28400}}]}",False
-264,price_in_steps,vscar-back-rocket,      9.36,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 28400, 'max': 28500}}]}",False
-265,price_in_steps,vscar-back-rocket,      9.26,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 28500, 'max': 28600}}]}",False
-266,price_in_steps,vscar-back-rocket,     14.32,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 28600, 'max': 28700}}]}",False
-267,price_in_steps,vscar-back-rocket,     13.76,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 28700, 'max': 28800}}]}",False
-268,price_in_steps,vscar-back-rocket,     13.60,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 28800, 'max': 28900}}]}",False
-269,price_in_steps,vscar-back-rocket,     15.01,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 28900, 'max': 29000}}]}",False
-270,price_in_steps,vscar-back-rocket,     10.56,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 29000, 'max': 29100}}]}",False
-271,price_in_steps,vscar-back-rocket,     14.63,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 29100, 'max': 29200}}]}",False
-272,price_in_steps,vscar-back-rocket,     12.77,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 29200, 'max': 29300}}]}",False
-273,price_in_steps,vscar-back-rocket,      9.64,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 29300, 'max': 29400}}]}",False
-274,price_in_steps,vscar-back-rocket,     16.31,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 29400, 'max': 29500}}]}",False
-275,price_in_steps,vscar-back-rocket,     10.99,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 29500, 'max': 29600}}]}",False
-276,price_in_steps,vscar-back-rocket,     13.72,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 29600, 'max': 29700}}]}",False
-277,price_in_steps,vscar-back-rocket,     16.60,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 29700, 'max': 29800}}]}",False
-278,price_in_steps,vscar-back-rocket,     12.41,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 29800, 'max': 29900}}]}",False
-279,price_in_steps,vscar-back-rocket,      9.75,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 29900, 'max': 30000}}]}",False
-280,price_in_steps,vscar-back-rocket,     10.45,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 30000, 'max': 30100}}]}",False
-281,price_in_steps,vscar-back-rocket,     14.52,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 30100, 'max': 30200}}]}",False
-282,price_in_steps,vscar-back-rocket,      6.42,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 30200, 'max': 30300}}]}",False
-283,price_in_steps,vscar-back-rocket,     12.95,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 30300, 'max': 30400}}]}",False
-284,price_in_steps,vscar-back-rocket,     13.59,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 30400, 'max': 30500}}]}",False
-285,price_in_steps,vscar-back-rocket,     14.94,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 30500, 'max': 30600}}]}",False
-286,price_in_steps,vscar-back-rocket,     15.98,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 30600, 'max': 30700}}]}",False
-287,price_in_steps,vscar-back-rocket,      8.62,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 30700, 'max': 30800}}]}",False
-288,price_in_steps,vscar-back-rocket,     10.52,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 30800, 'max': 30900}}]}",False
-289,price_in_steps,vscar-back-rocket,     17.97,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 30900, 'max': 31000}}]}",False
-290,price_in_steps,vscar-back-rocket,     12.02,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 31000, 'max': 31100}}]}",False
-291,price_in_steps,vscar-back-rocket,     12.96,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 31100, 'max': 31200}}]}",False
-292,price_in_steps,vscar-back-rocket,     14.45,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 31200, 'max': 31300}}]}",False
-293,price_in_steps,vscar-back-rocket,     14.95,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 31300, 'max': 31400}}]}",False
-294,price_in_steps,vscar-back-rocket,     15.86,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 31400, 'max': 31500}}]}",False
-295,price_in_steps,vscar-back-rocket,     16.43,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 31500, 'max': 31600}}]}",False
-296,price_in_steps,vscar-back-rocket,     12.97,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 31600, 'max': 31700}}]}",False
-297,price_in_steps,vscar-back-rocket,      9.05,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 31700, 'max': 31800}}]}",False
-298,price_in_steps,vscar-back-rocket,     13.07,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 31800, 'max': 31900}}]}",False
-299,price_in_steps,vscar-back-rocket,     15.05,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 31900, 'max': 32000}}]}",False
-300,price_in_steps,vscar-back-rocket,     17.54,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 32000, 'max': 32100}}]}",False
-301,price_in_steps,vscar-back-rocket,     14.43,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 32100, 'max': 32200}}]}",False
-302,price_in_steps,vscar-back-rocket,     13.22,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 32200, 'max': 32300}}]}",False
-303,price_in_steps,vscar-back-rocket,     18.36,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 32300, 'max': 32400}}]}",False
-304,price_in_steps,vscar-back-rocket,     19.61,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 32400, 'max': 32500}}]}",False
-305,price_in_steps,vscar-back-rocket,      9.22,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 32500, 'max': 32600}}]}",False
-306,price_in_steps,vscar-back-rocket,     14.90,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 32600, 'max': 32700}}]}",False
-307,price_in_steps,vscar-back-rocket,     14.94,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 32700, 'max': 32800}}]}",False
-308,price_in_steps,vscar-back-rocket,     16.64,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 32800, 'max': 32900}}]}",False
-309,price_in_steps,vscar-back-rocket,     33.06,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 32900, 'max': 33000}}]}",False
-310,price_in_steps,vscar-back-rocket,     13.53,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 33000, 'max': 33100}}]}",False
-311,price_in_steps,vscar-back-rocket,     20.88,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 33100, 'max': 33200}}]}",False
-312,price_in_steps,vscar-back-rocket,     20.04,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 33200, 'max': 33300}}]}",False
-313,price_in_steps,vscar-back-rocket,     23.39,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 33300, 'max': 33400}}]}",False
-314,price_in_steps,vscar-back-rocket,     16.80,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 33400, 'max': 33500}}]}",False
-315,price_in_steps,vscar-back-rocket,     14.02,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 33500, 'max': 33600}}]}",False
-316,price_in_steps,vscar-back-rocket,     12.37,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 33600, 'max': 33700}}]}",False
-317,price_in_steps,vscar-back-rocket,     13.96,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 33700, 'max': 33800}}]}",False
-318,price_in_steps,vscar-back-rocket,     15.84,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 33800, 'max': 33900}}]}",False
-319,price_in_steps,vscar-back-rocket,     35.51,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 33900, 'max': 34000}}]}",False
-320,price_in_steps,vscar-back-rocket,     17.23,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 34000, 'max': 34100}}]}",False
-321,price_in_steps,vscar-back-rocket,     17.57,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 34100, 'max': 34200}}]}",False
-322,price_in_steps,vscar-back-rocket,     17.28,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 34200, 'max': 34300}}]}",False
-323,price_in_steps,vscar-back-rocket,     22.09,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 34300, 'max': 34400}}]}",False
-324,price_in_steps,vscar-back-rocket,     21.91,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 34400, 'max': 34500}}]}",False
-325,price_in_steps,vscar-back-rocket,     23.59,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 34500, 'max': 34600}}]}",False
-326,price_in_steps,vscar-back-rocket,     17.26,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 34600, 'max': 34700}}]}",False
-327,price_in_steps,vscar-back-rocket,     14.54,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 34700, 'max': 34800}}]}",False
-328,price_in_steps,vscar-back-rocket,     22.20,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 34800, 'max': 34900}}]}",False
-329,price_in_steps,vscar-back-rocket,     29.70,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 34900, 'max': 35000}}]}",False
-330,price_in_steps,vscar-back-rocket,     13.24,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 35000, 'max': 35100}}]}",False
-331,price_in_steps,vscar-back-rocket,     20.89,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 35100, 'max': 35200}}]}",False
-332,price_in_steps,vscar-back-rocket,     13.23,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 35200, 'max': 35300}}]}",False
-333,price_in_steps,vscar-back-rocket,     12.13,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 35300, 'max': 35400}}]}",False
-334,price_in_steps,vscar-back-rocket,     25.77,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 35400, 'max': 35500}}]}",False
-335,price_in_steps,vscar-back-rocket,     15.21,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 35500, 'max': 35600}}]}",False
-336,price_in_steps,vscar-back-rocket,     20.77,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 35600, 'max': 35700}}]}",False
-337,price_in_steps,vscar-back-rocket,     13.85,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 35700, 'max': 35800}}]}",False
-338,price_in_steps,vscar-back-rocket,     16.50,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 35800, 'max': 35900}}]}",False
-339,price_in_steps,vscar-back-rocket,     25.32,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 35900, 'max': 36000}}]}",False
-340,price_in_steps,vscar-back-rocket,     20.03,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 36000, 'max': 36100}}]}",False
-341,price_in_steps,vscar-back-rocket,     18.59,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 36100, 'max': 36200}}]}",False
-342,price_in_steps,vscar-back-rocket,     22.41,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 36200, 'max': 36300}}]}",False
-343,price_in_steps,vscar-back-rocket,     24.98,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 36300, 'max': 36400}}]}",False
-344,price_in_steps,vscar-back-rocket,     26.44,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 36400, 'max': 36500}}]}",False
-345,price_in_steps,vscar-back-rocket,     17.86,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 36500, 'max': 36600}}]}",False
-346,price_in_steps,vscar-back-rocket,     21.91,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 36600, 'max': 36700}}]}",False
-347,price_in_steps,vscar-back-rocket,     21.16,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 36700, 'max': 36800}}]}",False
-348,price_in_steps,vscar-back-rocket,     19.74,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 36800, 'max': 36900}}]}",False
-349,price_in_steps,vscar-back-rocket,     21.01,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 36900, 'max': 37000}}]}",False
-350,price_in_steps,vscar-back-rocket,     22.66,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 37000, 'max': 37100}}]}",False
-351,price_in_steps,vscar-back-rocket,     26.06,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 37100, 'max': 37200}}]}",False
-352,price_in_steps,vscar-back-rocket,     20.79,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 37200, 'max': 37300}}]}",False
-353,price_in_steps,vscar-back-rocket,     13.75,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 37300, 'max': 37400}}]}",False
-354,price_in_steps,vscar-back-rocket,     15.47,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 37400, 'max': 37500}}]}",False
-355,price_in_steps,vscar-back-rocket,     22.40,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 37500, 'max': 37600}}]}",False
-356,price_in_steps,vscar-back-rocket,     28.18,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 37600, 'max': 37700}}]}",False
-357,price_in_steps,vscar-back-rocket,     27.02,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 37700, 'max': 37800}}]}",False
-358,price_in_steps,vscar-back-rocket,     18.76,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 37800, 'max': 37900}}]}",False
-359,price_in_steps,vscar-back-rocket,     16.36,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 37900, 'max': 38000}}]}",False
-360,price_in_steps,vscar-back-rocket,     12.48,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 38000, 'max': 38100}}]}",False
-361,price_in_steps,vscar-back-rocket,     13.98,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 38100, 'max': 38200}}]}",False
-362,price_in_steps,vscar-back-rocket,     23.55,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 38200, 'max': 38300}}]}",False
-363,price_in_steps,vscar-back-rocket,     13.56,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 38300, 'max': 38400}}]}",False
-364,price_in_steps,vscar-back-rocket,     20.63,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 38400, 'max': 38500}}]}",False
-365,price_in_steps,vscar-back-rocket,     16.18,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 38500, 'max': 38600}}]}",False
-366,price_in_steps,vscar-back-rocket,     24.32,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 38600, 'max': 38700}}]}",False
-367,price_in_steps,vscar-back-rocket,     29.12,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 38700, 'max': 38800}}]}",False
-368,price_in_steps,vscar-back-rocket,     30.47,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 38800, 'max': 38900}}]}",False
-369,price_in_steps,vscar-back-rocket,     22.34,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 38900, 'max': 39000}}]}",False
-370,price_in_steps,vscar-back-rocket,     17.35,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 39000, 'max': 39100}}]}",False
-371,price_in_steps,vscar-back-rocket,     19.74,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 39100, 'max': 39200}}]}",False
-372,price_in_steps,vscar-back-rocket,     17.79,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 39200, 'max': 39300}}]}",False
-373,price_in_steps,vscar-back-rocket,     22.98,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 39300, 'max': 39400}}]}",False
-374,price_in_steps,vscar-back-rocket,     21.51,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 39400, 'max': 39500}}]}",False
-375,price_in_steps,vscar-back-rocket,     14.12,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 39500, 'max': 39600}}]}",False
-376,price_in_steps,vscar-back-rocket,     20.81,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 39600, 'max': 39700}}]}",False
-377,price_in_steps,vscar-back-rocket,     15.35,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 39700, 'max': 39800}}]}",False
-378,price_in_steps,vscar-back-rocket,     27.78,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 39800, 'max': 39900}}]}",False
-379,price_in_steps,vscar-back-rocket,     19.86,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 39900, 'max': 40000}}]}",False
-380,price_in_steps,vscar-back-rocket,     20.01,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 40000, 'max': 40100}}]}",False
-381,price_in_steps,vscar-back-rocket,     25.42,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 40100, 'max': 40200}}]}",False
-382,price_in_steps,vscar-back-rocket,     32.52,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 40200, 'max': 40300}}]}",False
-383,price_in_steps,vscar-back-rocket,     17.15,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 40300, 'max': 40400}}]}",False
-384,price_in_steps,vscar-back-rocket,     28.75,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 40400, 'max': 40500}}]}",False
-385,price_in_steps,vscar-back-rocket,     24.19,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 40500, 'max': 40600}}]}",False
-386,price_in_steps,vscar-back-rocket,     15.85,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 40600, 'max': 40700}}]}",False
-387,price_in_steps,vscar-back-rocket,     19.20,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 40700, 'max': 40800}}]}",False
-388,price_in_steps,vscar-back-rocket,     16.38,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 40800, 'max': 40900}}]}",False
-389,price_in_steps,vscar-back-rocket,     22.12,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 40900, 'max': 41000}}]}",False
-390,price_in_steps,vscar-back-rocket,     15.88,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 41000, 'max': 41100}}]}",False
-391,price_in_steps,vscar-back-rocket,     20.50,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 41100, 'max': 41200}}]}",False
-392,price_in_steps,vscar-back-rocket,     19.74,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 41200, 'max': 41300}}]}",False
-393,price_in_steps,vscar-back-rocket,     20.24,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 41300, 'max': 41400}}]}",False
-394,price_in_steps,vscar-back-rocket,     22.77,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 41400, 'max': 41500}}]}",False
-395,price_in_steps,vscar-back-rocket,     15.47,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 41500, 'max': 41600}}]}",False
-396,price_in_steps,vscar-back-rocket,     21.50,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 41600, 'max': 41700}}]}",False
-397,price_in_steps,vscar-back-rocket,     15.90,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 41700, 'max': 41800}}]}",False
-398,price_in_steps,vscar-back-rocket,     24.43,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 41800, 'max': 41900}}]}",False
-399,price_in_steps,vscar-back-rocket,     27.43,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 41900, 'max': 42000}}]}",False
-400,price_in_steps,vscar-back-rocket,     22.20,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 42000, 'max': 42100}}]}",False
-401,price_in_steps,vscar-back-rocket,     15.62,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 42100, 'max': 42200}}]}",False
-402,price_in_steps,vscar-back-rocket,     13.06,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 42200, 'max': 42300}}]}",False
-403,price_in_steps,vscar-back-rocket,     17.58,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 42300, 'max': 42400}}]}",False
-404,price_in_steps,vscar-back-rocket,     22.61,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 42400, 'max': 42500}}]}",False
-405,price_in_steps,vscar-back-rocket,     13.67,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 42500, 'max': 42600}}]}",False
-406,price_in_steps,vscar-back-rocket,     23.89,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 42600, 'max': 42700}}]}",False
-407,price_in_steps,vscar-back-rocket,     20.89,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 42700, 'max': 42800}}]}",False
-408,price_in_steps,vscar-back-rocket,     10.65,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 42800, 'max': 42900}}]}",False
-409,price_in_steps,vscar-back-rocket,     21.84,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 42900, 'max': 43000}}]}",False
-410,price_in_steps,vscar-back-rocket,     25.41,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 43000, 'max': 43100}}]}",False
-411,price_in_steps,vscar-back-rocket,     24.69,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 43100, 'max': 43200}}]}",False
-412,price_in_steps,vscar-back-rocket,     17.07,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 43200, 'max': 43300}}]}",False
-413,price_in_steps,vscar-back-rocket,     16.99,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 43300, 'max': 43400}}]}",False
-414,price_in_steps,vscar-back-rocket,     24.56,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 43400, 'max': 43500}}]}",False
-415,price_in_steps,vscar-back-rocket,     20.19,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 43500, 'max': 43600}}]}",False
-416,price_in_steps,vscar-back-rocket,     23.80,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 43600, 'max': 43700}}]}",False
-417,price_in_steps,vscar-back-rocket,     26.59,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 43700, 'max': 43800}}]}",False
-418,price_in_steps,vscar-back-rocket,     31.06,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 43800, 'max': 43900}}]}",False
-419,price_in_steps,vscar-back-rocket,     20.32,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 43900, 'max': 44000}}]}",False
-420,price_in_steps,vscar-back-rocket,     22.98,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 44000, 'max': 44100}}]}",False
-421,price_in_steps,vscar-back-rocket,     20.71,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 44100, 'max': 44200}}]}",False
-422,price_in_steps,vscar-back-rocket,     32.37,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 44200, 'max': 44300}}]}",False
-423,price_in_steps,vscar-back-rocket,     22.40,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 44300, 'max': 44400}}]}",False
-424,price_in_steps,vscar-back-rocket,     24.08,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 44400, 'max': 44500}}]}",False
-425,price_in_steps,vscar-back-rocket,     16.53,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 44500, 'max': 44600}}]}",False
-426,price_in_steps,vscar-back-rocket,     25.39,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 44600, 'max': 44700}}]}",False
-427,price_in_steps,vscar-back-rocket,     22.93,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 44700, 'max': 44800}}]}",False
-428,price_in_steps,vscar-back-rocket,     16.39,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 44800, 'max': 44900}}]}",False
-429,price_in_steps,vscar-back-rocket,     27.01,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 44900, 'max': 45000}}]}",False
-430,price_in_steps,vscar-back-rocket,     26.24,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 45000, 'max': 45100}}]}",False
-431,price_in_steps,vscar-back-rocket,     22.70,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 45100, 'max': 45200}}]}",False
-432,price_in_steps,vscar-back-rocket,     25.50,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 45200, 'max': 45300}}]}",False
-433,price_in_steps,vscar-back-rocket,     23.05,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 45300, 'max': 45400}}]}",False
-434,price_in_steps,vscar-back-rocket,     27.38,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 45400, 'max': 45500}}]}",False
-435,price_in_steps,vscar-back-rocket,     21.19,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 45500, 'max': 45600}}]}",False
-436,price_in_steps,vscar-back-rocket,     20.41,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 45600, 'max': 45700}}]}",False
-437,price_in_steps,vscar-back-rocket,     20.55,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 45700, 'max': 45800}}]}",False
-438,price_in_steps,vscar-back-rocket,     16.74,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 45800, 'max': 45900}}]}",False
-439,price_in_steps,vscar-back-rocket,     31.20,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 45900, 'max': 46000}}]}",False
-440,price_in_steps,vscar-back-rocket,     23.87,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 46000, 'max': 46100}}]}",False
-441,price_in_steps,vscar-back-rocket,     17.51,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 46100, 'max': 46200}}]}",False
-442,price_in_steps,vscar-back-rocket,     21.97,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 46200, 'max': 46300}}]}",False
-443,price_in_steps,vscar-back-rocket,     18.08,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 46300, 'max': 46400}}]}",False
-444,price_in_steps,vscar-back-rocket,     15.63,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 46400, 'max': 46500}}]}",False
-445,price_in_steps,vscar-back-rocket,     25.48,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 46500, 'max': 46600}}]}",False
-446,price_in_steps,vscar-back-rocket,     43.21,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 46600, 'max': 46700}}]}",False
-447,price_in_steps,vscar-back-rocket,     19.16,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 46700, 'max': 46800}}]}",False
-448,price_in_steps,vscar-back-rocket,     15.44,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 46800, 'max': 46900}}]}",False
-449,price_in_steps,vscar-back-rocket,     26.11,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 46900, 'max': 47000}}]}",False
-450,price_in_steps,vscar-back-rocket,     23.13,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 47000, 'max': 47100}}]}",False
-451,price_in_steps,vscar-back-rocket,     17.35,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 47100, 'max': 47200}}]}",False
-452,price_in_steps,vscar-back-rocket,     27.59,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 47200, 'max': 47300}}]}",False
-453,price_in_steps,vscar-back-rocket,     19.85,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 47300, 'max': 47400}}]}",False
-454,price_in_steps,vscar-back-rocket,     25.52,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 47400, 'max': 47500}}]}",False
-455,price_in_steps,vscar-back-rocket,     36.67,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 47500, 'max': 47600}}]}",False
-456,price_in_steps,vscar-back-rocket,     18.26,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 47600, 'max': 47700}}]}",False
-457,price_in_steps,vscar-back-rocket,     19.54,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 47700, 'max': 47800}}]}",False
-458,price_in_steps,vscar-back-rocket,     19.85,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 47800, 'max': 47900}}]}",False
-459,price_in_steps,vscar-back-rocket,     14.79,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 47900, 'max': 48000}}]}",False
-460,price_in_steps,vscar-back-rocket,     18.26,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 48000, 'max': 48100}}]}",False
-461,price_in_steps,vscar-back-rocket,     22.76,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 48100, 'max': 48200}}]}",False
-462,price_in_steps,vscar-back-rocket,     26.61,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 48200, 'max': 48300}}]}",False
-463,price_in_steps,vscar-back-rocket,     11.48,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 48300, 'max': 48400}}]}",False
-464,price_in_steps,vscar-back-rocket,     18.14,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 48400, 'max': 48500}}]}",False
-465,price_in_steps,vscar-back-rocket,     19.34,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 48500, 'max': 48600}}]}",False
-466,price_in_steps,vscar-back-rocket,     18.62,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 48600, 'max': 48700}}]}",False
-467,price_in_steps,vscar-back-rocket,     15.66,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 48700, 'max': 48800}}]}",False
-468,price_in_steps,vscar-back-rocket,     23.68,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 48800, 'max': 48900}}]}",False
-469,price_in_steps,vscar-back-rocket,     20.35,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 48900, 'max': 49000}}]}",False
-470,price_in_steps,vscar-back-rocket,     14.33,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 49000, 'max': 49100}}]}",False
-471,price_in_steps,vscar-back-rocket,     16.39,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 49100, 'max': 49200}}]}",False
-472,price_in_steps,vscar-back-rocket,     24.48,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 49200, 'max': 49300}}]}",False
-473,price_in_steps,vscar-back-rocket,     33.77,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 49300, 'max': 49400}}]}",False
-474,price_in_steps,vscar-back-rocket,     17.05,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 49400, 'max': 49500}}]}",False
-475,price_in_steps,vscar-back-rocket,     20.35,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 49500, 'max': 49600}}]}",False
-476,price_in_steps,vscar-back-rocket,     28.20,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 49600, 'max': 49700}}]}",False
-477,price_in_steps,vscar-back-rocket,     19.13,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 49700, 'max': 49800}}]}",False
-478,price_in_steps,vscar-back-rocket,     12.18,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 49800, 'max': 49900}}]}",False
-479,price_in_steps,vscar-back-rocket,     18.22,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 49900, 'max': 50000}}]}",False
-480,price_in_steps,vscar-back-rocket,     24.49,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 50000, 'max': 50100}}]}",False
+0,loop_through_pages,vscar-back-rocket,266.3402557373047,200,"{'page': 1, 'limit': 100, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8000, 'max': 50000}}]}",False
+1,loop_through_pages,vscar-back-rocket,243.17574501037598,200,"{'page': 2, 'limit': 100, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8000, 'max': 50000}}]}",False
+2,loop_through_pages,vscar-back-rocket,190.4275417327881,200,"{'page': 3, 'limit': 100, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8000, 'max': 50000}}]}",False
+3,loop_through_pages,vscar-back-rocket,190.98520278930664,200,"{'page': 4, 'limit': 100, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8000, 'max': 50000}}]}",False
+4,loop_through_pages,vscar-back-rocket,228.08480262756348,200,"{'page': 5, 'limit': 100, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8000, 'max': 50000}}]}",False
+5,loop_through_pages,vscar-back-rocket,193.50504875183105,200,"{'page': 6, 'limit': 100, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8000, 'max': 50000}}]}",False
+6,loop_through_pages,vscar-back-rocket,188.56358528137207,200,"{'page': 7, 'limit': 100, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8000, 'max': 50000}}]}",False
+7,loop_through_pages,vscar-back-rocket,180.94134330749512,200,"{'page': 8, 'limit': 100, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8000, 'max': 50000}}]}",False
+8,loop_through_pages,vscar-back-rocket,187.24822998046875,200,"{'page': 9, 'limit': 100, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8000, 'max': 50000}}]}",False
+9,loop_through_pages,vscar-back-rocket,194.16117668151855,200,"{'page': 10, 'limit': 100, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8000, 'max': 50000}}]}",False
+10,loop_through_pages,vscar-back-rocket,176.0549545288086,200,"{'page': 11, 'limit': 100, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8000, 'max': 50000}}]}",False
+11,loop_through_pages,vscar-back-rocket,177.54626274108887,200,"{'page': 12, 'limit': 100, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8000, 'max': 50000}}]}",False
+12,loop_through_pages,vscar-back-rocket,183.53652954101562,200,"{'page': 13, 'limit': 100, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8000, 'max': 50000}}]}",False
+13,loop_through_pages,vscar-back-rocket,179.3992519378662,200,"{'page': 14, 'limit': 100, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8000, 'max': 50000}}]}",False
+14,loop_through_pages,vscar-back-rocket,197.43919372558594,200,"{'page': 15, 'limit': 100, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8000, 'max': 50000}}]}",False
+15,loop_through_pages,vscar-back-rocket,194.11134719848633,200,"{'page': 16, 'limit': 100, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8000, 'max': 50000}}]}",False
+16,loop_through_pages,vscar-back-rocket,185.38641929626465,200,"{'page': 17, 'limit': 100, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8000, 'max': 50000}}]}",False
+17,loop_through_pages,vscar-back-rocket,183.013916015625,200,"{'page': 18, 'limit': 100, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8000, 'max': 50000}}]}",False
+18,loop_through_pages,vscar-back-rocket,175.44054985046387,200,"{'page': 19, 'limit': 100, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8000, 'max': 50000}}]}",False
+19,loop_through_pages,vscar-back-rocket,193.43948364257812,200,"{'page': 20, 'limit': 100, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8000, 'max': 50000}}]}",False
+20,loop_through_pages,vscar-back-rocket,179.4748306274414,200,"{'page': 21, 'limit': 100, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8000, 'max': 50000}}]}",False
+21,loop_through_pages,vscar-back-rocket,193.2809352874756,200,"{'page': 22, 'limit': 100, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8000, 'max': 50000}}]}",False
+22,loop_through_pages,vscar-back-rocket,175.39381980895996,200,"{'page': 23, 'limit': 100, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8000, 'max': 50000}}]}",False
+23,loop_through_pages,vscar-back-rocket,185.47725677490234,200,"{'page': 24, 'limit': 100, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8000, 'max': 50000}}]}",False
+24,loop_through_pages,vscar-back-rocket,177.764892578125,200,"{'page': 25, 'limit': 100, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8000, 'max': 50000}}]}",False
+25,loop_through_pages,vscar-back-rocket,180.52053451538086,200,"{'page': 26, 'limit': 100, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8000, 'max': 50000}}]}",False
+26,loop_through_pages,vscar-back-rocket,189.02230262756348,200,"{'page': 27, 'limit': 100, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8000, 'max': 50000}}]}",False
+27,loop_through_pages,vscar-back-rocket,194.17405128479004,200,"{'page': 28, 'limit': 100, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8000, 'max': 50000}}]}",False
+28,loop_through_pages,vscar-back-rocket,185.14680862426758,200,"{'page': 29, 'limit': 100, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8000, 'max': 50000}}]}",False
+29,loop_through_pages,vscar-back-rocket,178.94768714904785,200,"{'page': 30, 'limit': 100, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8000, 'max': 50000}}]}",False
+30,loop_through_pages,vscar-back-rocket,181.20932579040527,200,"{'page': 31, 'limit': 100, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8000, 'max': 50000}}]}",False
+31,loop_through_pages,vscar-back-rocket,178.48825454711914,200,"{'page': 32, 'limit': 100, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8000, 'max': 50000}}]}",False
+32,loop_through_pages,vscar-back-rocket,175.01211166381836,200,"{'page': 33, 'limit': 100, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8000, 'max': 50000}}]}",False
+33,loop_through_pages,vscar-back-rocket,178.97963523864746,200,"{'page': 34, 'limit': 100, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8000, 'max': 50000}}]}",False
+34,loop_through_pages,vscar-back-rocket,184.0837001800537,200,"{'page': 35, 'limit': 100, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8000, 'max': 50000}}]}",False
+35,loop_through_pages,vscar-back-rocket,178.46989631652832,200,"{'page': 36, 'limit': 100, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8000, 'max': 50000}}]}",False
+36,loop_through_pages,vscar-back-rocket,176.02944374084473,200,"{'page': 37, 'limit': 100, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8000, 'max': 50000}}]}",False
+37,loop_through_pages,vscar-back-rocket,183.8052272796631,200,"{'page': 38, 'limit': 100, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8000, 'max': 50000}}]}",False
+38,loop_through_pages,vscar-back-rocket,176.52225494384766,200,"{'page': 39, 'limit': 100, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8000, 'max': 50000}}]}",False
+39,loop_through_pages,vscar-back-rocket,186.32745742797852,200,"{'page': 40, 'limit': 100, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8000, 'max': 50000}}]}",False
+40,loop_through_pages,vscar-back-rocket,184.54575538635254,200,"{'page': 41, 'limit': 100, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8000, 'max': 50000}}]}",False
+41,loop_through_pages,vscar-back-rocket,183.7468147277832,200,"{'page': 42, 'limit': 100, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8000, 'max': 50000}}]}",False
+42,loop_through_pages,vscar-back-rocket,180.36198616027832,200,"{'page': 43, 'limit': 100, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8000, 'max': 50000}}]}",False
+43,loop_through_pages,vscar-back-rocket,184.03124809265137,200,"{'page': 44, 'limit': 100, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8000, 'max': 50000}}]}",False
+44,loop_through_pages,vscar-back-rocket,184.6632957458496,200,"{'page': 45, 'limit': 100, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8000, 'max': 50000}}]}",False
+45,loop_through_pages,vscar-back-rocket,182.2664737701416,200,"{'page': 46, 'limit': 100, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8000, 'max': 50000}}]}",False
+46,loop_through_pages,vscar-back-rocket,131.03818893432617,200,"{'page': 47, 'limit': 100, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8000, 'max': 50000}}]}",False
+47,loop_through_pages,vscar-back-rocket,95.11709213256836,200,"{'page': 48, 'limit': 100, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8000, 'max': 50000}}]}",False
+48,loop_through_pages,vscar-back-rocket,95.94273567199707,200,"{'page': 49, 'limit': 100, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8000, 'max': 50000}}]}",False
+49,loop_through_pages,vscar-back-rocket,97.79214859008789,200,"{'page': 50, 'limit': 100, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8000, 'max': 50000}}]}",False
+50,loop_through_pages,vscar-back-rocket,95.69883346557617,200,"{'page': 51, 'limit': 100, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8000, 'max': 50000}}]}",False
+51,loop_through_pages,vscar-back-rocket,94.73395347595215,200,"{'page': 52, 'limit': 100, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8000, 'max': 50000}}]}",False
+52,loop_through_pages,vscar-back-rocket,95.37601470947266,200,"{'page': 53, 'limit': 100, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8000, 'max': 50000}}]}",False
+53,loop_through_pages,vscar-back-rocket,94.45905685424805,200,"{'page': 54, 'limit': 100, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8000, 'max': 50000}}]}",False
+54,loop_through_pages,vscar-back-rocket,94.89607810974121,200,"{'page': 55, 'limit': 100, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8000, 'max': 50000}}]}",False
+55,loop_through_pages,vscar-back-rocket,98.35171699523926,200,"{'page': 56, 'limit': 100, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8000, 'max': 50000}}]}",False
+56,loop_through_pages,vscar-back-rocket,95.96443176269531,200,"{'page': 57, 'limit': 100, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8000, 'max': 50000}}]}",False
+57,loop_through_pages,vscar-back-rocket,95.21985054016113,200,"{'page': 58, 'limit': 100, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8000, 'max': 50000}}]}",False
+58,loop_through_pages,vscar-back-rocket,98.5710620880127,200,"{'page': 59, 'limit': 100, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8000, 'max': 50000}}]}",False
+59,loop_through_pages,vscar-back-rocket,94.87652778625488,200,"{'page': 60, 'limit': 100, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8000, 'max': 50000}}]}",False
+60,price_in_steps,vscar-back-rocket,25.867223739624023,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8000, 'max': 8100}}]}",False
+61,price_in_steps,vscar-back-rocket,2.1834373474121094,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8100, 'max': 8200}}]}",False
+62,price_in_steps,vscar-back-rocket,14.753103256225586,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8200, 'max': 8300}}]}",False
+63,price_in_steps,vscar-back-rocket,2.290487289428711,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8300, 'max': 8400}}]}",False
+64,price_in_steps,vscar-back-rocket,1.1241436004638672,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8400, 'max': 8500}}]}",False
+65,price_in_steps,vscar-back-rocket,32.14859962463379,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8500, 'max': 8600}}]}",False
+66,price_in_steps,vscar-back-rocket,2.280712127685547,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8600, 'max': 8700}}]}",False
+67,price_in_steps,vscar-back-rocket,3.4012794494628906,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8700, 'max': 8800}}]}",False
+68,price_in_steps,vscar-back-rocket,1.3909339904785156,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8800, 'max': 8900}}]}",False
+69,price_in_steps,vscar-back-rocket,1.9958019256591797,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 8900, 'max': 9000}}]}",False
+70,price_in_steps,vscar-back-rocket,1.7781257629394531,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 9000, 'max': 9100}}]}",False
+71,price_in_steps,vscar-back-rocket,1.6682147979736328,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 9100, 'max': 9200}}]}",False
+72,price_in_steps,vscar-back-rocket,2.3746490478515625,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 9200, 'max': 9300}}]}",False
+73,price_in_steps,vscar-back-rocket,1.8596649169921875,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 9300, 'max': 9400}}]}",False
+74,price_in_steps,vscar-back-rocket,1.4603137969970703,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 9400, 'max': 9500}}]}",False
+75,price_in_steps,vscar-back-rocket,1.689910888671875,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 9500, 'max': 9600}}]}",False
+76,price_in_steps,vscar-back-rocket,1.0235309600830078,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 9600, 'max': 9700}}]}",False
+77,price_in_steps,vscar-back-rocket,0.9329319000244141,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 9700, 'max': 9800}}]}",False
+78,price_in_steps,vscar-back-rocket,1.6713142395019531,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 9800, 'max': 9900}}]}",False
+79,price_in_steps,vscar-back-rocket,2.576112747192383,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 9900, 'max': 10000}}]}",False
+80,price_in_steps,vscar-back-rocket,2.750873565673828,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 10000, 'max': 10100}}]}",False
+81,price_in_steps,vscar-back-rocket,1.8298625946044922,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 10100, 'max': 10200}}]}",False
+82,price_in_steps,vscar-back-rocket,1.2292861938476562,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 10200, 'max': 10300}}]}",False
+83,price_in_steps,vscar-back-rocket,1.901388168334961,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 10300, 'max': 10400}}]}",False
+84,price_in_steps,vscar-back-rocket,1.8062591552734375,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 10400, 'max': 10500}}]}",False
+85,price_in_steps,vscar-back-rocket,1.821279525756836,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 10500, 'max': 10600}}]}",False
+86,price_in_steps,vscar-back-rocket,1.2679100036621094,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 10600, 'max': 10700}}]}",False
+87,price_in_steps,vscar-back-rocket,2.373933792114258,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 10700, 'max': 10800}}]}",False
+88,price_in_steps,vscar-back-rocket,1.9261837005615234,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 10800, 'max': 10900}}]}",False
+89,price_in_steps,vscar-back-rocket,1.6560554504394531,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 10900, 'max': 11000}}]}",False
+90,price_in_steps,vscar-back-rocket,1.6219615936279297,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 11000, 'max': 11100}}]}",False
+91,price_in_steps,vscar-back-rocket,2.218008041381836,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 11100, 'max': 11200}}]}",False
+92,price_in_steps,vscar-back-rocket,1.9519329071044922,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 11200, 'max': 11300}}]}",False
+93,price_in_steps,vscar-back-rocket,1.1398792266845703,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 11300, 'max': 11400}}]}",False
+94,price_in_steps,vscar-back-rocket,3.0176639556884766,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 11400, 'max': 11500}}]}",False
+95,price_in_steps,vscar-back-rocket,2.5091171264648438,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 11500, 'max': 11600}}]}",False
+96,price_in_steps,vscar-back-rocket,1.146078109741211,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 11600, 'max': 11700}}]}",False
+97,price_in_steps,vscar-back-rocket,1.7704963684082031,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 11700, 'max': 11800}}]}",False
+98,price_in_steps,vscar-back-rocket,1.2898445129394531,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 11800, 'max': 11900}}]}",False
+99,price_in_steps,vscar-back-rocket,1.8529891967773438,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 11900, 'max': 12000}}]}",False
+100,price_in_steps,vscar-back-rocket,1.8820762634277344,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 12000, 'max': 12100}}]}",False
+101,price_in_steps,vscar-back-rocket,2.3810863494873047,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 12100, 'max': 12200}}]}",False
+102,price_in_steps,vscar-back-rocket,2.690553665161133,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 12200, 'max': 12300}}]}",False
+103,price_in_steps,vscar-back-rocket,1.7859935760498047,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 12300, 'max': 12400}}]}",False
+104,price_in_steps,vscar-back-rocket,1.4345645904541016,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 12400, 'max': 12500}}]}",False
+105,price_in_steps,vscar-back-rocket,1.0631084442138672,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 12500, 'max': 12600}}]}",False
+106,price_in_steps,vscar-back-rocket,1.0564327239990234,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 12600, 'max': 12700}}]}",False
+107,price_in_steps,vscar-back-rocket,1.0690689086914062,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 12700, 'max': 12800}}]}",False
+108,price_in_steps,vscar-back-rocket,1.0309219360351562,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 12800, 'max': 12900}}]}",False
+109,price_in_steps,vscar-back-rocket,3.463268280029297,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 12900, 'max': 13000}}]}",False
+110,price_in_steps,vscar-back-rocket,2.1562576293945312,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 13000, 'max': 13100}}]}",False
+111,price_in_steps,vscar-back-rocket,3.1769275665283203,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 13100, 'max': 13200}}]}",False
+112,price_in_steps,vscar-back-rocket,1.8570423126220703,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 13200, 'max': 13300}}]}",False
+113,price_in_steps,vscar-back-rocket,1.470327377319336,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 13300, 'max': 13400}}]}",False
+114,price_in_steps,vscar-back-rocket,1.0533332824707031,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 13400, 'max': 13500}}]}",False
+115,price_in_steps,vscar-back-rocket,1.0616779327392578,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 13500, 'max': 13600}}]}",False
+116,price_in_steps,vscar-back-rocket,1.7883777618408203,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 13600, 'max': 13700}}]}",False
+117,price_in_steps,vscar-back-rocket,3.1890869140625,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 13700, 'max': 13800}}]}",False
+118,price_in_steps,vscar-back-rocket,1.1374950408935547,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 13800, 'max': 13900}}]}",False
+119,price_in_steps,vscar-back-rocket,1.1713504791259766,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 13900, 'max': 14000}}]}",False
+120,price_in_steps,vscar-back-rocket,1.3713836669921875,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 14000, 'max': 14100}}]}",False
+121,price_in_steps,vscar-back-rocket,2.6400089263916016,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 14100, 'max': 14200}}]}",False
+122,price_in_steps,vscar-back-rocket,2.2423267364501953,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 14200, 'max': 14300}}]}",False
+123,price_in_steps,vscar-back-rocket,4.226446151733398,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 14300, 'max': 14400}}]}",False
+124,price_in_steps,vscar-back-rocket,2.044677734375,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 14400, 'max': 14500}}]}",False
+125,price_in_steps,vscar-back-rocket,1.6355514526367188,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 14500, 'max': 14600}}]}",False
+126,price_in_steps,vscar-back-rocket,2.321481704711914,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 14600, 'max': 14700}}]}",False
+127,price_in_steps,vscar-back-rocket,1.758575439453125,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 14700, 'max': 14800}}]}",False
+128,price_in_steps,vscar-back-rocket,2.342700958251953,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 14800, 'max': 14900}}]}",False
+129,price_in_steps,vscar-back-rocket,7.400274276733398,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 14900, 'max': 15000}}]}",False
+130,price_in_steps,vscar-back-rocket,3.399372100830078,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 15000, 'max': 15100}}]}",False
+131,price_in_steps,vscar-back-rocket,2.6254653930664062,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 15100, 'max': 15200}}]}",False
+132,price_in_steps,vscar-back-rocket,1.0714530944824219,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 15200, 'max': 15300}}]}",False
+133,price_in_steps,vscar-back-rocket,2.3114681243896484,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 15300, 'max': 15400}}]}",False
+134,price_in_steps,vscar-back-rocket,1.6641616821289062,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 15400, 'max': 15500}}]}",False
+135,price_in_steps,vscar-back-rocket,5.721569061279297,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 15500, 'max': 15600}}]}",False
+136,price_in_steps,vscar-back-rocket,3.5026073455810547,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 15600, 'max': 15700}}]}",False
+137,price_in_steps,vscar-back-rocket,3.137350082397461,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 15700, 'max': 15800}}]}",False
+138,price_in_steps,vscar-back-rocket,4.435062408447266,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 15800, 'max': 15900}}]}",False
+139,price_in_steps,vscar-back-rocket,2.5730133056640625,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 15900, 'max': 16000}}]}",False
+140,price_in_steps,vscar-back-rocket,4.465341567993164,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 16000, 'max': 16100}}]}",False
+141,price_in_steps,vscar-back-rocket,2.107858657836914,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 16100, 'max': 16200}}]}",False
+142,price_in_steps,vscar-back-rocket,2.4738311767578125,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 16200, 'max': 16300}}]}",False
+143,price_in_steps,vscar-back-rocket,3.408193588256836,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 16300, 'max': 16400}}]}",False
+144,price_in_steps,vscar-back-rocket,4.461050033569336,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 16400, 'max': 16500}}]}",False
+145,price_in_steps,vscar-back-rocket,1.8303394317626953,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 16500, 'max': 16600}}]}",False
+146,price_in_steps,vscar-back-rocket,2.357006072998047,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 16600, 'max': 16700}}]}",False
+147,price_in_steps,vscar-back-rocket,3.9336681365966797,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 16700, 'max': 16800}}]}",False
+148,price_in_steps,vscar-back-rocket,4.3163299560546875,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 16800, 'max': 16900}}]}",False
+149,price_in_steps,vscar-back-rocket,6.150722503662109,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 16900, 'max': 17000}}]}",False
+150,price_in_steps,vscar-back-rocket,2.624034881591797,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 17000, 'max': 17100}}]}",False
+151,price_in_steps,vscar-back-rocket,2.996206283569336,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 17100, 'max': 17200}}]}",False
+152,price_in_steps,vscar-back-rocket,5.089282989501953,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 17200, 'max': 17300}}]}",False
+153,price_in_steps,vscar-back-rocket,5.53584098815918,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 17300, 'max': 17400}}]}",False
+154,price_in_steps,vscar-back-rocket,4.975795745849609,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 17400, 'max': 17500}}]}",False
+155,price_in_steps,vscar-back-rocket,1.847982406616211,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 17500, 'max': 17600}}]}",False
+156,price_in_steps,vscar-back-rocket,2.989053726196289,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 17600, 'max': 17700}}]}",False
+157,price_in_steps,vscar-back-rocket,2.9990673065185547,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 17700, 'max': 17800}}]}",False
+158,price_in_steps,vscar-back-rocket,4.106760025024414,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 17800, 'max': 17900}}]}",False
+159,price_in_steps,vscar-back-rocket,4.497051239013672,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 17900, 'max': 18000}}]}",False
+160,price_in_steps,vscar-back-rocket,2.3326873779296875,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 18000, 'max': 18100}}]}",False
+161,price_in_steps,vscar-back-rocket,2.404451370239258,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 18100, 'max': 18200}}]}",False
+162,price_in_steps,vscar-back-rocket,4.892587661743164,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 18200, 'max': 18300}}]}",False
+163,price_in_steps,vscar-back-rocket,4.946470260620117,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 18300, 'max': 18400}}]}",False
+164,price_in_steps,vscar-back-rocket,1.4140605926513672,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 18400, 'max': 18500}}]}",False
+165,price_in_steps,vscar-back-rocket,5.608558654785156,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 18500, 'max': 18600}}]}",False
+166,price_in_steps,vscar-back-rocket,7.2460174560546875,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 18600, 'max': 18700}}]}",False
+167,price_in_steps,vscar-back-rocket,3.8766860961914062,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 18700, 'max': 18800}}]}",False
+168,price_in_steps,vscar-back-rocket,2.9332637786865234,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 18800, 'max': 18900}}]}",False
+169,price_in_steps,vscar-back-rocket,8.255243301391602,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 18900, 'max': 19000}}]}",False
+170,price_in_steps,vscar-back-rocket,3.1194686889648438,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 19000, 'max': 19100}}]}",False
+171,price_in_steps,vscar-back-rocket,2.656698226928711,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 19100, 'max': 19200}}]}",False
+172,price_in_steps,vscar-back-rocket,1.2459754943847656,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 19200, 'max': 19300}}]}",False
+173,price_in_steps,vscar-back-rocket,2.4566650390625,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 19300, 'max': 19400}}]}",False
+174,price_in_steps,vscar-back-rocket,5.615949630737305,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 19400, 'max': 19500}}]}",False
+175,price_in_steps,vscar-back-rocket,7.22193717956543,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 19500, 'max': 19600}}]}",False
+176,price_in_steps,vscar-back-rocket,8.231163024902344,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 19600, 'max': 19700}}]}",False
+177,price_in_steps,vscar-back-rocket,5.272626876831055,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 19700, 'max': 19800}}]}",False
+178,price_in_steps,vscar-back-rocket,3.5088062286376953,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 19800, 'max': 19900}}]}",False
+179,price_in_steps,vscar-back-rocket,11.545419692993164,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 19900, 'max': 20000}}]}",False
+180,price_in_steps,vscar-back-rocket,5.938291549682617,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 20000, 'max': 20100}}]}",False
+181,price_in_steps,vscar-back-rocket,5.118370056152344,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 20100, 'max': 20200}}]}",False
+182,price_in_steps,vscar-back-rocket,4.077911376953125,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 20200, 'max': 20300}}]}",False
+183,price_in_steps,vscar-back-rocket,5.040645599365234,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 20300, 'max': 20400}}]}",False
+184,price_in_steps,vscar-back-rocket,4.766941070556641,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 20400, 'max': 20500}}]}",False
+185,price_in_steps,vscar-back-rocket,4.967927932739258,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 20500, 'max': 20600}}]}",False
+186,price_in_steps,vscar-back-rocket,4.7740936279296875,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 20600, 'max': 20700}}]}",False
+187,price_in_steps,vscar-back-rocket,3.0803680419921875,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 20700, 'max': 20800}}]}",False
+188,price_in_steps,vscar-back-rocket,5.191564559936523,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 20800, 'max': 20900}}]}",False
+189,price_in_steps,vscar-back-rocket,6.395101547241211,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 20900, 'max': 21000}}]}",False
+190,price_in_steps,vscar-back-rocket,5.755186080932617,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 21000, 'max': 21100}}]}",False
+191,price_in_steps,vscar-back-rocket,5.26118278503418,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 21100, 'max': 21200}}]}",False
+192,price_in_steps,vscar-back-rocket,2.6063919067382812,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 21200, 'max': 21300}}]}",False
+193,price_in_steps,vscar-back-rocket,5.482196807861328,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 21300, 'max': 21400}}]}",False
+194,price_in_steps,vscar-back-rocket,4.015684127807617,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 21400, 'max': 21500}}]}",False
+195,price_in_steps,vscar-back-rocket,3.41796875,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 21500, 'max': 21600}}]}",False
+196,price_in_steps,vscar-back-rocket,7.032871246337891,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 21600, 'max': 21700}}]}",False
+197,price_in_steps,vscar-back-rocket,8.63194465637207,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 21700, 'max': 21800}}]}",False
+198,price_in_steps,vscar-back-rocket,3.435850143432617,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 21800, 'max': 21900}}]}",False
+199,price_in_steps,vscar-back-rocket,5.547285079956055,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 21900, 'max': 22000}}]}",False
+200,price_in_steps,vscar-back-rocket,2.9535293579101562,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 22000, 'max': 22100}}]}",False
+201,price_in_steps,vscar-back-rocket,4.933595657348633,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 22100, 'max': 22200}}]}",False
+202,price_in_steps,vscar-back-rocket,4.452228546142578,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 22200, 'max': 22300}}]}",False
+203,price_in_steps,vscar-back-rocket,5.3730010986328125,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 22300, 'max': 22400}}]}",False
+204,price_in_steps,vscar-back-rocket,7.4100494384765625,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 22400, 'max': 22500}}]}",False
+205,price_in_steps,vscar-back-rocket,5.736827850341797,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 22500, 'max': 22600}}]}",False
+206,price_in_steps,vscar-back-rocket,2.582073211669922,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 22600, 'max': 22700}}]}",False
+207,price_in_steps,vscar-back-rocket,8.695602416992188,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 22700, 'max': 22800}}]}",False
+208,price_in_steps,vscar-back-rocket,3.9708614349365234,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 22800, 'max': 22900}}]}",False
+209,price_in_steps,vscar-back-rocket,12.093544006347656,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 22900, 'max': 23000}}]}",False
+210,price_in_steps,vscar-back-rocket,5.087614059448242,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 23000, 'max': 23100}}]}",False
+211,price_in_steps,vscar-back-rocket,6.379842758178711,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 23100, 'max': 23200}}]}",False
+212,price_in_steps,vscar-back-rocket,7.011175155639648,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 23200, 'max': 23300}}]}",False
+213,price_in_steps,vscar-back-rocket,10.824203491210938,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 23300, 'max': 23400}}]}",False
+214,price_in_steps,vscar-back-rocket,7.748603820800781,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 23400, 'max': 23500}}]}",False
+215,price_in_steps,vscar-back-rocket,5.304098129272461,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 23500, 'max': 23600}}]}",False
+216,price_in_steps,vscar-back-rocket,4.2819976806640625,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 23600, 'max': 23700}}]}",False
+217,price_in_steps,vscar-back-rocket,7.251739501953125,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 23700, 'max': 23800}}]}",False
+218,price_in_steps,vscar-back-rocket,5.8803558349609375,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 23800, 'max': 23900}}]}",False
+219,price_in_steps,vscar-back-rocket,8.452653884887695,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 23900, 'max': 24000}}]}",False
+220,price_in_steps,vscar-back-rocket,5.643367767333984,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 24000, 'max': 24100}}]}",False
+221,price_in_steps,vscar-back-rocket,6.007671356201172,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 24100, 'max': 24200}}]}",False
+222,price_in_steps,vscar-back-rocket,9.632110595703125,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 24200, 'max': 24300}}]}",False
+223,price_in_steps,vscar-back-rocket,5.512237548828125,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 24300, 'max': 24400}}]}",False
+224,price_in_steps,vscar-back-rocket,7.4748992919921875,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 24400, 'max': 24500}}]}",False
+225,price_in_steps,vscar-back-rocket,8.966445922851562,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 24500, 'max': 24600}}]}",False
+226,price_in_steps,vscar-back-rocket,4.436016082763672,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 24600, 'max': 24700}}]}",False
+227,price_in_steps,vscar-back-rocket,10.404348373413086,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 24700, 'max': 24800}}]}",False
+228,price_in_steps,vscar-back-rocket,10.57577133178711,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 24800, 'max': 24900}}]}",False
+229,price_in_steps,vscar-back-rocket,10.896444320678711,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 24900, 'max': 25000}}]}",False
+230,price_in_steps,vscar-back-rocket,11.271476745605469,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 25000, 'max': 25100}}]}",False
+231,price_in_steps,vscar-back-rocket,6.978750228881836,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 25100, 'max': 25200}}]}",False
+232,price_in_steps,vscar-back-rocket,9.391069412231445,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 25200, 'max': 25300}}]}",False
+233,price_in_steps,vscar-back-rocket,9.176969528198242,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 25300, 'max': 25400}}]}",False
+234,price_in_steps,vscar-back-rocket,3.4568309783935547,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 25400, 'max': 25500}}]}",False
+235,price_in_steps,vscar-back-rocket,4.974603652954102,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 25500, 'max': 25600}}]}",False
+236,price_in_steps,vscar-back-rocket,9.868144989013672,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 25600, 'max': 25700}}]}",False
+237,price_in_steps,vscar-back-rocket,8.941650390625,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 25700, 'max': 25800}}]}",False
+238,price_in_steps,vscar-back-rocket,14.617919921875,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 25800, 'max': 25900}}]}",False
+239,price_in_steps,vscar-back-rocket,9.182453155517578,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 25900, 'max': 26000}}]}",False
+240,price_in_steps,vscar-back-rocket,7.191181182861328,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 26000, 'max': 26100}}]}",False
+241,price_in_steps,vscar-back-rocket,7.13658332824707,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 26100, 'max': 26200}}]}",False
+242,price_in_steps,vscar-back-rocket,11.850833892822266,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 26200, 'max': 26300}}]}",False
+243,price_in_steps,vscar-back-rocket,9.343862533569336,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 26300, 'max': 26400}}]}",False
+244,price_in_steps,vscar-back-rocket,15.387296676635742,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 26400, 'max': 26500}}]}",False
+245,price_in_steps,vscar-back-rocket,9.978294372558594,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 26500, 'max': 26600}}]}",False
+246,price_in_steps,vscar-back-rocket,9.587526321411133,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 26600, 'max': 26700}}]}",False
+247,price_in_steps,vscar-back-rocket,8.932113647460938,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 26700, 'max': 26800}}]}",False
+248,price_in_steps,vscar-back-rocket,10.062932968139648,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 26800, 'max': 26900}}]}",False
+249,price_in_steps,vscar-back-rocket,8.016109466552734,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 26900, 'max': 27000}}]}",False
+250,price_in_steps,vscar-back-rocket,10.129213333129883,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 27000, 'max': 27100}}]}",False
+251,price_in_steps,vscar-back-rocket,7.517814636230469,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 27100, 'max': 27200}}]}",False
+252,price_in_steps,vscar-back-rocket,10.53309440612793,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 27200, 'max': 27300}}]}",False
+253,price_in_steps,vscar-back-rocket,11.208534240722656,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 27300, 'max': 27400}}]}",False
+254,price_in_steps,vscar-back-rocket,5.686283111572266,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 27400, 'max': 27500}}]}",False
+255,price_in_steps,vscar-back-rocket,5.703210830688477,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 27500, 'max': 27600}}]}",False
+256,price_in_steps,vscar-back-rocket,15.478849411010742,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 27600, 'max': 27700}}]}",False
+257,price_in_steps,vscar-back-rocket,7.913827896118164,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 27700, 'max': 27800}}]}",False
+258,price_in_steps,vscar-back-rocket,9.48953628540039,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 27800, 'max': 27900}}]}",False
+259,price_in_steps,vscar-back-rocket,13.925790786743164,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 27900, 'max': 28000}}]}",False
+260,price_in_steps,vscar-back-rocket,14.338970184326172,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 28000, 'max': 28100}}]}",False
+261,price_in_steps,vscar-back-rocket,7.141828536987305,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 28100, 'max': 28200}}]}",False
+262,price_in_steps,vscar-back-rocket,17.49730110168457,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 28200, 'max': 28300}}]}",False
+263,price_in_steps,vscar-back-rocket,10.111331939697266,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 28300, 'max': 28400}}]}",False
+264,price_in_steps,vscar-back-rocket,10.645389556884766,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 28400, 'max': 28500}}]}",False
+265,price_in_steps,vscar-back-rocket,8.441448211669922,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 28500, 'max': 28600}}]}",False
+266,price_in_steps,vscar-back-rocket,14.199972152709961,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 28600, 'max': 28700}}]}",False
+267,price_in_steps,vscar-back-rocket,13.361215591430664,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 28700, 'max': 28800}}]}",False
+268,price_in_steps,vscar-back-rocket,11.319160461425781,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 28800, 'max': 28900}}]}",False
+269,price_in_steps,vscar-back-rocket,12.192726135253906,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 28900, 'max': 29000}}]}",False
+270,price_in_steps,vscar-back-rocket,9.81283187866211,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 29000, 'max': 29100}}]}",False
+271,price_in_steps,vscar-back-rocket,11.540651321411133,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 29100, 'max': 29200}}]}",False
+272,price_in_steps,vscar-back-rocket,11.075019836425781,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 29200, 'max': 29300}}]}",False
+273,price_in_steps,vscar-back-rocket,10.150909423828125,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 29300, 'max': 29400}}]}",False
+274,price_in_steps,vscar-back-rocket,14.246940612792969,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 29400, 'max': 29500}}]}",False
+275,price_in_steps,vscar-back-rocket,11.618852615356445,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 29500, 'max': 29600}}]}",False
+276,price_in_steps,vscar-back-rocket,12.912750244140625,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 29600, 'max': 29700}}]}",False
+277,price_in_steps,vscar-back-rocket,16.069412231445312,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 29700, 'max': 29800}}]}",False
+278,price_in_steps,vscar-back-rocket,12.592792510986328,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 29800, 'max': 29900}}]}",False
+279,price_in_steps,vscar-back-rocket,9.71674919128418,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 29900, 'max': 30000}}]}",False
+280,price_in_steps,vscar-back-rocket,11.858940124511719,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 30000, 'max': 30100}}]}",False
+281,price_in_steps,vscar-back-rocket,13.836145401000977,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 30100, 'max': 30200}}]}",False
+282,price_in_steps,vscar-back-rocket,6.11567497253418,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 30200, 'max': 30300}}]}",False
+283,price_in_steps,vscar-back-rocket,12.813568115234375,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 30300, 'max': 30400}}]}",False
+284,price_in_steps,vscar-back-rocket,12.058734893798828,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 30400, 'max': 30500}}]}",False
+285,price_in_steps,vscar-back-rocket,13.371944427490234,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 30500, 'max': 30600}}]}",False
+286,price_in_steps,vscar-back-rocket,14.676570892333984,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 30600, 'max': 30700}}]}",False
+287,price_in_steps,vscar-back-rocket,8.104801177978516,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 30700, 'max': 30800}}]}",False
+288,price_in_steps,vscar-back-rocket,10.731935501098633,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 30800, 'max': 30900}}]}",False
+289,price_in_steps,vscar-back-rocket,16.905546188354492,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 30900, 'max': 31000}}]}",False
+290,price_in_steps,vscar-back-rocket,12.701034545898438,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 31000, 'max': 31100}}]}",False
+291,price_in_steps,vscar-back-rocket,13.548851013183594,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 31100, 'max': 31200}}]}",False
+292,price_in_steps,vscar-back-rocket,15.218257904052734,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 31200, 'max': 31300}}]}",False
+293,price_in_steps,vscar-back-rocket,15.69819450378418,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 31300, 'max': 31400}}]}",False
+294,price_in_steps,vscar-back-rocket,16.074180603027344,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 31400, 'max': 31500}}]}",False
+295,price_in_steps,vscar-back-rocket,17.66800880432129,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 31500, 'max': 31600}}]}",False
+296,price_in_steps,vscar-back-rocket,12.934446334838867,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 31600, 'max': 31700}}]}",False
+297,price_in_steps,vscar-back-rocket,8.581876754760742,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 31700, 'max': 31800}}]}",False
+298,price_in_steps,vscar-back-rocket,12.751579284667969,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 31800, 'max': 31900}}]}",False
+299,price_in_steps,vscar-back-rocket,16.208887100219727,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 31900, 'max': 32000}}]}",False
+300,price_in_steps,vscar-back-rocket,18.951892852783203,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 32000, 'max': 32100}}]}",False
+301,price_in_steps,vscar-back-rocket,14.960527420043945,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 32100, 'max': 32200}}]}",False
+302,price_in_steps,vscar-back-rocket,13.308286666870117,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 32200, 'max': 32300}}]}",False
+303,price_in_steps,vscar-back-rocket,21.074533462524414,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 32300, 'max': 32400}}]}",False
+304,price_in_steps,vscar-back-rocket,18.886327743530273,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 32400, 'max': 32500}}]}",False
+305,price_in_steps,vscar-back-rocket,9.63139533996582,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 32500, 'max': 32600}}]}",False
+306,price_in_steps,vscar-back-rocket,18.780946731567383,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 32600, 'max': 32700}}]}",False
+307,price_in_steps,vscar-back-rocket,14.142751693725586,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 32700, 'max': 32800}}]}",False
+308,price_in_steps,vscar-back-rocket,15.743494033813477,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 32800, 'max': 32900}}]}",False
+309,price_in_steps,vscar-back-rocket,29.029130935668945,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 32900, 'max': 33000}}]}",False
+310,price_in_steps,vscar-back-rocket,11.784791946411133,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 33000, 'max': 33100}}]}",False
+311,price_in_steps,vscar-back-rocket,17.621517181396484,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 33100, 'max': 33200}}]}",False
+312,price_in_steps,vscar-back-rocket,17.792463302612305,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 33200, 'max': 33300}}]}",False
+313,price_in_steps,vscar-back-rocket,23.0562686920166,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 33300, 'max': 33400}}]}",False
+314,price_in_steps,vscar-back-rocket,16.936540603637695,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 33400, 'max': 33500}}]}",False
+315,price_in_steps,vscar-back-rocket,12.19487190246582,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 33500, 'max': 33600}}]}",False
+316,price_in_steps,vscar-back-rocket,11.969327926635742,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 33600, 'max': 33700}}]}",False
+317,price_in_steps,vscar-back-rocket,16.60776138305664,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 33700, 'max': 33800}}]}",False
+318,price_in_steps,vscar-back-rocket,15.268325805664062,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 33800, 'max': 33900}}]}",False
+319,price_in_steps,vscar-back-rocket,24.93906021118164,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 33900, 'max': 34000}}]}",False
+320,price_in_steps,vscar-back-rocket,13.654708862304688,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 34000, 'max': 34100}}]}",False
+321,price_in_steps,vscar-back-rocket,13.727664947509766,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 34100, 'max': 34200}}]}",False
+322,price_in_steps,vscar-back-rocket,14.165163040161133,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 34200, 'max': 34300}}]}",False
+323,price_in_steps,vscar-back-rocket,15.668630599975586,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 34300, 'max': 34400}}]}",False
+324,price_in_steps,vscar-back-rocket,18.69988441467285,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 34400, 'max': 34500}}]}",False
+325,price_in_steps,vscar-back-rocket,17.7304744720459,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 34500, 'max': 34600}}]}",False
+326,price_in_steps,vscar-back-rocket,12.793779373168945,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 34600, 'max': 34700}}]}",False
+327,price_in_steps,vscar-back-rocket,12.037515640258789,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 34700, 'max': 34800}}]}",False
+328,price_in_steps,vscar-back-rocket,22.156715393066406,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 34800, 'max': 34900}}]}",False
+329,price_in_steps,vscar-back-rocket,29.924869537353516,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 34900, 'max': 35000}}]}",False
+330,price_in_steps,vscar-back-rocket,12.255668640136719,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 35000, 'max': 35100}}]}",False
+331,price_in_steps,vscar-back-rocket,18.732070922851562,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 35100, 'max': 35200}}]}",False
+332,price_in_steps,vscar-back-rocket,12.850046157836914,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 35200, 'max': 35300}}]}",False
+333,price_in_steps,vscar-back-rocket,10.898828506469727,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 35300, 'max': 35400}}]}",False
+334,price_in_steps,vscar-back-rocket,24.393796920776367,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 35400, 'max': 35500}}]}",False
+335,price_in_steps,vscar-back-rocket,16.03841781616211,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 35500, 'max': 35600}}]}",False
+336,price_in_steps,vscar-back-rocket,21.190166473388672,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 35600, 'max': 35700}}]}",False
+337,price_in_steps,vscar-back-rocket,12.257814407348633,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 35700, 'max': 35800}}]}",False
+338,price_in_steps,vscar-back-rocket,15.730857849121094,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 35800, 'max': 35900}}]}",False
+339,price_in_steps,vscar-back-rocket,23.890256881713867,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 35900, 'max': 36000}}]}",False
+340,price_in_steps,vscar-back-rocket,19.464731216430664,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 36000, 'max': 36100}}]}",False
+341,price_in_steps,vscar-back-rocket,18.176794052124023,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 36100, 'max': 36200}}]}",False
+342,price_in_steps,vscar-back-rocket,19.58489418029785,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 36200, 'max': 36300}}]}",False
+343,price_in_steps,vscar-back-rocket,24.554729461669922,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 36300, 'max': 36400}}]}",False
+344,price_in_steps,vscar-back-rocket,25.670528411865234,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 36400, 'max': 36500}}]}",False
+345,price_in_steps,vscar-back-rocket,15.643119812011719,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 36500, 'max': 36600}}]}",False
+346,price_in_steps,vscar-back-rocket,18.627166748046875,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 36600, 'max': 36700}}]}",False
+347,price_in_steps,vscar-back-rocket,22.177457809448242,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 36700, 'max': 36800}}]}",False
+348,price_in_steps,vscar-back-rocket,20.822763442993164,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 36800, 'max': 36900}}]}",False
+349,price_in_steps,vscar-back-rocket,19.07634735107422,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 36900, 'max': 37000}}]}",False
+350,price_in_steps,vscar-back-rocket,20.70021629333496,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 37000, 'max': 37100}}]}",False
+351,price_in_steps,vscar-back-rocket,21.299362182617188,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 37100, 'max': 37200}}]}",False
+352,price_in_steps,vscar-back-rocket,20.93362808227539,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 37200, 'max': 37300}}]}",False
+353,price_in_steps,vscar-back-rocket,14.121294021606445,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 37300, 'max': 37400}}]}",False
+354,price_in_steps,vscar-back-rocket,15.314340591430664,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 37400, 'max': 37500}}]}",False
+355,price_in_steps,vscar-back-rocket,21.04020118713379,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 37500, 'max': 37600}}]}",False
+356,price_in_steps,vscar-back-rocket,25.41494369506836,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 37600, 'max': 37700}}]}",False
+357,price_in_steps,vscar-back-rocket,23.28014373779297,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 37700, 'max': 37800}}]}",False
+358,price_in_steps,vscar-back-rocket,20.320892333984375,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 37800, 'max': 37900}}]}",False
+359,price_in_steps,vscar-back-rocket,15.686988830566406,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 37900, 'max': 38000}}]}",False
+360,price_in_steps,vscar-back-rocket,12.193918228149414,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 38000, 'max': 38100}}]}",False
+361,price_in_steps,vscar-back-rocket,15.394210815429688,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 38100, 'max': 38200}}]}",False
+362,price_in_steps,vscar-back-rocket,22.240877151489258,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 38200, 'max': 38300}}]}",False
+363,price_in_steps,vscar-back-rocket,11.876583099365234,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 38300, 'max': 38400}}]}",False
+364,price_in_steps,vscar-back-rocket,19.281387329101562,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 38400, 'max': 38500}}]}",False
+365,price_in_steps,vscar-back-rocket,16.47186279296875,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 38500, 'max': 38600}}]}",False
+366,price_in_steps,vscar-back-rocket,21.536827087402344,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 38600, 'max': 38700}}]}",False
+367,price_in_steps,vscar-back-rocket,25.4971981048584,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 38700, 'max': 38800}}]}",False
+368,price_in_steps,vscar-back-rocket,23.63109588623047,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 38800, 'max': 38900}}]}",False
+369,price_in_steps,vscar-back-rocket,21.228551864624023,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 38900, 'max': 39000}}]}",False
+370,price_in_steps,vscar-back-rocket,17.53687858581543,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 39000, 'max': 39100}}]}",False
+371,price_in_steps,vscar-back-rocket,20.92289924621582,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 39100, 'max': 39200}}]}",False
+372,price_in_steps,vscar-back-rocket,18.950700759887695,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 39200, 'max': 39300}}]}",False
+373,price_in_steps,vscar-back-rocket,19.806861877441406,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 39300, 'max': 39400}}]}",False
+374,price_in_steps,vscar-back-rocket,19.665956497192383,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 39400, 'max': 39500}}]}",False
+375,price_in_steps,vscar-back-rocket,14.220476150512695,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 39500, 'max': 39600}}]}",False
+376,price_in_steps,vscar-back-rocket,19.8366641998291,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 39600, 'max': 39700}}]}",False
+377,price_in_steps,vscar-back-rocket,14.663934707641602,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 39700, 'max': 39800}}]}",False
+378,price_in_steps,vscar-back-rocket,24.824142456054688,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 39800, 'max': 39900}}]}",False
+379,price_in_steps,vscar-back-rocket,18.518924713134766,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 39900, 'max': 40000}}]}",False
+380,price_in_steps,vscar-back-rocket,20.250558853149414,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 40000, 'max': 40100}}]}",False
+381,price_in_steps,vscar-back-rocket,24.468183517456055,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 40100, 'max': 40200}}]}",False
+382,price_in_steps,vscar-back-rocket,29.526710510253906,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 40200, 'max': 40300}}]}",False
+383,price_in_steps,vscar-back-rocket,15.408754348754883,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 40300, 'max': 40400}}]}",False
+384,price_in_steps,vscar-back-rocket,23.24366569519043,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 40400, 'max': 40500}}]}",False
+385,price_in_steps,vscar-back-rocket,23.113250732421875,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 40500, 'max': 40600}}]}",False
+386,price_in_steps,vscar-back-rocket,13.804435729980469,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 40600, 'max': 40700}}]}",False
+387,price_in_steps,vscar-back-rocket,17.275094985961914,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 40700, 'max': 40800}}]}",False
+388,price_in_steps,vscar-back-rocket,15.643835067749023,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 40800, 'max': 40900}}]}",False
+389,price_in_steps,vscar-back-rocket,18.412113189697266,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 40900, 'max': 41000}}]}",False
+390,price_in_steps,vscar-back-rocket,17.08531379699707,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 41000, 'max': 41100}}]}",False
+391,price_in_steps,vscar-back-rocket,21.69346809387207,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 41100, 'max': 41200}}]}",False
+392,price_in_steps,vscar-back-rocket,22.313594818115234,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 41200, 'max': 41300}}]}",False
+393,price_in_steps,vscar-back-rocket,19.401073455810547,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 41300, 'max': 41400}}]}",False
+394,price_in_steps,vscar-back-rocket,23.62513542175293,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 41400, 'max': 41500}}]}",False
+395,price_in_steps,vscar-back-rocket,12.494564056396484,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 41500, 'max': 41600}}]}",False
+396,price_in_steps,vscar-back-rocket,20.272254943847656,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 41600, 'max': 41700}}]}",False
+397,price_in_steps,vscar-back-rocket,15.09237289428711,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 41700, 'max': 41800}}]}",False
+398,price_in_steps,vscar-back-rocket,23.58222007751465,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 41800, 'max': 41900}}]}",False
+399,price_in_steps,vscar-back-rocket,25.73871612548828,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 41900, 'max': 42000}}]}",False
+400,price_in_steps,vscar-back-rocket,20.67399024963379,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 42000, 'max': 42100}}]}",False
+401,price_in_steps,vscar-back-rocket,16.433238983154297,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 42100, 'max': 42200}}]}",False
+402,price_in_steps,vscar-back-rocket,12.84646987915039,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 42200, 'max': 42300}}]}",False
+403,price_in_steps,vscar-back-rocket,18.551111221313477,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 42300, 'max': 42400}}]}",False
+404,price_in_steps,vscar-back-rocket,22.618770599365234,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 42400, 'max': 42500}}]}",False
+405,price_in_steps,vscar-back-rocket,13.617992401123047,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 42500, 'max': 42600}}]}",False
+406,price_in_steps,vscar-back-rocket,21.36087417602539,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 42600, 'max': 42700}}]}",False
+407,price_in_steps,vscar-back-rocket,20.299673080444336,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 42700, 'max': 42800}}]}",False
+408,price_in_steps,vscar-back-rocket,11.420488357543945,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 42800, 'max': 42900}}]}",False
+409,price_in_steps,vscar-back-rocket,22.46856689453125,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 42900, 'max': 43000}}]}",False
+410,price_in_steps,vscar-back-rocket,24.91593360900879,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 43000, 'max': 43100}}]}",False
+411,price_in_steps,vscar-back-rocket,24.90377426147461,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 43100, 'max': 43200}}]}",False
+412,price_in_steps,vscar-back-rocket,15.50912857055664,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 43200, 'max': 43300}}]}",False
+413,price_in_steps,vscar-back-rocket,17.240047454833984,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 43300, 'max': 43400}}]}",False
+414,price_in_steps,vscar-back-rocket,23.69403839111328,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 43400, 'max': 43500}}]}",False
+415,price_in_steps,vscar-back-rocket,16.484975814819336,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 43500, 'max': 43600}}]}",False
+416,price_in_steps,vscar-back-rocket,20.08199691772461,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 43600, 'max': 43700}}]}",False
+417,price_in_steps,vscar-back-rocket,24.843931198120117,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 43700, 'max': 43800}}]}",False
+418,price_in_steps,vscar-back-rocket,33.04147720336914,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 43800, 'max': 43900}}]}",False
+419,price_in_steps,vscar-back-rocket,17.76123046875,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 43900, 'max': 44000}}]}",False
+420,price_in_steps,vscar-back-rocket,21.101951599121094,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 44000, 'max': 44100}}]}",False
+421,price_in_steps,vscar-back-rocket,17.25029945373535,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 44100, 'max': 44200}}]}",False
+422,price_in_steps,vscar-back-rocket,25.0699520111084,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 44200, 'max': 44300}}]}",False
+423,price_in_steps,vscar-back-rocket,20.432710647583008,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 44300, 'max': 44400}}]}",False
+424,price_in_steps,vscar-back-rocket,23.07581901550293,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 44400, 'max': 44500}}]}",False
+425,price_in_steps,vscar-back-rocket,14.978170394897461,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 44500, 'max': 44600}}]}",False
+426,price_in_steps,vscar-back-rocket,26.013612747192383,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 44600, 'max': 44700}}]}",False
+427,price_in_steps,vscar-back-rocket,21.394014358520508,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 44700, 'max': 44800}}]}",False
+428,price_in_steps,vscar-back-rocket,15.890836715698242,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 44800, 'max': 44900}}]}",False
+429,price_in_steps,vscar-back-rocket,24.51491355895996,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 44900, 'max': 45000}}]}",False
+430,price_in_steps,vscar-back-rocket,27.204513549804688,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 45000, 'max': 45100}}]}",False
+431,price_in_steps,vscar-back-rocket,20.882606506347656,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 45100, 'max': 45200}}]}",False
+432,price_in_steps,vscar-back-rocket,19.810199737548828,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 45200, 'max': 45300}}]}",False
+433,price_in_steps,vscar-back-rocket,18.660306930541992,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 45300, 'max': 45400}}]}",False
+434,price_in_steps,vscar-back-rocket,22.801876068115234,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 45400, 'max': 45500}}]}",False
+435,price_in_steps,vscar-back-rocket,20.6758975982666,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 45500, 'max': 45600}}]}",False
+436,price_in_steps,vscar-back-rocket,17.86971092224121,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 45600, 'max': 45700}}]}",False
+437,price_in_steps,vscar-back-rocket,19.765138626098633,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 45700, 'max': 45800}}]}",False
+438,price_in_steps,vscar-back-rocket,15.453577041625977,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 45800, 'max': 45900}}]}",False
+439,price_in_steps,vscar-back-rocket,27.395248413085938,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 45900, 'max': 46000}}]}",False
+440,price_in_steps,vscar-back-rocket,23.68950843811035,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 46000, 'max': 46100}}]}",False
+441,price_in_steps,vscar-back-rocket,15.709877014160156,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 46100, 'max': 46200}}]}",False
+442,price_in_steps,vscar-back-rocket,20.756244659423828,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 46200, 'max': 46300}}]}",False
+443,price_in_steps,vscar-back-rocket,17.221689224243164,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 46300, 'max': 46400}}]}",False
+444,price_in_steps,vscar-back-rocket,16.800880432128906,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 46400, 'max': 46500}}]}",False
+445,price_in_steps,vscar-back-rocket,25.869369506835938,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 46500, 'max': 46600}}]}",False
+446,price_in_steps,vscar-back-rocket,42.04845428466797,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 46600, 'max': 46700}}]}",False
+447,price_in_steps,vscar-back-rocket,17.998933792114258,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 46700, 'max': 46800}}]}",False
+448,price_in_steps,vscar-back-rocket,14.648914337158203,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 46800, 'max': 46900}}]}",False
+449,price_in_steps,vscar-back-rocket,24.25384521484375,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 46900, 'max': 47000}}]}",False
+450,price_in_steps,vscar-back-rocket,23.12755584716797,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 47000, 'max': 47100}}]}",False
+451,price_in_steps,vscar-back-rocket,15.71035385131836,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 47100, 'max': 47200}}]}",False
+452,price_in_steps,vscar-back-rocket,27.370691299438477,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 47200, 'max': 47300}}]}",False
+453,price_in_steps,vscar-back-rocket,20.107746124267578,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 47300, 'max': 47400}}]}",False
+454,price_in_steps,vscar-back-rocket,27.0535945892334,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 47400, 'max': 47500}}]}",False
+455,price_in_steps,vscar-back-rocket,35.369873046875,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 47500, 'max': 47600}}]}",False
+456,price_in_steps,vscar-back-rocket,17.5323486328125,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 47600, 'max': 47700}}]}",False
+457,price_in_steps,vscar-back-rocket,20.685195922851562,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 47700, 'max': 47800}}]}",False
+458,price_in_steps,vscar-back-rocket,18.967390060424805,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 47800, 'max': 47900}}]}",False
+459,price_in_steps,vscar-back-rocket,15.132665634155273,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 47900, 'max': 48000}}]}",False
+460,price_in_steps,vscar-back-rocket,17.406463623046875,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 48000, 'max': 48100}}]}",False
+461,price_in_steps,vscar-back-rocket,19.391298294067383,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 48100, 'max': 48200}}]}",False
+462,price_in_steps,vscar-back-rocket,23.32139015197754,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 48200, 'max': 48300}}]}",False
+463,price_in_steps,vscar-back-rocket,10.20193099975586,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 48300, 'max': 48400}}]}",False
+464,price_in_steps,vscar-back-rocket,17.101049423217773,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 48400, 'max': 48500}}]}",False
+465,price_in_steps,vscar-back-rocket,16.771316528320312,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 48500, 'max': 48600}}]}",False
+466,price_in_steps,vscar-back-rocket,19.227027893066406,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 48600, 'max': 48700}}]}",False
+467,price_in_steps,vscar-back-rocket,14.794588088989258,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 48700, 'max': 48800}}]}",False
+468,price_in_steps,vscar-back-rocket,22.844552993774414,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 48800, 'max': 48900}}]}",False
+469,price_in_steps,vscar-back-rocket,19.62876319885254,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 48900, 'max': 49000}}]}",False
+470,price_in_steps,vscar-back-rocket,14.645576477050781,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 49000, 'max': 49100}}]}",False
+471,price_in_steps,vscar-back-rocket,16.447782516479492,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 49100, 'max': 49200}}]}",False
+472,price_in_steps,vscar-back-rocket,21.059513092041016,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 49200, 'max': 49300}}]}",False
+473,price_in_steps,vscar-back-rocket,30.310630798339844,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 49300, 'max': 49400}}]}",False
+474,price_in_steps,vscar-back-rocket,15.333175659179688,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 49400, 'max': 49500}}]}",False
+475,price_in_steps,vscar-back-rocket,18.387317657470703,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 49500, 'max': 49600}}]}",False
+476,price_in_steps,vscar-back-rocket,25.72917938232422,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 49600, 'max': 49700}}]}",False
+477,price_in_steps,vscar-back-rocket,15.71202278137207,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 49700, 'max': 49800}}]}",False
+478,price_in_steps,vscar-back-rocket,10.119199752807617,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 49800, 'max': 49900}}]}",False
+479,price_in_steps,vscar-back-rocket,17.59815216064453,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 49900, 'max': 50000}}]}",False
+480,price_in_steps,vscar-back-rocket,26.195287704467773,200,"{'page': 1, 'limit': 1000, 'text': '', 'attributes': [{'name': 'Grundpreis', 'values': [], 'range': {'min': 50000, 'max': 50100}}]}",False
