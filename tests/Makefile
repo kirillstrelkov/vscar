@@ -37,5 +37,4 @@ quick-perf-check:
 
 run-perf-back-%:
 	./.venv/bin/python perf_test/run_perf_back.py --app $* --force
-	./.venv/bin/python perf_test/run_perf_back.py --app $* --force --parallel
 

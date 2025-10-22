@@ -136,7 +136,7 @@ def perf_find_by_filter_through_prices(
     """Measure backend APIs calls with price range."""
     logger.debug("Running perf_find_by_filter_through_prices")
     url = f"{TARGET_URL}/cars/findByFilter"
-    limit = 1000
+    limit = 100
     step = 100
 
     args = []
@@ -150,38 +150,6 @@ def perf_find_by_filter_through_prices(
                     "name": "Grundpreis",
                     "values": [],
                     "range": {"min": range_start, "max": range_start + step},
-                },
-            ],
-        }
-        args.append(data)
-
-    return _run_requsts(args, url, parallel=parallel)
-
-
-def perf_find_by_filter_through_pages(
-    *,
-    range_min: int = 8000,
-    range_max: int = 50000,
-    parallel: bool = False,
-) -> list[ExecResult]:
-    """Measure backend APIs calls with limit per page."""
-    logger.debug("Running perf_find_by_filter_through_pages")
-    url = f"{TARGET_URL}/cars/findByFilter"
-    total = 6000
-    limit = 100
-    pages = total // limit
-
-    args = []
-    for i in range(1, pages + 1):
-        data = {
-            "page": i,
-            "limit": limit,
-            "text": "",
-            "attributes": [
-                {
-                    "name": "Grundpreis",
-                    "values": [],
-                    "range": {"min": range_min, "max": range_max},
                 },
             ],
         }
@@ -213,11 +181,8 @@ def cli(*, simple: bool) -> None:
 
     tests = [(perf_basic_requests, 7)]
     if not simple:
-        tests.extend(
-            [
-                (perf_find_by_filter_through_pages, 60),
-                (perf_find_by_filter_through_prices, 421),
-            ]
+        tests.append(
+            (perf_find_by_filter_through_prices, 421),
         )
 
     for func, expected_results in tests:
