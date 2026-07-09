@@ -31,6 +31,19 @@ async function load_json_to_db(path: string) {
   mongoose.connection.close();
 }
 
+async function extractArchive(input_archive: string, output_dir: string) {
+  try {
+    const { execSync } = require('child_process');
+    execSync(`unzip -o "${input_archive}" -d "${output_dir}"`, {
+      stdio: 'ignore',
+    });
+    console.log('Extracted using native unzip');
+  } catch (unzipErr) {
+    const extract = require('extract-zip');
+    await extract(input_archive, { dir: output_dir });
+  }
+}
+
 async function main() {
   const input_archive = '../../db/db.zip';
 
@@ -38,8 +51,7 @@ async function main() {
   try {
     console.log(`Extracting ${input_archive} to ${output_dir}`);
 
-    const extract = require('extract-zip');
-    await extract(input_archive, { dir: output_dir });
+    await extractArchive(input_archive, output_dir);
 
     console.log('Done\n');
   } catch (err) {
