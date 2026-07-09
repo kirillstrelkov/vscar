@@ -1,0 +1,19 @@
+{
+  "name": "vscar-playwright-tests",
+  "version": "1.0.0",
+  "description": "Playwright E2E and API tests for VSCar",
+  "type": "module",
+  "scripts": {
+    "format": "prettier --write \"./**/*.ts\"",
+    "test": "playwright test",
+    "test:ui": "playwright test --ui",
+    "test:front": "playwright test --project=frontend",
+    "test:back": "playwright test --project=backend"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.49.0",
+    "@types/node": "^20.11.0",
+    "typescript": "^5.3.3",
+    "prettier": "^3.9.4"
+  }
+}
