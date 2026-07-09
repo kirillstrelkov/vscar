@@ -1,0 +1,63 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: vscar-rocket
+  namespace: vscar
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: vscar-rocket
+  template:
+    metadata:
+      labels:
+        app: vscar-rocket
+        app.kubernetes.io/part-of: vscar
+    spec:
+      topologySpreadConstraints:
+      - maxSkew: 1
+        topologyKey: kubernetes.io/hostname
+        whenUnsatisfiable: DoNotSchedule
+        labelSelector:
+          matchLabels:
+            app.kubernetes.io/part-of: vscar
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: node-role.kubernetes.io/control-plane
+                operator: DoesNotExist
+      containers:
+      - name: rocket
+        image: vscar-back-rocket-app:latest
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 3000
+        env:
+        - name: ROCKET_PORT
+          value: "3000"
+        - name: ROCKET_ADDRESS
+          value: "0.0.0.0"
+        - name: DATABASE_URI
+          valueFrom:
+            configMapKeyRef:
+              name: vscar-config
+              key: DATABASE_URI
+        - name: ALLOWED_ORIGINS
+          valueFrom:
+            configMapKeyRef:
+              name: vscar-config
+              key: ALLOWED_ORIGINS
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: vscar-rocket
+  namespace: vscar
+spec:
+  selector:
+    app: vscar-rocket
+  ports:
+  - port: 3000
+    targetPort: 3000

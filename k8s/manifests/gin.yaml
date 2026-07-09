@@ -1,0 +1,63 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: vscar-gin
+  namespace: vscar
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: vscar-gin
+  template:
+    metadata:
+      labels:
+        app: vscar-gin
+        app.kubernetes.io/part-of: vscar
+    spec:
+      topologySpreadConstraints:
+      - maxSkew: 1
+        topologyKey: kubernetes.io/hostname
+        whenUnsatisfiable: DoNotSchedule
+        labelSelector:
+          matchLabels:
+            app.kubernetes.io/part-of: vscar
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: node-role.kubernetes.io/control-plane
+                operator: DoesNotExist
+      containers:
+      - name: gin
+        image: vscar-back-gin-app:latest
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 3000
+        env:
+        - name: PORT
+          value: "3000"
+        - name: GIN_MODE
+          value: "release"
+        - name: DATABASE_URI
+          valueFrom:
+            configMapKeyRef:
+              name: vscar-config
+              key: DATABASE_URI
+        - name: ALLOWED_ORIGINS
+          valueFrom:
+            configMapKeyRef:
+              name: vscar-config
+              key: ALLOWED_ORIGINS
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: vscar-gin
+  namespace: vscar
+spec:
+  selector:
+    app: vscar-gin
+  ports:
+  - port: 3000
+    targetPort: 3000
