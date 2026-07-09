@@ -1,0 +1,116 @@
+# StripPrefix middlewares — remove the path prefix before forwarding to each backend
+# API group traefik.io/v1alpha1 requires k3s >= 1.27 / Traefik >= 2.10.
+# For older clusters use traefik.containo.us/v1alpha1 instead.
+apiVersion: traefik.io/v1alpha1
+kind: Middleware
+metadata:
+  name: strip-nestjs
+  namespace: vscar
+spec:
+  stripPrefix:
+    prefixes:
+    - /nestjs
+---
+apiVersion: traefik.io/v1alpha1
+kind: Middleware
+metadata:
+  name: strip-fastapi
+  namespace: vscar
+spec:
+  stripPrefix:
+    prefixes:
+    - /fastapi
+---
+apiVersion: traefik.io/v1alpha1
+kind: Middleware
+metadata:
+  name: strip-gin
+  namespace: vscar
+spec:
+  stripPrefix:
+    prefixes:
+    - /gin
+---
+apiVersion: traefik.io/v1alpha1
+kind: Middleware
+metadata:
+  name: strip-rocket
+  namespace: vscar
+spec:
+  stripPrefix:
+    prefixes:
+    - /rocket
+---
+apiVersion: traefik.io/v1alpha1
+kind: Middleware
+metadata:
+  name: strip-ktor
+  namespace: vscar
+spec:
+  stripPrefix:
+    prefixes:
+    - /ktor
+---
+apiVersion: traefik.io/v1alpha1
+kind: Middleware
+metadata:
+  name: strip-spring
+  namespace: vscar
+spec:
+  stripPrefix:
+    prefixes:
+    - /spring
+---
+# Single IngressRoute — all path-prefix rules share the web (port 80) entrypoint.
+# Traffic flow: localhost:8080/{backend}/... -> strip prefix -> backend service :3000
+apiVersion: traefik.io/v1alpha1
+kind: IngressRoute
+metadata:
+  name: vscar
+  namespace: vscar
+spec:
+  entryPoints:
+  - web
+  routes:
+  - match: PathPrefix(`/nestjs`)
+    kind: Rule
+    middlewares:
+    - name: strip-nestjs
+    services:
+    - name: vscar-nestjs
+      port: 3000
+  - match: PathPrefix(`/fastapi`)
+    kind: Rule
+    middlewares:
+    - name: strip-fastapi
+    services:
+    - name: vscar-fastapi
+      port: 3000
+  - match: PathPrefix(`/gin`)
+    kind: Rule
+    middlewares:
+    - name: strip-gin
+    services:
+    - name: vscar-gin
+      port: 3000
+  - match: PathPrefix(`/rocket`)
+    kind: Rule
+    middlewares:
+    - name: strip-rocket
+    services:
+    - name: vscar-rocket
+      port: 3000
+  - match: PathPrefix(`/ktor`)
+    kind: Rule
+    middlewares:
+    - name: strip-ktor
+    services:
+    - name: vscar-ktor
+      port: 3000
+  - match: PathPrefix(`/spring`)
+    kind: Rule
+    middlewares:
+    - name: strip-spring
+    services:
+    - name: vscar-spring
+      port: 3000

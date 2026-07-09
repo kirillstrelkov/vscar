@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: vscar-config
+  namespace: vscar
+data:
+  # host.k3d.internal resolves to the host machine from inside k3d pods
+  DATABASE_URI: "mongodb://host.k3d.internal:27017/vscar"
+  ALLOWED_ORIGINS: "*"
