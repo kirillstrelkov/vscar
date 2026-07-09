@@ -2,7 +2,7 @@
   "name": "car-vs-fe",
   "version": "1.0.0",
   "scripts": {
-    "clean": "rimraf dist && rm -rf node_modules",
+    "clean": "rm -rf dist node_modules",
     "format": "prettier --write \"src/**/*.ts\"",
     "ng": "ng",
     "start": "ng serve",
