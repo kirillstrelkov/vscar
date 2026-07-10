@@ -5,17 +5,17 @@ APP_NAME := vscar-front-angular-app
 all: fmt check test
 
 clean:
-	pnpm run clean
+	bun run clean
 
 test:
-	#pnpm run test # TODO: fixme
+	#bun run test # TODO: fixme
 
 fmt:
-	pnpm run format
+	bun run format
 
 check: check-docker check-make
-	pnpm run lint-fix
-	pnpm run lint
+	bun run lint-fix
+	bun run lint
 
 check-docker:
 	docker run --rm -i hadolint/hadolint < Dockerfile
@@ -24,10 +24,10 @@ check-make:
 	go run github.com/checkmake/checkmake/cmd/checkmake@latest Makefile
 
 run:
-	pnpm run start
+	bun run start
 
 build: clean
-	pnpm run build
+	bun run build
 
 docker-build:
 	docker build -t ${APP_NAME} .
