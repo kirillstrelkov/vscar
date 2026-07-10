@@ -31,6 +31,7 @@
     "@nestjs/platform-express": "^11.1.6",
     "@nestjs/swagger": "^11.2.0",
     "cache-manager": "^7.2.4",
+    "cacheable": "^2.5.0",
     "extract-zip": "^2.0.1",
     "helmet": "^8.1.0",
     "mongoose": "^8.19.1",

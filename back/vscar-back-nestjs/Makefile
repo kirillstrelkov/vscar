@@ -5,16 +5,16 @@ APP_NAME := vscar-back-nestjs-app
 all: fmt check test
 
 clean:
-	pnpm run clean
+	bun run clean
 
 test:
 	@echo "Nothing to test"
 
 fmt:
-	pnpm run format
+	bun run format
 
 check: check-docker check-make
-	# pnpm run lint # TODO: fixme
+	# bun run lint # TODO: fixme
 
 check-docker:
 	docker run --rm -i hadolint/hadolint < Dockerfile
@@ -23,10 +23,10 @@ check-make:
 	go run github.com/checkmake/checkmake/cmd/checkmake@latest Makefile
 
 run:
-	pnpm run start
+	bun run start
 
 build: clean
-	pnpm run build
+	bun run build
 
 docker-build:
 	docker build -t ${APP_NAME} .
@@ -36,4 +36,4 @@ docker-run:
 
 init-db:
 	docker run -d --rm -p 27017:27017 mongo
-	pnpm run resetdb
+	bun run resetdb
