@@ -36,6 +36,29 @@ From the `tests/k6/` directory:
 
 ---
 
+## Comparing all backends on k8s
+
+`../../k8s/` deploys all six backends behind a single Traefik `IngressRoute`, reachable at
+`http://localhost:8080/{backend}` (e.g. `/nestjs`, `/fastapi`, `/gin`, `/rocket`, `/ktor`, `/spring`) once the
+cluster is up (`make -C ../../k8s all`).
+
+`make test-k8s` runs the full k6 suite against each of those six backends in turn and saves each run's
+`--summary-export` JSON (aggregated `filter_prices_duration` stats: avg/min/med/max/p90/p95) to
+`data/k8s/{backend}.json`:
+
+```bash
+make test-k8s
+```
+
+- **`K8S_HOST`**: override the ingress base URL (defaults to `http://localhost:8080`).
+- **`VUS`**: forwarded to each run same as above (defaults to `10`).
+
+Then open [`Analysis.ipynb`](Analysis.ipynb) (uses the same Python environment as `tests/perf_test/Analysis.ipynb`,
+i.e. `tests/.venv`) to get a table and bar chart comparing `filter_prices_duration` across all backends, sorted
+fastest to slowest.
+
+---
+
 ## Results
 
 ```bash
