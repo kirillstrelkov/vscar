@@ -4,6 +4,6 @@ metadata:
   name: vscar-config
   namespace: vscar
 data:
-  # host.k3d.internal resolves to the host machine from inside k3d pods
-  DATABASE_URI: "mongodb://host.k3d.internal:27017/vscar"
+  # vscar-mongo is the in-cluster MongoDB Service (see manifests/mongo.yaml)
+  DATABASE_URI: "mongodb://vscar-mongo:27017/vscar"
   ALLOWED_ORIGINS: "*"

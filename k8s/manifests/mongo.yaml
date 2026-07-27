@@ -1,0 +1,61 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: vscar-mongo
+  namespace: vscar
+spec:
+  accessModes:
+  - ReadWriteOnce
+  resources:
+    requests:
+      storage: 1Gi
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: vscar-mongo
+  namespace: vscar
+spec:
+  replicas: 1
+  strategy:
+    type: Recreate
+  selector:
+    matchLabels:
+      app: vscar-mongo
+  template:
+    metadata:
+      labels:
+        app: vscar-mongo
+        app.kubernetes.io/part-of: vscar
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: node-role.kubernetes.io/control-plane
+                operator: DoesNotExist
+      containers:
+      - name: mongo
+        image: mongo:7
+        ports:
+        - containerPort: 27017
+        volumeMounts:
+        - name: data
+          mountPath: /data/db
+      volumes:
+      - name: data
+        persistentVolumeClaim:
+          claimName: vscar-mongo
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: vscar-mongo
+  namespace: vscar
+spec:
+  selector:
+    app: vscar-mongo
+  ports:
+  - port: 27017
+    targetPort: 27017

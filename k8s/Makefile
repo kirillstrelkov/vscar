@@ -1,13 +1,13 @@
 CLUSTER_NAME := vscar
 HOST_PORT    := 8080
 NAMESPACE    := vscar
-DB_URI       ?= mongodb://host.k3d.internal:27017/vscar
+DB_URI       ?= mongodb://vscar-mongo:27017/vscar
 BACKENDS     := nestjs fastapi gin rocket ktor spring
 
 SERVER_NODE  := k3d-$(CLUSTER_NAME)-server-0
 
 .PHONY: all cluster-create cluster-start cluster-stop cluster-clean \
-        images-build deploy undeploy status help
+        images-build deploy undeploy seed-db status help
 
 .DEFAULT_GOAL := help
 
@@ -44,10 +44,22 @@ images-build:  ## Build all backend images and import them into the cluster
 # ── Deploy ────────────────────────────────────────────────────────────────────
 
 deploy:  ## Apply all Kubernetes manifests
+	kubectl apply -f manifests/namespace.yaml
 	kubectl apply -f manifests/
 
 undeploy:  ## Delete all deployed manifests (ignores missing)
 	kubectl delete -f manifests/ --ignore-not-found
+
+# ── Data ─────────────────────────────────────────────────────────────────────
+
+seed-db:  ## Seed the in-cluster MongoDB with car data (port-forwards vscar-mongo, runs NestJS reset script)
+	@echo "==> Port-forwarding svc/vscar-mongo to localhost:27017..."; \
+	kubectl port-forward -n $(NAMESPACE) svc/vscar-mongo 27017:27017 >/tmp/vscar-mongo-portforward.log 2>&1 & \
+	pf_pid=$$!; \
+	trap 'kill $$pf_pid 2>/dev/null' EXIT INT TERM; \
+	sleep 2; \
+	echo "==> Seeding database..."; \
+	(cd ../back/vscar-back-nestjs && DATABASE_URI=mongodb://localhost:27017/vscar bun run resetdb)
 
 # ── Observability ─────────────────────────────────────────────────────────────
 
