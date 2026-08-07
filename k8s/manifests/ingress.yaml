@@ -61,6 +61,16 @@ spec:
     prefixes:
     - /spring
 ---
+apiVersion: traefik.io/v1alpha1
+kind: Middleware
+metadata:
+  name: strip-hono
+  namespace: vscar
+spec:
+  stripPrefix:
+    prefixes:
+    - /hono
+---
 # Single IngressRoute — all path-prefix rules share the web (port 80) entrypoint.
 # Traffic flow: localhost:8080/{backend}/... -> strip prefix -> backend service :3000
 apiVersion: traefik.io/v1alpha1
@@ -113,4 +123,11 @@ spec:
     - name: strip-spring
     services:
     - name: vscar-spring
+      port: 3000
+  - match: PathPrefix(`/hono`)
+    kind: Rule
+    middlewares:
+    - name: strip-hono
+    services:
+    - name: vscar-hono
       port: 3000

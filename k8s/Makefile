@@ -2,7 +2,7 @@ CLUSTER_NAME := vscar
 HOST_PORT    := 8080
 NAMESPACE    := vscar
 DB_URI       ?= mongodb://vscar-mongo:27017/vscar
-BACKENDS     := nestjs fastapi gin rocket ktor spring
+BACKENDS     := nestjs fastapi gin rocket ktor spring hono
 
 SERVER_NODE  := k3d-$(CLUSTER_NAME)-server-0
 

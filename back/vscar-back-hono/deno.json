@@ -1,0 +1,15 @@
+{
+  "nodeModulesDir": "auto",
+  "tasks": {
+    "clean": "rm -rf dist node_modules",
+    "build": "deno compile --allow-net --allow-env --allow-sys --output dist/vscar-back-hono src/index.ts",
+    "start": "deno run --allow-net --allow-env --allow-sys src/index.ts",
+    "start:dev": "deno run --allow-net --allow-env --allow-sys --watch src/index.ts",
+    "typecheck": "deno check src/index.ts reset_db.ts",
+    "lint": "deno run -A npm:@biomejs/biome lint --write .",
+    "format": "deno run -A npm:@biomejs/biome format --write .",
+    "test": "deno run -A npm:vitest run",
+    "test:watch": "deno run -A npm:vitest",
+    "resetdb": "deno run --allow-net --allow-env --allow-sys --allow-read --allow-run reset_db.ts"
+  }
+}
