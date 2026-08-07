@@ -10,22 +10,25 @@ const TARGET_URL = __ENV.BACKEND_URL || __ENV.URL || 'http://localhost:3000';
 const PRICE_RANGE_STEPS = 421;
 
 const filterPricesDuration = new Trend('filter_prices_duration', true);
+const scenarios = {
+  basic: {
+    executor: 'shared-iterations',
+    exec: 'basicRequests',
+    vus: 1,
+    iterations: 1,
+  },
+  filter_prices: {
+    executor: 'shared-iterations',
+    exec: 'filterPrices',
+    vus: __ENV.VUS ? parseInt(__ENV.VUS, 10) : 10,
+    iterations: PRICE_RANGE_STEPS,
+  },
+};
+
+const { SCENARIO } = __ENV;
 
 export const options = {
-  scenarios: {
-    basic: {
-      executor: 'shared-iterations',
-      exec: 'basicRequests',
-      vus: 1,
-      iterations: 1,
-    },
-    filter_prices: {
-      executor: 'shared-iterations',
-      exec: 'filterPrices',
-      vus: __ENV.VUS ? parseInt(__ENV.VUS, 10) : 10,
-      iterations: PRICE_RANGE_STEPS,
-    },
-  },
+  scenarios: SCENARIO ? { [SCENARIO]: scenarios[SCENARIO] } : scenarios,
 };
 
 const params = {
@@ -82,7 +85,6 @@ export function filterPrices() {
   const minPrice = 8000;
   const step = 100;
 
-  // iterationInTest goes from 0 to 420
   const index = exec.scenario.iterationInTest;
   const rangeStart = minPrice + (index * step);
 
